@@ -1,0 +1,19 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/meezaan/alquran-cloud-template.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:meezaan/alquran-api-client-php.git"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.0",
+        "monolog/monolog": "~1.17",
+        "slim/php-view": "^2.1",
+        "alquran/alquran-cloud-template": "dev-master",
+        "alquran/api-client": "dev-master"
+    }
+}
