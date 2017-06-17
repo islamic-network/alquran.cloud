@@ -1,0 +1,173 @@
+body {
+
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left{
+    float: left;
+}
+.align-left {
+    text-align: left;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.linkify {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.linkify:hover {
+    color: #2196f3;
+}
+
+.ayah-playing span.linkify {
+    color: #666666;
+}
+
+.style-ayah {
+    font-size: 40px;
+}
+
+.margin-left-15
+{
+    margin-left: 15px;
+}
+
+.hide {
+    display: none;
+}
+
+.ayah-ending {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.ayah-number {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  z-index: 10;
+  margin-top: 25%;
+  margin-left: -20%;
+  font-size: 60%;
+}
+
+.ayah-number-2digit {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  right: 2px;
+  z-index: 10;
+  margin-top: 25%;
+  margin-right: 20%;
+  font-size: 60%;
+}
+
+.ayah-number-3digit {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 8px;
+  right: 1px;
+  left: 0;
+  z-index: 10;
+  margin-top: 30%;
+  margin-right: 20%;
+  font-size: 60%;
+}
+
+.ayahEditionName:first-letter {
+  text-transform:capitalize;
+}
+
+.ayah-playing {
+    color: #2196f3;
+}
+
+/** Audio Playlist **/
+.mejs-list li:hover {
+  background: #ffa;
+  cursor: pointer;
+}
+.mejs-list li.current {
+  background: #cddfff;
+}
+.mejs-container {
+    position: relative;
+    background: #2196f3;
+    margin-top: 10px;
+}
+.playerBar{
+    background-color: white;
+}
+
+#surahConfigurator {
+    padding-top: 15px;
+
+}
+
+.surah-bracket-sign {
+    font-family: 'Simplified Arabic','Traditional Arabic','Simplified Arabic Fixed',KacstOne,'XP Vosta',Harmatta,'Iranian Sans','Arabic Typesetting',Scheherazade,Lateef,'Droid Arabic Naskh','Noto Naskh Arabic'; font-size: 125%">﴿</span> <?= $surah->data->name; ?> <span style="font-family: 'Simplified Arabic','Traditional Arabic','Simplified Arabic Fixed',KacstOne,'XP Vosta',Harmatta,'Iranian Sans','Arabic Typesetting',Scheherazade,Lateef,'Droid Arabic Naskh','Noto Naskh Arabic';
+    font-size: 125%;
+}
+
+.multiselect-container>li>a>label {
+    vertical-align: top;
+}
+
+.translationText {
+    font-size: 18px;
+}
+
+.juzCell a:hover, .juzCell:hover a, .juzCell p:hover a, .juzCell p a:hover, .juzCell p:hover a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.juzCell:hover {
+    background-color: #0c84e4;
+}
+
+.juzCell p {
+    margin-top: 15px;
+}
+
+.surahRow:hover {
+    background-color: #0c84e4;
+}
+
+.surahRow:hover a, .surahRow:hover a:hover, .surahRow a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+hr {
+    border-top: 1px #222 solid;
+}

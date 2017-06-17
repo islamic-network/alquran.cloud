@@ -1,0 +1,13 @@
+connections:
+    #    database:
+    #    host: 123.45.67.89
+    #    username: username
+    #    password: password
+    #    dbname: databasename
+    #    port: 3306
+    memcache:
+        host: 123.56.89.00
+        port: 12345
+
+#apikeys:
+#    google_geocoding: xxxxxxxx

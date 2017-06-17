@@ -1,5 +1,5 @@
-<?php require_once('../vendor/alquran/alquran-cloud-template/template/header.php'); ?>
-<?php require_once('../vendor/alquran/alquran-cloud-template/template/navigation.php'); ?>
+<?php require_once('common/header.php'); ?>
+<?php require_once('common/navigation.php'); ?>
 <?php // ================================================================ // ?>
 <?php use AlQuranCloud\Renderer\Ayah; ?>
 <?php use AlQuranCloud\Renderer\Generic; ?>
@@ -10,7 +10,7 @@
 		بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
 	</div>
 	<hr />
-	<?php 
+	<?php
 	$ayahs = (array) $juz->data->ayahs;
 	if (isset($juzEdition)) {
 		$ayahEditions = (array) $juzEdition->data->ayahs;
@@ -29,8 +29,10 @@
 	<hr />
 </div>
 
-<div class="row" id="surahConfigurator" style="padding: 10px 7% 0 7%;">
-	<div class="col-md-3">
+<div class="playerBar" style="bottom: 0; margin-bottom: 60px; position: fixed; width: 100%; z-index: 1000;">
+<div class="container">
+<div class="row" id="surahConfigurator">
+	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 		<form>
 			<div class="form-group">
 				<select id="juzSelector" name="juzSelector" title="Select Juz" class="form-control" >
@@ -41,8 +43,8 @@
 			</div>
 		</form>
 	</div>
-	<div class="col-md-5 align-center">
-		<form>
+	<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+		<form class="form-inline align-center">
 			<div class="form-group">
 				<label for="v">Show translation </label>
 				<select id="editionSelector" name="editionSelector" multiple="multiple" title="Select Language" class="form-control" >
@@ -57,11 +59,11 @@
 			</div>
 		</form>
 	</div>
-	<div class="col-md-4 align-right rtl">
+	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 	<audio id="juzPlayer" controls="controls" class="align-right rtl">
 		<?php if ($juz->data->number != 1) { ?>
 			<source src="//cdn.alquran.cloud/media/audio/ayah/ar.alafasy/1/high" title="Bismillah" type="audio/mp3"/>
-		<?php } 
+		<?php }
 		$currentSurah = $juz->data->ayahs[0]->surah->number;
 		foreach ($juz->data->ayahs as $ayah) {
 			if ($ayah->surah->number > $currentSurah) {
@@ -73,6 +75,9 @@
 	</audio>
 	</div>
 </div>
+</div>
+</div>
+
 
 <script src="//cdn.alquran.cloud/public/libraries/mediaelementjs-2.21.2/build/mediaelement-and-player.js"></script>
 <script src="//cdn.alquran.cloud/public/libraries/mep-feature-playlist/mep-feature-playlist.js"></script>
@@ -81,15 +86,15 @@
 <script>
 $(function() {
 	var player = $.alQuranMediaPlayer.getJuzPlayer('#juzPlayer');
-	$('#editionSelector').multiselect({ enableFiltering: true, enableCaseInsensitiveFiltering: true  });
+	$('#editionSelector').multiselect({ enableFiltering: true, enableCaseInsensitiveFiltering: true, dropUp: true, maxHeight: 400  });
 	$.alQuranJuz.editions('#editionSelector', '<?= $juz->data->number; ?>');
 	$.alQuranJuz.juzs('#juzSelector');
 	$.alQuranJuz.playThisAyah(player);
 	$.alQuranJuz.zoomIntoThisAyah();
-	
+
 });
 </script>
 
 
 <?php // ================================================================ // ?>
-<?php require_once('../vendor/alquran/alquran-cloud-template/template/footer.php'); ?>
+<?php require_once('common/footer.php'); ?>

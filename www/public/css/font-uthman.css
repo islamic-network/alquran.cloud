@@ -1,0 +1,8 @@
+@font-face {
+    font-family: Uthmani;
+    src: url("//cdn.alquran.cloud/public/fonts/uthman_tn09.otf") format("opentype");
+}
+
+.font-uthmani {
+  font-family: 'Uthmani', serif;
+}

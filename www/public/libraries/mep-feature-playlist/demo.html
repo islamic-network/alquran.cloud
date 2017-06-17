@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MediaElements Playlist</title>
+  
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1.10.2/jquery-1.10.2.min.js">
+  </script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/mediaelement/2.13.1/mediaelement-and-player.min.js"></script>
+<script type="text/javascript" src="mep-feature-playlist.js"></script>
+
+<link type="text/css" rel="stylesheet" href="http://cdn.jsdelivr.net/mediaelement/2.13.1/mediaelementplayer.min.css" />
+<link type="text/css" rel="stylesheet" href="mep-feature-playlist.css" />
+
+<style>
+body{
+    font-family:arial;
+}
+    #mediawrapper{
+
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:30px;
+    width:430px;
+    }
+    h1{
+        text-align: center;
+    }
+
+    .tagline{
+        text-align: center;
+    }
+
+
+</style>
+
+<script>
+    $(function(){
+        $('video,audio').mediaelementplayer({
+                   loop: true,
+        shuffle: true,
+        playlist: true,
+        audioHeight: 30,
+        playlistposition: 'bottom',
+        features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'loop', 'shuffle', 'playlist', 'current', 'progress', 'duration', 'volume'],
+            keyActions: []
+        });
+
+ 
+
+    });
+
+</script>
+
+
+<style id="jsbin-css">
+
+</style>
+</head>
+
+<body>
+  
+    <h1>MediaElement.js Player Plugin</h1>
+    <div class="tagline">The ultimate plugin of <a href="http://mediaelementjs.com" title="Uh yes, I don't say">mediaelement.js</a></div>
+    <br/> <!-- !sorry if this looks ugly -->
+ 
+    <br/>
+    <div id="mediawrapper">
+
+
+    <audio id="mejs" type="audio/mp3" controls="controls">
+ <Source src="http://www.mediaelementjs.com/media/AirReview-Landmarks-02-ChasingCorporate.mp3" title="Air Review - Chasing Corporate"></Source>
+ <Source src="http://www.mediaelementjs.com/media/AirReview-Landmarks-04-AllBecauseYoureMine.mp3" title="Air Review - All Because You're Mine"></Source>
+        <Source src="http://k003.kiwi6.com/hotlink/9ucf2r3yo6/chasing_cars_cover_chris_-_for_hollie_s_cover.mp3" title="Chris - Chasing Cars(Cover)"></Source>
+        <Source src="http://k004.kiwi6.com/hotlink/vvy55kc7c5/new_distance.mp3" title="SmallCityLights - New Distance"></Source>
+        <Source src="http://k003.kiwi6.com/hotlink/0c2q7je6rn/i_got_you.mp3" title="Jamie Ray - I got you"></Source>
+        <Source src="http://k006.kiwi6.com/hotlink/081qjgl6pt/when_you_re_gone_cover_chris_.mp3" title="Chris - When You're Gone Cover"></Source>
+        <Source src="http://www.miaowmusic.com/mp3/Miaow-07-Bubble.mp3" title="Miaow - Bubble"></Source>
+       
+    </audio>
+     
+
+
+    </div>
+
+
+     <a href="https://github.com/jeremejazz/mep-feature-playlist/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+</body>
+</html>

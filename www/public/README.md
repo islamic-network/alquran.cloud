@@ -1,0 +1,1 @@
+This folder contains all files and folders accessible directly via the internet.

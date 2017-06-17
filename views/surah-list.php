@@ -1,5 +1,5 @@
-<?php require_once('../vendor/alquran/alquran-cloud-template/template/header.php'); ?>
-<?php require_once('../vendor/alquran/alquran-cloud-template/template/navigation.php'); ?>
+<?php require_once('common/header.php'); ?>
+<?php require_once('common/navigation.php'); ?>
 <?php // ================================================================ // ?>
 <?php use AlQuranCloud\Renderer\Generic; ?>
 
@@ -26,7 +26,7 @@
 		<div class="col-md-6 rtl">
 			<a href="/surah/<?= $surah->number; ?>">
 				<p class="lead"><?= $surah->name; ?></p>
-				<?= Generic::latinToArabicNumerals($surah->numberOfAyahs); ?> آيات 
+				<?= Generic::latinToArabicNumerals($surah->numberOfAyahs); ?> آيات
 			</a>
 		</div>
 	</div>
@@ -35,4 +35,4 @@
 
 
 <?php // ================================================================ // ?>
-<?php require_once('../vendor/alquran/alquran-cloud-template/template/footer.php'); ?>
+<?php require_once('common/footer.php'); ?>

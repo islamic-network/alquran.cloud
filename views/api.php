@@ -1,5 +1,5 @@
-<?php require_once('../vendor/alquran/alquran-cloud-template/template/header.php'); ?>
-<?php require_once('../vendor/alquran/alquran-cloud-template/template/navigation.php'); ?>
+<?php require_once('common/header.php'); ?>
+<?php require_once('common/navigation.php'); ?>
 <?php // ================================================================ // ?>
 <div class="container">
     <div class="lead font-uthmani align-center">
@@ -427,5 +427,5 @@
 </div>
 
 <?php // ================================================================ // ?>
-<?php require_once('../vendor/alquran/alquran-cloud-template/template/footer.php'); ?>
+<?php require_once('common/footer.php'); ?>
 
