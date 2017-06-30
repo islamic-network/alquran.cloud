@@ -24,7 +24,7 @@
             <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
                     <p>
-                        All these endpoints give you a JSON object describing an edition. From this object, you need to use the identifer to get data from other endpoints in this API. For any of the endpoints that require an edition identifier, if you do not specify one, 'quran-simple' is used and returns the Arabic text of the Holy Quran.
+                        All these endpoints give you a JSON object describing an edition. From this object, you need to use the identifer to get data from other endpoints in this API. For any of the endpoints that require an edition identifier, if you do not specify one, 'quran-uthmani' is used and returns the Arabic text of the Holy Quran.
                     </p>
                     <div class="row">
                         <div class="col-md-4 bold">
@@ -174,7 +174,7 @@
                         <div class="col-md-4">
                             <ol>
                                 <li><a href="http://api.alquran.cloud/quran/en.asad" target="_blank">http://api.alquran.cloud/quran/en.asad</a> - (Text) Returns Muhammad Asad's translation of the Holy Quran</li>
-                                <li><a href="http://api.alquran.cloud/quran/quran-simple" target="_blank">http://api.alquran.cloud/quran/quran-simple</a> - (Text) Returns the text of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/quran/quran-uthmani" target="_blank">http://api.alquran.cloud/quran/quran-uthmani</a> - (Text) Returns the text of the Holy Quran</li>
                                 <li><a href="http://api.alquran.cloud/quran/ar.alafasy" target="_blank">http://api.alquran.cloud/quran/ar.alafasy</a> - (Audio) Returns Mishary Alafasy's recitation of the Quran</li>
                             </ol>
                         </div>
@@ -225,8 +225,8 @@
                         <div class="col-md-4">
                             <ol>
                                 <li><a href="http://api.alquran.cloud/juz/30/en.asad" target="_blank">http://api.alquran.cloud/juz/30/en.asad</a> - Returns Juz 30 from Muhammad Asad's translation of the Holy Quran</li>
-                                <li><a href="http://api.alquran.cloud/juz/30/quran-simple" target="_blank">http://api.alquran.cloud/juz/30/quran-simple</a> - Returns the text of Juz 30 the Holy Quran</li>
-                                <li><a href="http://api.alquran.cloud/juz/1/quran-simple?offset=3&limit=10" target="_blank">http://api.alquran.cloud/juz/1/quran-simple?offset=3&limit=10</a> - Returns the the ayahs 4-13 from Juz 1</li>
+                                <li><a href="http://api.alquran.cloud/juz/30/quran-uthmani" target="_blank">http://api.alquran.cloud/juz/30/quran-uthmani</a> - Returns the text of Juz 30 the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/juz/1/quran-uthmani?offset=3&limit=10" target="_blank">http://api.alquran.cloud/juz/1/quran-uthmani?offset=3&limit=10</a> - Returns the the ayahs 4-13 from Juz 1</li>
                             </ol>
                         </div>
                     </div>
@@ -309,7 +309,7 @@
                         <div class="col-md-4">
                             <ol>
                                 <li>
-                                    <a href="http://api.alquran.cloud/surah/114/editions/quran-simple,en.asad,en.pickthall" target="_blank">http://api.alquran.cloud/surah/114/editions/quran-simple,en.asad,en.pickthall</a> - Returns Surat An-Naas from 3 editions: Simple Quran, Muhammad Asad and Marmaduke Pickthall
+                                    <a href="http://api.alquran.cloud/surah/114/editions/quran-uthmani,en.asad,en.pickthall" target="_blank">http://api.alquran.cloud/surah/114/editions/quran-uthmani,en.asad,en.pickthall</a> - Returns Surat An-Naas from 3 editions: Simple Quran, Muhammad Asad and Marmaduke Pickthall
                                 </li>
                             </ol>
                         </div>
@@ -370,7 +370,7 @@
                         </div>
                         <div class="col-md-4">
                             <ol>
-                                <li><a href="http://api.alquran.cloud/ayah/262/editions/quran-simple,en.asad,en.pickthall" target="_blank">http://api.alquran.cloud/ayah/262/editions/quran-simple,en.asad,en.pickthall</a> - (Text) Returns Ayat Al Kursi from 3 editions: Simple Quran, Muhammad Asad and Maramduke Pickthall</li>
+                                <li><a href="http://api.alquran.cloud/ayah/262/editions/quran-uthmani,en.asad,en.pickthall" target="_blank">http://api.alquran.cloud/ayah/262/editions/quran-uthmani,en.asad,en.pickthall</a> - (Text) Returns Ayat Al Kursi from 3 editions: Simple Quran, Muhammad Asad and Maramduke Pickthall</li>
                             </ol>
                         </div>
                     </div>
