@@ -6,7 +6,7 @@
         بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
     </div>
     <h4>
-        Quran API Documentation  
+        Quran API Documentation
     </h4>
     <p>
         The following endpoints are supported by the Quran API. They all support the HTTP GET method and return JSON.    </p>
@@ -48,7 +48,7 @@
                                 <li>format -  Specify a format. 'text' or 'audio</li>
                                 <li>language - A 2 digit language code. Example: 'en', 'fr', etc.</li>
                                 <li>type - A valid type. Example - 'versebyverse', 'translation' etc.</li>
-                                
+
                             </ul>
                         </div>
                         <div class="col-md-4">
@@ -60,9 +60,9 @@
                                 <a href="http://api.alquran.cloud/edition?format=audio&language=fr&type=versebyverse" target="_blank">http://api.alquran.cloud/edition?format=audio&language=fr&type=versebyverse</a> - Lists all audio editions in french of the versebyverse type
                                 </li>
                             </ol>
-                            
-                            
-                            
+
+
+
                         </div>
                     </div>
                      <div class="row">
@@ -137,7 +137,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="panel panel-primary">
             <div class="panel-heading" role="tab" id="headingTwo">
                 <h4 class="panel-title">
@@ -180,7 +180,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="panel panel-primary">
             <div class="panel-heading" role="tab" id="headingThree">
                 <h4 class="panel-title">
@@ -216,7 +216,7 @@
                             </p>
                             <b>Optional Parameters:</b>
                             <ul>
-                               <li>offset - Offset ayahs in a juz by the given number</li> 
+                               <li>offset - Offset ayahs in a juz by the given number</li>
                                 <li>limit - This is the number of ayahs that the response will be limited to.</li>
                             </ul>
                         </div>
@@ -231,7 +231,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="panel panel-primary">
             <div class="panel-heading" role="tab" id="headingFour">
                 <h4 class="panel-title">
@@ -264,7 +264,7 @@
                             {{edition}} is an edition identifier. Example: en.asad for Muhammad Asad's english translation
                             <b>Optional Parameters:</b>
                             <ul>
-                               <li>offset - Offset ayahs in a juz by the given number</li> 
+                               <li>offset - Offset ayahs in a juz by the given number</li>
                                 <li>limit - This is the number of ayahs that the response will be limited to.</li>
                             </ul>
                         </div>
@@ -315,7 +315,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="panel panel-primary">
             <div class="panel-heading" role="tab" id="headingFive">
                 <h4 class="panel-title">
@@ -375,7 +375,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="panel panel-primary">
             <div class="panel-heading" role="tab" id="headingSix">
                 <h4 class="panel-title">
@@ -448,7 +448,7 @@
             </div>
             <div id="collapseChina" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingChina">
                 <div class="panel-body">
-                    <b>http://api.quran.2muslim.org</b> - Available over http and https - licensed and based in China. This is a single instance endpoint - if you expect heavy usage, use the European endpoint for contact us, please. This instance has been kindly provided by ZhongMuWang（中穆网).
+                    <b>http://api.quran.2muslim.org</b> - Available over http and https - licensed and based in China. This is a single instance endpoint - if you expect heavy usage, use the European endpoint or contact us, please. This instance has been kindly provided by ZhongMuWang（中穆网).
                 </div>
             </div>
         </div>
@@ -457,4 +457,3 @@
 
 <?php // ================================================================ // ?>
 <?php require_once('common/footer.php'); ?>
-
