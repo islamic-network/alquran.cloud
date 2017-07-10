@@ -26,6 +26,7 @@
                     <li><a href="/api">API Documentation</a></li>
                     <li><a href="/cdn">Content Delivery Network</a></li>
                     <li><a href="/api-clients">API Clients</a></li>
+                    <li><a href="/tajweed-guide">Tajweed Guide</a></li>
                     <li><a href="/download-media">Download Quran Media</a></li>
                 </ul>
             </li>

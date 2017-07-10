@@ -30,7 +30,7 @@ $app->get('/api', function ($request, $response, $args) {
     return $this->view->render($response, 'api.php', [
         'pageTitle' => 'Quran API',
 		'metaDescription' => 'A RESTful Quran API to retrieve an Ayah, Surah, Juz or the enitre Holy Quran',
-		'view' => 'home'
+		'view' => 'api'
     ]);
 });
 
@@ -47,7 +47,7 @@ $app->get('/cdn', function ($request, $response, $args) {
     return $this->view->render($response, 'cdn.php', [
         'pageTitle' => 'Al Quran Cloud Content Delivery Network',
 		'metaDescription' => 'The Al Quran Cloud Content Delivery Network for Quran Recitation Audio Files and Quran Ayah Images',
-		'view' => 'home'
+		'view' => 'api'
     ]);
 });
 
@@ -55,7 +55,7 @@ $app->get('/api-clients', function ($request, $response, $args) {
     return $this->view->render($response, 'api-client.php', [
         'pageTitle' => 'Al Quran Cloud API Clients',
 		'metaDescription' => 'API Clients and Code Samples to interact with the API',
-		'view' => 'home'
+		'view' => 'api'
     ]);
 });
 
@@ -63,7 +63,15 @@ $app->get('/download-media', function ($request, $response, $args) {
     return $this->view->render($response, 'download-media.php', [
         'pageTitle' => 'Download Media',
 		'metaDescription' => 'Download Audio Files and Quran Ayah Images',
-		'view' => 'home'
+		'view' => 'api'
+    ]);
+});
+
+$app->get('/tajweed-guide', function ($request, $response, $args) {
+    return $this->view->render($response, 'tajweed-guide.php', [
+        'pageTitle' => 'Tajweed Guide',
+		'metaDescription' => 'How to Parse and Dispaly Quran Tajweed text',
+		'view' => 'api'
     ]);
 });
 
