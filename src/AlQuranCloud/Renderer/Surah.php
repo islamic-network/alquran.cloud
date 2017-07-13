@@ -31,7 +31,7 @@ class Surah
 		foreach ($ayahs as $key => $ayah) {
 			$html .= '<p class="font-uthmani rtl style-ayah ayah' . $surah->data->number . '_' . $ayah->numberInSurah . '">';
 				if ($surah->data->number > 1 && $surah->data->number != 9 && $ayah->numberInSurah == 1) {
-					$html .= str_replace('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', '', $ayah->text);
+					$html .= str_replace('بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ', '', $ayah->text);
 				} else {
 					$html .= $ayah->text;
 				}

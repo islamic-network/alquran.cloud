@@ -4,19 +4,19 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b346f31eff1ec73cd3d931463d8029c",
+    "content-hash": "4f20b49ab178b34cebf05c32f1463767",
     "packages": [
         {
             "name": "alquran/api-client",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/meezaan/alquran-api-client-php.git",
+                "url": "https://github.com/islamic-apps/alquran-api-client-php.git",
                 "reference": "32479cde21cfef10784aecc5b476292d96ce874b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/meezaan/alquran-api-client-php/zipball/32479cde21cfef10784aecc5b476292d96ce874b",
+                "url": "https://api.github.com/repos/islamic-apps/alquran-api-client-php/zipball/32479cde21cfef10784aecc5b476292d96ce874b",
                 "reference": "32479cde21cfef10784aecc5b476292d96ce874b",
                 "shasum": ""
             },
@@ -50,13 +50,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/meezaan/alquran-tools.git",
-                "reference": "cccbe0e52b56d302c3c2363a727b2c61ac825c68"
+                "url": "https://github.com/islamic-apps/alquran-tools.git",
+                "reference": "bd83c1a6a96bd1c1806d2ac5602ec8e12a0f8471"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/meezaan/alquran-tools/zipball/cccbe0e52b56d302c3c2363a727b2c61ac825c68",
-                "reference": "cccbe0e52b56d302c3c2363a727b2c61ac825c68",
+                "url": "https://api.github.com/repos/islamic-apps/alquran-tools/zipball/bd83c1a6a96bd1c1806d2ac5602ec8e12a0f8471",
+                "reference": "bd83c1a6a96bd1c1806d2ac5602ec8e12a0f8471",
                 "shasum": ""
             },
             "type": "library",
@@ -73,7 +73,7 @@
                 }
             ],
             "description": "Various tools to parse and process Quran Text",
-            "time": "2017-07-10 10:34:57"
+            "time": "2017-07-10 11:54:37"
         },
         {
             "name": "container-interop/container-interop",
@@ -734,6 +734,8 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^7.0"
+    },
     "platform-dev": []
 }

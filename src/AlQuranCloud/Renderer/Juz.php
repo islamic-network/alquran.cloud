@@ -11,7 +11,7 @@ class Juz
 		foreach ($ayahs as $key => $ayah) {
 			$html .= '<p class="font-uthmani rtl style-ayah ayah' . $juz->data->number . '_' . $ayah->number . '">';
 				if ($ayah->surah->number > 1 && $ayah->surah->number != 9 && $ayah->numberInSurah == 1) {
-					$html .= str_replace('بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', '', $ayah->text);
+					$html .= str_replace('بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ', '', $ayah->text);
 				} else {
 					$html .= $ayah->text;
 				}
