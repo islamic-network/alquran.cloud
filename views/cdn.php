@@ -6,10 +6,12 @@
         بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
     </div>
     <h4>
-        Al Quran Content Delivery Network (CDN) 
+        Al Quran Content Delivery Network (CDN)
     </h4>
     <p>
-        The Al Quran cloud provies an open CDN to serve audio files and Quran ayah images to allow you integrate media into your app. This media can be accessed using the information below. 
+        Al Quran Cloud provdies an open CDN to serve audio files and Quran ayah images to allow you
+        integrate media into your app. The CDN is powered by Beluga CDN - so it's more than just a CDN by name.
+        The documentation below explains how to access the media. 
     </p>
 
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -25,7 +27,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <p>
-                                Audio files can be accessed via the CDN using the following URL:    
+                                Audio files can be accessed via the CDN using the following URL:
                             </p>
                             <code>
                                 http://cdn.alquran.cloud/media/audio/ayah/{edition}/{number}/{quality}
@@ -42,7 +44,7 @@
                                 </li>
                             </ul>
                              <p>
-                                Examples:    
+                                Examples:
                             </p>
                             <ul>
                                 <li><a href="http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/262" target="_blank">http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/262</a></li>
@@ -54,7 +56,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="panel panel-primary">
             <div class="panel-heading" role="tab" id="headingTwo">
                 <h4 class="panel-title">
@@ -67,7 +69,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <p>
-                               Image files can be accessed via the CDN using the following URL:    
+                               Image files can be accessed via the CDN using the following URL:
                             </p>
                             <code>
                                 http://cdn.alquran.cloud/media/image/{surah}/{ayah}
@@ -81,7 +83,7 @@
                                 </li>
                             </ul>
                             <p>
-                                Examples:    
+                                Examples:
                             </p>
                             <ul>
                                 <li><a href="http://cdn.alquran.cloud/media/image/2/255" target="_blank">http://cdn.alquran.cloud/media/image/2/255</a></li>
@@ -92,10 +94,9 @@
                 </div>
             </div>
         </div>
-               
+
     </div>
 </div>
 
 <?php // ================================================================ // ?>
 <?php require_once('common/footer.php'); ?>
-
