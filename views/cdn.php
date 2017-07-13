@@ -10,7 +10,7 @@
     </h4>
     <p>
         Al Quran Cloud provides an open CDN to serve audio files and Quran ayah images to allow you
-        integrate media into your app. The documentation below explains how to access the media. 
+        integrate media into your app. The documentation below explains how to access the media. Please note that CDN is available over http and https. 
     </p>
 
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
