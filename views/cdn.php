@@ -9,9 +9,8 @@
         Al Quran Content Delivery Network (CDN)
     </h4>
     <p>
-        Al Quran Cloud provdies an open CDN to serve audio files and Quran ayah images to allow you
-        integrate media into your app. The CDN is powered by Beluga CDN - so it's more than just a CDN by name.
-        The documentation below explains how to access the media. 
+        Al Quran Cloud provides an open CDN to serve audio files and Quran ayah images to allow you
+        integrate media into your app. The documentation below explains how to access the media. 
     </p>
 
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
