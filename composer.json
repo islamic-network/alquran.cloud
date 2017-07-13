@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "php": "^7.0",
         "slim/slim": "^3.0",
         "monolog/monolog": "~1.17",
         "slim/php-view": "^2.1",
