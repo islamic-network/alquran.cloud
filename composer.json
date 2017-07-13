@@ -2,10 +2,6 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/meezaan/alquran-cloud-template.git"
-        },
-        {
-            "type": "vcs",
             "url": "git@github.com:meezaan/alquran-api-client-php.git"
         }
     ],
