@@ -104,7 +104,7 @@
 <script>
 $(function() {
 	var player = $.alQuranMediaPlayer.getAyahPlayer('#ayahPlayer');
-	$('#editionSelector').multiselect({ enableFiltering: true, enableCaseInsensitiveFiltering: true  });
+	$('#editionSelector').multiselect({ enableFiltering: true, enableCaseInsensitiveFiltering: true, dropUp: true, maxHeight: 400  });
 	$.alQuranAyah.init('#editionSelector', '<?= $ayah->data->number; ?>');
 
 });
