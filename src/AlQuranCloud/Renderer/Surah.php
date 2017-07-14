@@ -30,8 +30,8 @@ class Surah
 		$html = '';
 		foreach ($ayahs as $key => $ayah) {
 			$html .= '<p class="font-uthmani rtl style-ayah ayah' . $surah->data->number . '_' . $ayah->numberInSurah . '">';
-				if ($surah->data->number > 1 && $surah->data->number != 9 && $ayah->numberInSurah == 1) {
-					$html .= str_replace('بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ', '', $ayah->text);
+            if ($surah->data->number > 1 && $surah->data->number != 9 && $ayah->numberInSurah == 1) {
+					$html .= mb_substr($ayah->text, 39);
 				} else {
 					$html .= $ayah->text;
 				}

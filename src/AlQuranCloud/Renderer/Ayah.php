@@ -22,7 +22,7 @@ class Ayah
 		</span>
         ';
     }
-    
+
     public static function renderAyahEndingInLatin($number)
     {
         return '<span class="ayah-ending">&#1757;
@@ -33,12 +33,12 @@ class Ayah
 		</span>
         ';
     }
-	
+
 	public static function renderAyahReferenceInArabic($surah, $ayahNumber)
 	{
 		return Generic::latinToArabicNumerals($surah . ':' . $ayahNumber);
 	}
-	
+
 	public static function renderAyahReferenceInLatin($surah, $ayahNumber)
 	{
 		return $surah . ':' . $ayahNumber;

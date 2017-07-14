@@ -69,7 +69,7 @@ body {
   width: 90%;
   height: 90%;
   position: absolute;
-  top: 8px;
+  top: 0px;
   left: 0;
   z-index: 10;
   margin-top: 25%;
@@ -81,9 +81,9 @@ body {
   width: 90%;
   height: 90%;
   position: absolute;
-  top: 8px;
+  top: 0px;
   left: 0;
-  right: 2px;
+  right: 5px;
   z-index: 10;
   margin-top: 25%;
   margin-right: 20%;
@@ -94,11 +94,11 @@ body {
   width: 90%;
   height: 90%;
   position: absolute;
-  top: 8px;
+  top: 0px;
   right: 1px;
   left: 0;
   z-index: 10;
-  margin-top: 30%;
+  margin-top: 25%;
   margin-right: 20%;
   font-size: 60%;
 }

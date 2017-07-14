@@ -33,7 +33,7 @@ class Quran
 
 			$html .= '<p class="font-uthmani rtl style-ayah ayah' . $surah->number . '_' . $ayah->numberInSurah . '">';
 				if ($surah->number > 1 && $surah->number != 9 && $ayah->numberInSurah == 1) {
-					$html .= str_replace('بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ', '', $ayah->text);
+					$html .= mb_substr($ayah->text, 39);
 				} else {
 					$html .= $ayah->text;
 				}
