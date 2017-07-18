@@ -31,7 +31,7 @@
             an ayah, surah, juz or the entire Quran.
         </p>
         <p>
-            <a href="/quran" class="btn btn-primary">Read the Quran</a>
+            <a href="/read" class="btn btn-primary">Read the Quran</a>
         </p>
     </div>
 
