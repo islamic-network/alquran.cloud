@@ -20,14 +20,14 @@ $app->get('/quran', function ($request, $response, $args) {
 		'editions' => [
 			'editions' => $this->client->AlQuranCloudApi->editions(null, null, 'text'),
 		],
-		'view' => 'home'
+		'view' => 'read'
     ]);
 });
 
 $app->get('/quran/{edition}', function ($request, $response, $args) {
 
 	$edition = $request->getAttribute('edition');
-	
+
     return $this->view->render($response, 'quran.php', [
         'pageTitle' => 'Al Quran Cloud',
 		'metaDescription' => 'AlQuran Cloud',
@@ -37,6 +37,6 @@ $app->get('/quran/{edition}', function ($request, $response, $args) {
 		'editions' => [
 			'editions' => $this->client->AlQuranCloudApi->editions(null, null, 'text'),
 		],
-		'view' => 'home'
+		'view' => 'read'
     ]);
 });

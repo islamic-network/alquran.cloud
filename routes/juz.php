@@ -6,12 +6,12 @@ $app->get('/juzs', function ($request, $response, $args) {
     return $this->view->render($response, 'juz-list.php', [
         'pageTitle' => 'Quran Juz',
 		'metaDescription' => 'AlQuran Cloud',
-		'view' => 'read'
+		'view' => 'juz'
     ]);
 });
 
 $app->get('/juz', function ($request, $response, $args) {
-	
+
 	//$this->logger->info('test', ['1']);
     return $this->view->render($response, 'juz.php', [
         'pageTitle' => 'Quran - Juz 1',
@@ -20,12 +20,12 @@ $app->get('/juz', function ($request, $response, $args) {
 		'editions' => [
 			'editions' => $this->client->AlQuranCloudApi->editions(null, null, 'text'),
 		],
-		'view' => 'home'
+		'view' => 'juz'
     ]);
 });
 
 $app->get('/juz/{reference}', function ($request, $response, $args) {
-	
+
 	//$this->logger->info('test', ['1']);
 	$reference = $request->getAttribute('reference');
 	$juz = $this->client->AlQuranCloudApi->juz($reference, 'quran-uthmani');
@@ -36,12 +36,12 @@ $app->get('/juz/{reference}', function ($request, $response, $args) {
 		'editions' => [
 			'editions' => $this->client->AlQuranCloudApi->editions(null, null, 'text'),
 		],
-		'view' => 'home'
+		'view' => 'juz'
     ]);
 });
 
 $app->get('/juz/{reference}/{edition}', function ($request, $response, $args) {
-	
+
 	$reference = $request->getAttribute('reference');
 	$edition = $request->getAttribute('edition');
 	$juz = $this->client->AlQuranCloudApi->juz($reference, 'quran-uthmani');
@@ -54,6 +54,6 @@ $app->get('/juz/{reference}/{edition}', function ($request, $response, $args) {
 		'editions' => [
 			'editions' => $this->client->AlQuranCloudApi->editions(null, null, 'text'),
 		],
-		'view' => 'home'
+		'view' => 'juz'
     ]);
 });

@@ -1,8 +1,8 @@
 <footer class="footer"  style="position: fixed; margin-top: 20px; border-top: 1px #ccc solid;">
-    <div class="container">
+    <!--<div class="container">-->
         <div class="row">
             <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
-                <p class="" style="margin-top: 20px;">
+                <p class="" style="margin-top: 20px; margin-left: 10px;">
             &copy; <?php echo date('Y'); ?> Respective <a href="http://alquran.cloud/contributors">contributors</a>.
                 </p>
             </div>
@@ -16,7 +16,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    <!--</div>-->
 </div>
 
 

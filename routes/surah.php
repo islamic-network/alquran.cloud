@@ -7,7 +7,7 @@ $app->get('/surahs', function ($request, $response, $args) {
     return $this->view->render($response, 'surah-list.php', [
         'pageTitle' => 'Surahs of the Quran',
 		'metaDescription' => 'AlQuran Cloud',
-		'view' => 'read',
+		'view' => 'surah',
 		'suwar' => $this->client->AlQuranCloudApi->surahs()
     ]);
 });
@@ -24,7 +24,7 @@ $app->get('/surah', function ($request, $response, $args) {
 		'editions' => [
 			'editions' => $this->client->AlQuranCloudApi->editions(null, null, 'text'),
 		],
-		'view' => 'home'
+		'view' => 'surah'
     ]);
 });
 
@@ -40,7 +40,7 @@ $app->get('/surah/{reference}', function ($request, $response, $args) {
 		'editions' => [
 			'editions' => $this->client->AlQuranCloudApi->editions(null, null, 'text'),
 		],
-		'view' => 'home'
+		'view' => 'surah'
     ]);
 });
 
@@ -58,6 +58,6 @@ $app->get('/surah/{reference}/{edition}', function ($request, $response, $args) 
 		'editions' => [
 			'editions' => $this->client->AlQuranCloudApi->editions(null, null, 'text'),
 		],
-		'view' => 'home'
+		'view' => 'surah'
     ]);
 });

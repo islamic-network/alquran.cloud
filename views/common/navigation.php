@@ -1,5 +1,5 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+      <!--<div class="container">-->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -11,21 +11,21 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
-                  <a class="navbar-brand font-uthmani rtl" href="https://alquran.cloud">الْقُرْآن الْكَرِيْم</a>
+                  <a class="navbar-brand font-uthmani rtl" style="margin-right: 10px;" href="https://alquran.cloud">الْقُرْآن الْكَرِيْم</a>
               </li>
           </ul>
           <ul class="nav navbar-nav">
             <li class="<?= $view == 'home' ? 'active' : ''; ?>"><a href="https://alquran.cloud">Home</a></li>
-            <li><a href="/read" >Quran</a></li>
-            <li><a href="/juzs">Juz</a></li>
-            <li><a href="/surahs">Surah</a></li>
-            <li><a href="/ayah">Ayah</a></li>
+            <li class="<?= $view == 'read' ? 'active' : ''; ?>"><a href="/read" >Quran</a></li>
+            <li class="<?= $view == 'juz' ? 'active' : ''; ?>"><a href="/juzs">Juz</a></li>
+            <li class="<?= $view == 'surah' ? 'active' : ''; ?>"><a href="/surahs">Surah</a></li>
+            <li class="<?= $view == 'ayah' ? 'active' : ''; ?>"><a href="/ayah">Ayah</a></li>
             <li class="dropdown <?= $view == 'api' ? 'active' : ''; ?>">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="/api">API Documentation</a></li>
                     <li><a href="/cdn">Content Delivery Network</a></li>
-                    <li><a href="/api-clients">API Clients</a></li>
+                    <!--<li><a href="/api-clients">API Clients</a></li>-->
                     <li><a href="/tajweed-guide">Tajweed Guide</a></li>
                     <li><a href="/download-media">Download Quran Media</a></li>
                 </ul>
@@ -42,5 +42,5 @@
             </form>
 
         </div>
-      </div>
+      <!--</div>-->
   </nav>

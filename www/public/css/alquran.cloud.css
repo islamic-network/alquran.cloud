@@ -1,7 +1,10 @@
 body {
 
 }
-
+div.container {
+    background-color: white;
+    opacity: 0.9;
+}
 .align-center {
     text-align: center;
 }

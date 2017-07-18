@@ -73,6 +73,6 @@ $app->get('/search', function ($request, $response, $args) {
         'editions' => [
             'editions' => $this->client->AlQuranCloudApi->editions(null, null, 'text')
         ],
-        'view' => 'home'
+        'view' => 'search'
     ]);
 });

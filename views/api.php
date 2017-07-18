@@ -223,7 +223,7 @@
                         <div class="col-md-4">
                             <ol>
                                 <li><a href="http://api.alquran.cloud/juz/30/en.asad" target="_blank">http://api.alquran.cloud/juz/30/en.asad</a> - Returns Juz 30 from Muhammad Asad's translation of the Holy Quran</li>
-                                <li><a href="http://api.alquran.cloud/juz/30/quran-uthmani" target="_blank">http://api.alquran.cloud/juz/30/quran-uthmani</a> - Returns the text of Juz 30 the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/juz/30/quran-uthmani" target="_blank">http://api.alquran.cloud/juz/30/quran-uthmani</a> - Returns the text of Juz 30 of the Holy Quran</li>
                                 <li><a href="http://api.alquran.cloud/juz/1/quran-uthmani?offset=3&limit=10" target="_blank">http://api.alquran.cloud/juz/1/quran-uthmani?offset=3&limit=10</a> - Returns the the ayahs 4-13 from Juz 1</li>
                             </ol>
                         </div>
@@ -420,6 +420,253 @@
                 </div>
             </div>
         </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading" role="tab" id="headingSeven">
+                <h4 class="panel-title">
+        <span class="label label-danger">GET</span> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">Manzil - Get a Manzil of the Quran
+        </a>
+      </h4>
+            </div>
+            <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                <div class="panel-body">
+                    <p>
+                        The Quran has 7 Manzils (for those who want to read / recite it over one week). You can get the text for each Manzil using the endpoint below.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-4 bold">
+                            Endpoint
+                        </div>
+                        <div class="col-md-4 bold">
+                            Description
+                        </div>
+                        <div class="col-md-4 bold">
+                            Example
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-4">
+                            1. http://api.alquran.cloud/manzil/{{manzil}}/{{edition}}
+                        </div>
+                        <div class="col-md-4">
+                            <p>
+                            Returns the requested manzil from a particular edition<br />
+                            {{edition}} is an edition identifier. Example: en.asad for Muhammad Asad's english translation
+                            </p>
+                            <b>Optional Parameters:</b>
+                            <ul>
+                               <li>offset - Offset ayahs in a manzil by the given number</li>
+                                <li>limit - This is the number of ayahs that the response will be limited to.</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ol>
+                                <li><a href="http://api.alquran.cloud/manzil/7/en.asad" target="_blank">http://api.alquran.cloud/manzil/7/en.asad</a> - Returns manzil 7 from Muhammad Asad's translation of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/manzil/7/quran-uthmani" target="_blank">http://api.alquran.cloud/manzil/7/quran-uthmani</a> - Returns the text of Manzil 7 of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/manzil/7/quran-uthmani?offset=3&limit=10" target="_blank">http://api.alquran.cloud/manzil/7/quran-uthmani?offset=3&limit=10</a> - Returns the the ayahs 4-13 from Manzil 7</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading" role="tab" id="headingEight">
+                <h4 class="panel-title">
+        <span class="label label-danger">GET</span> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="true" aria-controls="collapseEight">Ruku - Get a Ruku of the Quran
+        </a>
+        </h4>
+            </div>
+            <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                <div class="panel-body">
+                    <p>
+                        The Quran has 556 Rukus. You can get the text for each Ruku using the endpoint below.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-4 bold">
+                            Endpoint
+                        </div>
+                        <div class="col-md-4 bold">
+                            Description
+                        </div>
+                        <div class="col-md-4 bold">
+                            Example
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-4">
+                            1. http://api.alquran.cloud/ruku/{{ruku}}/{{edition}}
+                        </div>
+                        <div class="col-md-4">
+                            <p>
+                            Returns the requested ruku from a particular edition<br />
+                            {{edition}} is an edition identifier. Example: en.asad for Muhammad Asad's english translation
+                            </p>
+                            <b>Optional Parameters:</b>
+                            <ul>
+                               <li>offset - Offset ayahs in a ruku by the given number</li>
+                                <li>limit - This is the number of ayahs that the response will be limited to.</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ol>
+                                <li><a href="http://api.alquran.cloud/ruku/7/en.asad" target="_blank">http://api.alquran.cloud/ruku/7/en.asad</a> - Returns ruku 7 from Muhammad Asad's translation of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/ruku/7/quran-uthmani" target="_blank">http://api.alquran.cloud/ruku/7/quran-uthmani</a> - Returns the text of ruku 7 of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/ruku/7/quran-uthmani?offset=3&limit=3" target="_blank">http://api.alquran.cloud/ruku/7/quran-uthmani?offset=3&limit=3</a> - Returns the the ayahs 4-6 from ruku 7</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading" role="tab" id="headingNine">
+                <h4 class="panel-title">
+        <span class="label label-danger">GET</span> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="true" aria-controls="collapseNine">Page - Get a Page of the Quran
+        </a>
+        </h4>
+            </div>
+            <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                <div class="panel-body">
+                    <p>
+                        The Quran is traditional printed on 604 pages. You can get the text for each page using the endpoint below.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-4 bold">
+                            Endpoint
+                        </div>
+                        <div class="col-md-4 bold">
+                            Description
+                        </div>
+                        <div class="col-md-4 bold">
+                            Example
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-4">
+                            1. http://api.alquran.cloud/page/{{page}}/{{edition}}
+                        </div>
+                        <div class="col-md-4">
+                            <p>
+                            Returns the requested page from a particular edition<br />
+                            {{edition}} is an edition identifier. Example: en.asad for Muhammad Asad's english translation
+                            </p>
+                            <b>Optional Parameters:</b>
+                            <ul>
+                               <li>offset - Offset ayahs in a page by the given number</li>
+                                <li>limit - This is the number of ayahs that the response will be limited to.</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ol>
+                                <li><a href="http://api.alquran.cloud/page/1/en.asad" target="_blank">http://api.alquran.cloud/page/1/en.asad</a> - Returns page 1 from Muhammad Asad's translation of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/page/1/quran-uthmani" target="_blank">http://api.alquran.cloud/page/1/quran-uthmani</a> - Returns the text of page 1 of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/page/1/quran-uthmani?offset=2&limit=2" target="_blank">http://api.alquran.cloud/page/1/quran-uthmani?offset=2&limit=2</a> - Returns the the ayahs 3-4 from page 1</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="panel panel-primary">
+            <div class="panel-heading" role="tab" id="headingTen">
+                <h4 class="panel-title">
+        <span class="label label-danger">GET</span> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="true" aria-controls="collapseTen">Hizb Quarter - Get a Hizb Quarter of the Quran
+        </a>
+        </h4>
+            </div>
+            <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                <div class="panel-body">
+                    <p>
+                        The Quran comprises 240 Hizb Quarters. One Hizb is half a Juz.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-4 bold">
+                            Endpoint
+                        </div>
+                        <div class="col-md-4 bold">
+                            Description
+                        </div>
+                        <div class="col-md-4 bold">
+                            Example
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-4">
+                            1. http://api.alquran.cloud/hizbQuarter/{{hizb}}/{{edition}}
+                        </div>
+                        <div class="col-md-4">
+                            <p>
+                            Returns the requested Hizb Quarter from a particular edition<br />
+                            {{edition}} is an edition identifier. Example: en.asad for Muhammad Asad's english translation
+                            </p>
+                            <b>Optional Parameters:</b>
+                            <ul>
+                               <li>offset - Offset ayahs in a hizb quarter by the given number</li>
+                                <li>limit - This is the number of ayahs that the response will be limited to.</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ol>
+                                <li><a href="http://api.alquran.cloud/hizbQuarter/1/en.asad" target="_blank">http://api.alquran.cloud/hizbQuarter/1/en.asad</a> - Returns hizb quarter 1 from Muhammad Asad's translation of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/hizbQuarter/1/quran-uthmani" target="_blank">http://api.alquran.cloud/hizbQuarter/1/quran-uthmani</a> - Returns the text of hizb quarater 1 of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/hizbQuarter/1/quran-uthmani?offset=2&limit=2" target="_blank">http://api.alquran.cloud/hizbQuarter/1/quran-uthmani?offset=2&limit=2</a> - Returns the the ayahs 3-4 from hizb Quarter 1</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="panel panel-primary">
+            <div class="panel-heading" role="tab" id="headingEleven">
+                <h4 class="panel-title">
+        <span class="label label-danger">GET</span> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">Sajda - Get all verses requiring Sajda / Prostration in the Quran
+        </a>
+        </h4>
+            </div>
+            <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                <div class="panel-body">
+                    <p>
+                        Depending on the madhab, there can be 14, 15 or 16 sajdas. This API has 15.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-4 bold">
+                            Endpoint
+                        </div>
+                        <div class="col-md-4 bold">
+                            Description
+                        </div>
+                        <div class="col-md-4 bold">
+                            Example
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-4">
+                            1. http://api.alquran.cloud/sajda/{{edition}}
+                        </div>
+                        <div class="col-md-4">
+                            <p>
+                            Returns all the sajda ayahs from a particular edition<br />
+                            {{edition}} is an edition identifier. Example: en.asad for Muhammad Asad's english translation
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <ol>
+                                <li><a href="http://api.alquran.cloud/sajda/en.asad" target="_blank">http://api.alquran.cloud/sajda/en.asad</a> - Returns sajda ayahs from Muhammad Asad's translation of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/sajda/quran-uthmani" target="_blank">http://api.alquran.cloud/sajda/quran-uthmani</a> - Returns the text of sajda ayahs of the Holy Quran</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <h4>
             Base URLs
         </h4>
@@ -453,6 +700,9 @@
             </div>
         </div>
     </div>
+
+    <h4>Developer Resources</h4>
+    For API clients and other tools, see our open source repositories on <a href="https://github.com/islamic-apps" target="_blank">GitHub</a>.
 </div>
 
 <?php // ================================================================ // ?>
