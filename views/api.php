@@ -531,7 +531,7 @@
             <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
                 <div class="panel-body">
                     <p>
-                        The Quran is traditional printed on 604 pages. You can get the text for each page using the endpoint below.
+                        The Quran is traditionally printed / written on 604 pages. You can get the text for each page using the endpoint below.
                     </p>
                     <div class="row">
                         <div class="col-md-4 bold">
