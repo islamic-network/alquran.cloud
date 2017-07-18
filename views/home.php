@@ -6,7 +6,8 @@
         بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
     </div>
   <div class="lead font-uthmani align-center">
-الحمدُ لِلّلهِ الَّذي خَلَقَ اللإنسَانَ وَ الجَانَ وَ السَّماوَاتِ وَ الأرضِ وَ مَا فِي هُم وَ مَا بَيْنَهُم وَ هُوا ذو الجَلَالِ وَ الأكرَامِ وَ هُوَ عَلَى كُلِّ شَيْءٍ قََدِير
+ٱلْحَمْدُ لِلّٰهِ ٱلَّذِي خَلَقَ ٱلْإِنْسَانَ وَٱلْجَانَ وَ ٱلسَّمٰوَاتِ وَ ٱلْأَرْضِ وَ مَا فِي هُمَا وَ مَا بَيْنَ هُمَا وَ هُوَا ذُوْ ٱلْجَلَالِ وَ ٱلْإِكْرَامِ وَ هُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ۝
+
   </div>
   <div class="lead align-center">
   All praise is for Allah Who created man and jinn and the heavens and the earth and what is in them and what is between them and He is the Lord of Majesty and Bounty and He has power over everything.
