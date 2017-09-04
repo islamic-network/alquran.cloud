@@ -22,7 +22,7 @@
             <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
                     <p>
-                        All these endpoints give you a JSON object describing an edition. From this object, you need to use the identifer to get data from other endpoints in this API. For any of the endpoints that require an edition identifier, if you do not specify one, 'quran-uthmani' is used and returns the Arabic text of the Holy Quran.
+                        All these endpoints give you a JSON object describing an edition. From this object, you need to use the identifier to get data from other endpoints in this API. For any of the endpoints that require an edition identifier, if you do not specify one, 'quran-uthmani' is used and returns the Arabic text of the Holy Quran.
                     </p>
                     <div class="row">
                         <div class="col-md-4 bold">
