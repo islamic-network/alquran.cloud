@@ -10,6 +10,9 @@
     </div>
 	<div class="row">
 		<div class="col-md-12">
+        <p>
+            AlQuran.cloud is part of the <a href="https://islamic.network" target="_blank">Islamic Network</a>.
+        </p>
 		<p>
         This website, API and all the services herein are made available in the hope that they will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
