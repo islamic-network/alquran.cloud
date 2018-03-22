@@ -702,7 +702,7 @@
     </div>
 
     <h4>Developer Resources</h4>
-    For API clients and other tools, see our open source repositories on <a href="https://github.com/islamic-apps" target="_blank">GitHub</a>.
+    For API clients and other tools, see our open source repositories on <a href="https://github.com/islamic-network" target="_blank">GitHub</a>.
 </div>
 
 <?php // ================================================================ // ?>

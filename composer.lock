@@ -11,12 +11,12 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/islamic-apps/alquran-api-client-php.git",
+                "url": "https://github.com/islamic-network/alquran-api-client-php.git",
                 "reference": "32479cde21cfef10784aecc5b476292d96ce874b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/islamic-apps/alquran-api-client-php/zipball/32479cde21cfef10784aecc5b476292d96ce874b",
+                "url": "https://api.github.com/repos/islamic-network/alquran-api-client-php/zipball/32479cde21cfef10784aecc5b476292d96ce874b",
                 "reference": "32479cde21cfef10784aecc5b476292d96ce874b",
                 "shasum": ""
             },
@@ -50,12 +50,12 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/islamic-apps/alquran-tools.git",
+                "url": "https://github.com/islamic-network/alquran-tools.git",
                 "reference": "bd83c1a6a96bd1c1806d2ac5602ec8e12a0f8471"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/islamic-apps/alquran-tools/zipball/bd83c1a6a96bd1c1806d2ac5602ec8e12a0f8471",
+                "url": "https://api.github.com/repos/islamic-network/alquran-tools/zipball/bd83c1a6a96bd1c1806d2ac5602ec8e12a0f8471",
                 "reference": "bd83c1a6a96bd1c1806d2ac5602ec8e12a0f8471",
                 "shasum": ""
             },

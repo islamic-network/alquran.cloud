@@ -20,7 +20,7 @@ $parser = new AlQuranCloud\Tools\Parser\Tajweed();
             <strong>NOTE: Webkit Browsers (Chrome, Safari etc.) are currently unable to properly parse arabic characters with inline HTML. Please use Firefox for displaying Tajweed. For more information, see the GitHub repo.</strong>
         <h5>Developer Tools and Documentation</h5>
         <p>
-            The library and documentation on how to use it is available on <a href="https://github.com/islamic-apps/alquran-tools">https://github.com/meezaan/alquran-tools</a>.
+            The library and documentation on how to use it is available on <a href="https://github.com/islamic-network/alquran-tools">https://github.com/meezaan/alquran-tools</a>.
             This page essentially lists the output of the library. Please see the complete documentation the GitHub URL above.
         </p>
         <h5>Rendered Example - Ayah Noor (24:35) with Tajweed Parsed</h5>
