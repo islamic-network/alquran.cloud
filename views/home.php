@@ -43,7 +43,7 @@
         </p>
         <p>
             <a href="/api" class="btn btn-primary">API Documentation</a>
-            <a href="https://github.com/islamic-apps" target="_blank" class="btn btn-primary">GitHub Resources</a>
+            <a href="https://github.com/islamic-network" target="_blank" class="btn btn-primary">GitHub Resources</a>
         </p>
     </div>
 
@@ -66,7 +66,7 @@
             All code for this app is open source (and built with open source tools). You can use it or contribute to it.
         </p>
         <p>
-            <a href="https://github.com/islamic-apps/alquran-web-app" target="_blank" class="btn btn-primary">Code @ GitHub</a>
+            <a href="https://github.com/islamic-network/alquran-web-app" target="_blank" class="btn btn-primary">Code @ GitHub</a>
         </p>
     </div>
 
