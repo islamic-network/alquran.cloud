@@ -11,10 +11,10 @@
 	<div class="row">
 		<div class="col-md-12">
 		<p>
-        All the media available via the <a href="/cdn">Al Quran Cloud Content Delivery Network (CDN)</a> is available to download and use as required. Please follow the below link to the One Drive folder that contains all the media.
+        All the media available via the <a href="/cdn">Al Quran Cloud Content Delivery Network (CDN)</a> is available to download and use as required. Please follow the link below to download / view all the media.
 		</p>
 		<p class="align-center">
-			<a href="https://1drv.ms/f/s!AmrVmjAdc7P2kId4gMQNTYXWh-Nh6A" class="btn btn-primary" target="_blank">Download Media</a>
+			<a href="http://downloads.alquran.cloud" class="btn btn-primary" target="_blank">Download Media</a>
 		</p>
 		</div>
 	</div>
