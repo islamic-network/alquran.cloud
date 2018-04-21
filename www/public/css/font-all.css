@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'MeQuran';
-  src: url('//cdn.alquran.cloud/public/fonts/me_quran-webfont.otf');
+  src: url('//islamcdn.com/quran/public/fonts/me_quran-webfont.otf');
 }
 
 .font-mequran {
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'NooreHidayah';
-  src: url('//cdn.alquran.cloud/public/fonts/noorehidayat.ttf');
+  src: url('//islamcdn.com/quran/public/fonts/noorehidayat.ttf');
 }
 
 .font-nh {
@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: 'Othmani';
-  src: url('//cdn.alquran.cloud/public/fonts/ar-Othmani.ttf');
+  src: url('//islamcdn.com/quran/public/fonts/ar-Othmani.ttf');
 }
 
 .font-othmani {
@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: 'Quran';
-  src: url('//cdn.alquran.cloud/public/fonts/QURAN_STD.ttf');
+  src: url('//islamcdn.com/quran/public/fonts/QURAN_STD.ttf');
 }
 
 .font-quran {
@@ -36,7 +36,7 @@
 
 @font-face {
     font-family: 'Uthmani';
-    src: url("//cdn.alquran.cloud/public/fonts/uthman_tn09.otf") format("opentype");
+    src: url("//islamcdn.com/quran/public/fonts/uthman_tn09.otf") format("opentype");
 }
 
 .font-uthmani {

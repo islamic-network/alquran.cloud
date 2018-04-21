@@ -13,7 +13,7 @@ jQuery( document ).ready( function( $ ) {
 			$('.playThisAyah').on('click', function() {
 				// reference = $(this).data('reference');
 				number = $(this).data('number');
-				player.playTrackURL('http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/' + number + '/high');
+				player.playTrackURL('http://islamcdn.com/quran/media/audio/ayah/ar.alafasy/' + number + '/high');
 		  	});	
 		},
 		zoomIntoThisAyah: function() {

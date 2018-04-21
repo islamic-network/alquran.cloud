@@ -33,7 +33,7 @@ jQuery( document ).ready( function( $ ) {
                 });
 		},
 		setPlayerToAyah: function(surah, ayah, player) {
-			//var url = 'https://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/' + ayah + '/high'
+			//var url = 'https://islamcdn.com/quran/media/audio/ayah/ar.alafasy/' + ayah + '/high'
 			var url = surah + '_' + ayah;
 			var track = $('.mejs-playlist').find("[title='" + url + "']");
 			var trackPrev = track.prev();
@@ -50,7 +50,7 @@ jQuery( document ).ready( function( $ ) {
 			$('.playThisAyah').on('click', function() {
 				// reference = $(this).data('reference');
 				number = $(this).data('number');
-				player.playTrackURL('https://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/' + number + '/high');
+				player.playTrackURL('https://islamcdn.com/quran/media/audio/ayah/ar.alafasy/' + number + '/high');
 		  	});	
 		},
 		zoomIntoThisAyah: function() {

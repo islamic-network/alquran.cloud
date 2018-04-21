@@ -45,7 +45,7 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <audio id="ayahPlayer" controls="controls" class="align-right">
-                    <source src="//cdn.alquran.cloud/media/audio/ayah/ar.alafasy/<?= $ayah->data->number; ?>" title="Ayah" type="audio/mp3" />
+                    <source src="//islamcdn.com/quran/media/audio/ayah/ar.alafasy/<?= $ayah->data->number; ?>" title="Ayah" type="audio/mp3" />
                 </audio>
             </div>
         </div>
@@ -97,10 +97,10 @@
 	</div>
 </div>
 
-<script src="//cdn.alquran.cloud/public/libraries/mediaelementjs-2.21.2/build/mediaelement-and-player.js"></script>
-<script src="//cdn.alquran.cloud/public/libraries/mep-feature-playlist/mep-feature-playlist.js"></script>
-<script src="//cdn.alquran.cloud/public/js/jquery.mediaplayer.js"></script>
-<script src="//cdn.alquran.cloud/public/js/jquery.ayah.js"></script>
+<script src="//islamcdn.com/quran/public/libraries/mediaelementjs-2.21.2/build/mediaelement-and-player.js"></script>
+<script src="//islamcdn.com/quran/public/libraries/mep-feature-playlist/mep-feature-playlist.js"></script>
+<script src="//islamcdn.com/quran/public/js/jquery.mediaplayer.js"></script>
+<script src="//islamcdn.com/quran/public/js/jquery.ayah.js"></script>
 <script>
 $(function() {
 	var player = $.alQuranMediaPlayer.getAyahPlayer('#ayahPlayer');

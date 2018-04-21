@@ -72,10 +72,10 @@
 	<audio id="quranPlayer" controls="controls" class="align-right rt">
 		<?php foreach ($quran->data->surahs as $surah) { ?>
 			<?php if ($surah->number > 1 && $surah->number != 9) { ?>
-			<source src="//cdn.alquran.cloud/media/audio/ayah/ar.alafasy/1/high" title="Bismillah" type="audio/mp3"/>
+			<source src="//islamcdn.com/quran/media/audio/ayah/ar.alafasy/1/high" title="Bismillah" type="audio/mp3"/>
 			<?php } ?>
 			<?php foreach ($surah->ayahs as $ayah) { ?>
-			<source src="//cdn.alquran.cloud/media/audio/ayah/ar.alafasy/<?= $ayah->number; ?>/high" title="<?= $surah->number; ?>_<?= $ayah->numberInSurah; ?>" type="audio/mp3"/>
+			<source src="//islamcdn.com/quran/media/audio/ayah/ar.alafasy/<?= $ayah->number; ?>/high" title="<?= $surah->number; ?>_<?= $ayah->numberInSurah; ?>" type="audio/mp3"/>
 			<?php } ?>
 		<?php } ?>
 	</audio>
@@ -84,10 +84,10 @@
 </div>
 </div>
 
-<script src="//cdn.alquran.cloud/public/libraries/mediaelementjs-2.21.2/build/mediaelement-and-player.js"></script>
-<script src="//cdn.alquran.cloud/public/libraries/mep-feature-playlist/mep-feature-playlist.js"></script>
-<script src="//cdn.alquran.cloud/public/js/jquery.mediaplayer.js"></script>
-<script src="//cdn.alquran.cloud/public/js/jquery.quran.js"></script>
+<script src="//islamcdn.com/quran/public/libraries/mediaelementjs-2.21.2/build/mediaelement-and-player.js"></script>
+<script src="//islamcdn.com/quran/public/libraries/mep-feature-playlist/mep-feature-playlist.js"></script>
+<script src="//islamcdn.com/quran/public/js/jquery.mediaplayer.js"></script>
+<script src="//islamcdn.com/quran/public/js/jquery.quran.js"></script>
 <script>
 $(function() {
 	var player = $.alQuranMediaPlayer.getQuranPlayer('#quranPlayer');
