@@ -62,15 +62,15 @@
 	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 	<audio id="juzPlayer" controls="controls" class="align-right rtl">
 		<?php if ($juz->data->number != 1) { ?>
-			<source src="//islamcdn.com/quran/media/audio/ayah/ar.alafasy/1/high" title="Bismillah" type="audio/mp3"/>
+			<source src="//cdn.alquran.cloud/media/audio/ayah/ar.alafasy/1/high" title="Bismillah" type="audio/mp3"/>
 		<?php }
 		$currentSurah = $juz->data->ayahs[0]->surah->number;
 		foreach ($juz->data->ayahs as $ayah) {
 			if ($ayah->surah->number > $currentSurah) {
 				$currentSurah = $ayah->surah->number; ?>
-				<source src="//islamcdn.com/quran/media/audio/ayah/ar.alafasy/1/high" title="Bismillah" type="audio/mp3"/>
+				<source src="//cdn.alquran.cloud/media/audio/ayah/ar.alafasy/1/high" title="Bismillah" type="audio/mp3"/>
 			<?php } ?>
-			<source src="//islamcdn.com/quran/media/audio/ayah/ar.alafasy/<?= $ayah->number; ?>/high" title="<?= $juz->data->number; ?>_<?= $ayah->number; ?>" type="audio/mp3"/>
+			<source src="//cdn.alquran.cloud/media/audio/ayah/ar.alafasy/<?= $ayah->number; ?>/high" title="<?= $juz->data->number; ?>_<?= $ayah->number; ?>" type="audio/mp3"/>
 		<?php } ?>
 	</audio>
 	</div>
@@ -79,10 +79,10 @@
 </div>
 
 
-<script src="//islamcdn.com/quran/public/libraries/mediaelementjs-2.21.2/build/mediaelement-and-player.js"></script>
-<script src="//islamcdn.com/quran/public/libraries/mep-feature-playlist/mep-feature-playlist.js"></script>
-<script src="//islamcdn.com/quran/public/js/jquery.mediaplayer.js"></script>
-<script src="//islamcdn.com/quran/public/js/jquery.juz.js"></script>
+<script src="//cdn.alquran.cloud/public/libraries/mediaelementjs-2.21.2/build/mediaelement-and-player.js"></script>
+<script src="//cdn.alquran.cloud/public/libraries/mep-feature-playlist/mep-feature-playlist.js"></script>
+<script src="//cdn.alquran.cloud/public/js/jquery.mediaplayer.js"></script>
+<script src="//cdn.alquran.cloud/public/js/jquery.juz.js"></script>
 <script>
 $(function() {
 	var player = $.alQuranMediaPlayer.getJuzPlayer('#juzPlayer');

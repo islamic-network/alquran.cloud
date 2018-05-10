@@ -60,10 +60,10 @@
 	</div>
 </div>
 
-<script src="http://islamcdn.com/quran/public/libraries/mediaelementjs-2.21.2/build/mediaelement-and-player.js"></script>
-<script src="http://islamcdn.com/quran/public/libraries/mep-feature-playlist/mep-feature-playlist.js"></script>
-<script src="http://islamcdn.com/quran/public/js/jquery.mediaplayer.js"></script>
-<script src="http://islamcdn.com/quran/public/js/jquery.surah.js"></script>
+<script src="http://cdn.alquran.cloud/public/libraries/mediaelementjs-2.21.2/build/mediaelement-and-player.js"></script>
+<script src="http://cdn.alquran.cloud/public/libraries/mep-feature-playlist/mep-feature-playlist.js"></script>
+<script src="http://cdn.alquran.cloud/public/js/jquery.mediaplayer.js"></script>
+<script src="http://cdn.alquran.cloud/public/js/jquery.surah.js"></script>
 
 <script>
 $(function() {

@@ -29,7 +29,7 @@
                                 Audio files can be accessed via the CDN using the following URL:
                             </p>
                             <code>
-                                http://islamcdn.com/quran/media/audio/ayah/{edition}/{number}/{quality}
+                                http://cdn.alquran.cloud/media/audio/ayah/{edition}/{number}/{quality}
                             </code>
                             <ul>
                                 <li>
@@ -39,16 +39,16 @@
                                 {number} - An ayah number. the Quran contains 6236 ayahs, so this must be a number between 1 and 6236.
                                 </li>
                                 <li>
-                                {quality} - Quality of audio served. Acceptable values are 'high' or 'low'. Do not specify if you want medium quality. Example: http://islamcdn.com/quran/audio/ayah/ar.alafasy/262 will return a medium quality file for Ayat al Kursi.
+                                {quality} - Quality of audio served. Acceptable values are 'high' or 'low'. Do not specify if you want medium quality. Example: http://cdn.alquran.cloud/audio/ayah/ar.alafasy/262 will return a medium quality file for Ayat al Kursi.
                                 </li>
                             </ul>
                              <p>
                                 Examples:
                             </p>
                             <ul>
-                                <li><a href="http://islamcdn.com/quran/media/audio/ayah/ar.alafasy/262" target="_blank">http://islamcdn.com/quran/media/audio/ayah/ar.alafasy/262</a></li>
-                                <li><a href="http://islamcdn.com/quran/media/audio/ayah/ar.alafasy/262/low" target="_blank">http://islamcdn.com/quran/media/audio/ayah/ar.alafasy/262/low</a></li>
-                                <li><a href="http://islamcdn.com/quran/media/audio/ayah/ar.alafasy/262/high" target="_blank">http://islamcdn.com/quran/media/audio/ayah/ar.alafasy/262/high</a></li>
+                                <li><a href="http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/262" target="_blank">http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/262</a></li>
+                                <li><a href="http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/262/low" target="_blank">http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/262/low</a></li>
+                                <li><a href="http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/262/high" target="_blank">http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/262/high</a></li>
                             </ul>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                                Image files can be accessed via the CDN using the following URL:
                             </p>
                             <code>
-                                http://islamcdn.com/quran/media/image/{surah}/{ayah}
+                                http://cdn.alquran.cloud/media/image/{surah}/{ayah}
                             </code>
                             <ul>
                                 <li>
@@ -85,8 +85,8 @@
                                 Examples:
                             </p>
                             <ul>
-                                <li><a href="http://islamcdn.com/quran/media/image/2/255" target="_blank">http://islamcdn.com/quran/media/image/2/255</a></li>
-                                <li><a href="http://islamcdn.com/quran/media/image/24/35" target="_blank">http://islamcdn.com/quran/media/image/24/35</a></li>
+                                <li><a href="http://cdn.alquran.cloud/media/image/2/255" target="_blank">http://cdn.alquran.cloud/media/image/2/255</a></li>
+                                <li><a href="http://cdn.alquran.cloud/media/image/24/35" target="_blank">http://cdn.alquran.cloud/media/image/24/35</a></li>
                             </ul>
                         </div>
                     </div>

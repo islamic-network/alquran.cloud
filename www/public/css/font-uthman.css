@@ -1,6 +1,6 @@
 @font-face {
     font-family: Uthmani;
-    src: url("//islamcdn.com/quran/public/fonts/uthman_tn09.otf") format("opentype");
+    src: url("//cdn.alquran.cloud/public/fonts/uthman_tn09.otf") format("opentype");
 }
 
 .font-uthmani {
