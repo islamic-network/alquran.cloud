@@ -76,7 +76,7 @@
             Quran audio, ayah images, the database - everything is available for use.
         </p>
         <p>
-            <a href="https://onedrive.live.com/redir?resid=F6B3731D309AD56A!263160&authkey=!APDvX6cwz6DAwng&ithint=folder%2C" target="_blank" class="btn btn-primary">Get the Media</a>
+            <a href="http://downloads.alquran.cloud" target="_blank" class="btn btn-primary">Get the Media</a>
 
         </p>
     </div>
