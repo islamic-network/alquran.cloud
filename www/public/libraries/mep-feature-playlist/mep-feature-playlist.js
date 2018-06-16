@@ -254,10 +254,12 @@
     },
     playTrack: function(track) {
       var t = this;
-      t.pause();
+      //t.pause();
       t.setSrc(track.attr('data-url'));
       t.load();
-      t.play();
+      t.canplay = function() {
+        t.play();
+      };
       track.addClass('current').siblings().removeClass('current');
       // Highlight ayah in Quran
       currentId = track.html();
