@@ -13,7 +13,8 @@ $container['helper'] = function($c) {
     // Create the logger
     $helper->logger = new Logger('QuranApp');
     // Now add some handlers
-    $helper->logger->pushHandler(new StreamHandler(__DIR__.'/../logs/' . $logFile . '.log', Logger::DEBUG));
+    //$helper->logger->pushHandler(new StreamHandler(__DIR__.'/../logs/' . $logFile . '.log', Logger::DEBUG));
+    $helper->logger->pushHandler(new \Monolog\Handler\ErrorLogHandler());
 
     return $helper;
 };

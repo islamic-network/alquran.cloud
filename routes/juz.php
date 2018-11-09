@@ -11,8 +11,6 @@ $app->get('/juzs', function ($request, $response, $args) {
 });
 
 $app->get('/juz', function ($request, $response, $args) {
-
-	//$this->logger->info('test', ['1']);
     return $this->view->render($response, 'juz.php', [
         'pageTitle' => 'Quran - Juz 1',
 		'metaDescription' => 'AlQuran Cloud',
@@ -25,8 +23,6 @@ $app->get('/juz', function ($request, $response, $args) {
 });
 
 $app->get('/juz/{reference}', function ($request, $response, $args) {
-
-	//$this->logger->info('test', ['1']);
 	$reference = $request->getAttribute('reference');
 	$juz = $this->client->AlQuranCloudApi->juz($reference, 'quran-uthmani');
     return $this->view->render($response, 'juz.php', [
