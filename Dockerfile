@@ -1,4 +1,4 @@
-FROM vesica/php72:1
+FROM vesica/php72:latest
 
 # Copy files
 RUN cd ../ && rm -rf /var/www/html
