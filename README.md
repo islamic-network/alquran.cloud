@@ -41,6 +41,12 @@ In the mean time:
 7. Open your browser and browse to http://localhost:8081/.
 8. Any changes you make will be synced to the Docker container. You just refresh the page in the browser to see them.
 
+## Apache Config
+
+This app takes 15 MB per apache process / worker and is set to have a maximum of 20 Apache workers.
+
+A single instance should be sized with a maximum of 512 MB RAM, after which you should scale it horizontally.
+
 ## Contributing Code
 
 You can contribute code by raising a pull request.
