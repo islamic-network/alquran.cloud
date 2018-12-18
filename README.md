@@ -31,8 +31,6 @@ You can now visit http://localhost:8081/ and start using it.
 
 ### Build and Contribute
 
-In the mean time:
-
 1. Clone this repository
 2. Run ```docker build . -t vesica/alquran.cloud```. This will build an image with production dependencies only.
 3. Run ```docker run -it -p 8081:8080  -v ($pwd)/.:/var/www vesica/alquran.cloud``` to spin up the built image.
