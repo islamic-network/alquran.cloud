@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## Release tag / version. If this is not for a specific release, please set this to latest, otherwise set it to a specific release.
-version=2
+version=3
 
 ###########################################################################################
 #UNLESS YOU WANT TO CHANGE SOMETHING TO DO WITH THE PUSH TO NEXUS, LEAVE THE BELOW ALONE #

@@ -37,7 +37,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            1. http://api.alquran.cloud/edition
+                            1. http://api.alquran.cloud/v1/edition
                         </div>
                         <div class="col-md-4">
                             Lists all available editions. You can filter the results using the parameters below.
@@ -54,10 +54,10 @@
                         <div class="col-md-4">
                             <ol>
                                 <li>
-                                    <a href="http://api.alquran.cloud/edition" target="_blank">http://api.alquran.cloud/edition</a> - Lists all editions
+                                    <a href="http://api.alquran.cloud/v1/edition" target="_blank">http://api.alquran.cloud/v1/edition</a> - Lists all editions
                                 </li>
                                 <li>
-                                <a href="http://api.alquran.cloud/edition?format=audio&language=fr&type=versebyverse" target="_blank">http://api.alquran.cloud/edition?format=audio&language=fr&type=versebyverse</a> - Lists all audio editions in french of the versebyverse type
+                                <a href="http://api.alquran.cloud/v1/edition?format=audio&language=fr&type=versebyverse" target="_blank">http://api.alquran.cloud/v1/edition?format=audio&language=fr&type=versebyverse</a> - Lists all audio editions in french of the versebyverse type
                                 </li>
                             </ol>
 
@@ -67,71 +67,71 @@
                     </div>
                      <div class="row">
                         <div class="col-md-4">
-                            2. http://api.alquran.cloud/edition/language
+                            2. http://api.alquran.cloud/v1/edition/language
                         </div>
                         <div class="col-md-4">
                             Lists all languages in which editions are available
                         </div>
                         <div class="col-md-4">
-                            <a href="http://api.alquran.cloud/edition/language" target="_blank">http://api.alquran.cloud/language</a>
+                            <a href="http://api.alquran.cloud/v1/edition/language" target="_blank">http://api.alquran.cloud/v1/language</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            3. http://api.alquran.cloud/edition/language/{{language}}
+                            3. http://api.alquran.cloud/v1/edition/language/{{language}}
                         </div>
                         <div class="col-md-4">
                             Lists all editions for a given language<br />
                             {{language}} is a 2 digit language code. Example: en for English, fr for French, ar for Arabic
                         </div>
                         <div class="col-md-4">
-                            <a href="http://api.alquran.cloud/edition/language/en" target="_blank">http://api.alquran.cloud/language/en</a>
+                            <a href="http://api.alquran.cloud/v1/edition/language/en" target="_blank">http://api.alquran.cloud/v1/language/en</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            4. http://api.alquran.cloud/edition/type
+                            4. http://api.alquran.cloud/v1/edition/type
                         </div>
                         <div class="col-md-4">
                             Lists all types of editions
                         </div>
                         <div class="col-md-4">
-                            <a href="http://api.alquran.cloud/edition/type" target="_blank">http://api.alquran.cloud/type</a>
+                            <a href="http://api.alquran.cloud/v1/edition/type" target="_blank">http://api.alquran.cloud/v1/type</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            5. http://api.alquran.cloud/edition/type/{{type}}
+                            5. http://api.alquran.cloud/v1/edition/type/{{type}}
                         </div>
                         <div class="col-md-4">
                             Lists all editions for a given type<br />
                             {{type}} can be 'translation', 'tafsir' or another result returned in 4 above
                         </div>
                         <div class="col-md-4">
-                            <a href="http://api.alquran.cloud/edition/type/translation" target="_blank">http://api.alquran.cloud/type/translation</a>
+                            <a href="http://api.alquran.cloud/v1/edition/type/translation" target="_blank">http://api.alquran.cloud/v1/type/translation</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            6. http://api.alquran.cloud/edition/format
+                            6. http://api.alquran.cloud/v1/edition/format
                         </div>
                         <div class="col-md-4">
                             Lists all formats
                         </div>
                         <div class="col-md-4">
-                            <a href="http://api.alquran.cloud/edition/format" target="_blank">http://api.alquran.cloud/format</a>
+                            <a href="http://api.alquran.cloud/v1/edition/format" target="_blank">http://api.alquran.cloud/v1/format</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            7. http://api.alquran.cloud/edition/format/{{format}}
+                            7. http://api.alquran.cloud/v1/edition/format/{{format}}
                         </div>
                         <div class="col-md-4">
                             Lists all editions for a given format<br />
                             {{format}} can be 'audio' or 'text'
                         </div>
                         <div class="col-md-4">
-                            <a href="http://api.alquran.cloud/edition/format/text" target="_blank">http://api.alquran.cloud/format/text</a>
+                            <a href="http://api.alquran.cloud/v1/edition/format/text" target="_blank">http://api.alquran.cloud/v1/format/text</a>
                         </div>
                     </div>
                 </div>
@@ -163,7 +163,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            1. http://api.alquran.cloud/quran/{{edition}}
+                            1. http://api.alquran.cloud/v1/quran/{{edition}}
                         </div>
                         <div class="col-md-4">
                             Returns a complete Quran edition in the audio or text format<br />
@@ -171,9 +171,9 @@
                         </div>
                         <div class="col-md-4">
                             <ol>
-                                <li><a href="http://api.alquran.cloud/quran/en.asad" target="_blank">http://api.alquran.cloud/quran/en.asad</a> - (Text) Returns Muhammad Asad's translation of the Holy Quran</li>
-                                <li><a href="http://api.alquran.cloud/quran/quran-uthmani" target="_blank">http://api.alquran.cloud/quran/quran-uthmani</a> - (Text) Returns the text of the Holy Quran</li>
-                                <li><a href="http://api.alquran.cloud/quran/ar.alafasy" target="_blank">http://api.alquran.cloud/quran/ar.alafasy</a> - (Audio) Returns Mishary Alafasy's recitation of the Quran</li>
+                                <li><a href="http://api.alquran.cloud/v1/quran/en.asad" target="_blank">http://api.alquran.cloud/v1/quran/en.asad</a> - (Text) Returns Muhammad Asad's translation of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/v1/quran/quran-uthmani" target="_blank">http://api.alquran.cloud/v1/quran/quran-uthmani</a> - (Text) Returns the text of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/v1/quran/ar.alafasy" target="_blank">http://api.alquran.cloud/v1/quran/ar.alafasy</a> - (Audio) Returns Mishary Alafasy's recitation of the Quran</li>
                             </ol>
                         </div>
                     </div>
@@ -207,7 +207,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            1. http://api.alquran.cloud/juz/{{juz}}/{{edition}}
+                            1. http://api.alquran.cloud/v1/juz/{{juz}}/{{edition}}
                         </div>
                         <div class="col-md-4">
                             <p>
@@ -222,9 +222,9 @@
                         </div>
                         <div class="col-md-4">
                             <ol>
-                                <li><a href="http://api.alquran.cloud/juz/30/en.asad" target="_blank">http://api.alquran.cloud/juz/30/en.asad</a> - Returns Juz 30 from Muhammad Asad's translation of the Holy Quran</li>
-                                <li><a href="http://api.alquran.cloud/juz/30/quran-uthmani" target="_blank">http://api.alquran.cloud/juz/30/quran-uthmani</a> - Returns the text of Juz 30 of the Holy Quran</li>
-                                <li><a href="http://api.alquran.cloud/juz/1/quran-uthmani?offset=3&limit=10" target="_blank">http://api.alquran.cloud/juz/1/quran-uthmani?offset=3&limit=10</a> - Returns the the ayahs 4-13 from Juz 1</li>
+                                <li><a href="http://api.alquran.cloud/v1/juz/30/en.asad" target="_blank">http://api.alquran.cloud/v1/juz/30/en.asad</a> - Returns Juz 30 from Muhammad Asad's translation of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/v1/juz/30/quran-uthmani" target="_blank">http://api.alquran.cloud/v1/juz/30/quran-uthmani</a> - Returns the text of Juz 30 of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/v1/juz/1/quran-uthmani?offset=3&limit=10" target="_blank">http://api.alquran.cloud/v1/juz/1/quran-uthmani?offset=3&limit=10</a> - Returns the the ayahs 4-13 from Juz 1</li>
                             </ol>
                         </div>
                     </div>
@@ -257,7 +257,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            1. http://api.alquran.cloud/surah
+                            1. http://api.alquran.cloud/v1/surah
                         </div>
                         <div class="col-md-4">
                             Returns the list of Surahs in the Quran<br />
@@ -268,12 +268,12 @@
                                 <li>limit - This is the number of ayahs that the response will be limited to.</li>
                             </ul>
                         </div>
-                        <div class="col-md-4"><a href="http://api.alquran.cloud/surah" target="_blank">http://api.alquran.cloud/surah</a>
+                        <div class="col-md-4"><a href="http://api.alquran.cloud/v1/surah" target="_blank">http://api.alquran.cloud/v1/surah</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            2. http://api.alquran.cloud/surah/{{surah}}/{{edition}}
+                            2. http://api.alquran.cloud/v1/surah/{{surah}}/{{edition}}
                         </div>
                         <div class="col-md-4">
                             Returns the requested surah from a particular edition<br />
@@ -282,23 +282,23 @@
                         <div class="col-md-4">
                             <ol>
                                 <li>
-                                    <a href="http://api.alquran.cloud/surah/114/en.asad" target="_blank">http://api.alquran.cloud/surah/114/en.asad</a> - Returns Surat An-Naas from Muhammad Asad's translation of the Holy Quran
+                                    <a href="http://api.alquran.cloud/v1/surah/114/en.asad" target="_blank">http://api.alquran.cloud/v1/surah/114/en.asad</a> - Returns Surat An-Naas from Muhammad Asad's translation of the Holy Quran
                                 </li>
                                 <li>
-                                    <a href="http://api.alquran.cloud/surah/114/ar.alafasy" target="_blank">http://api.alquran.cloud/surah/114/ar.alafasy</a> - Returns Mishary Alafasy's recitation of Surat An-Naas
+                                    <a href="http://api.alquran.cloud/v1/surah/114/ar.alafasy" target="_blank">http://api.alquran.cloud/v1/surah/114/ar.alafasy</a> - Returns Mishary Alafasy's recitation of Surat An-Naas
                                 </li>
                                 <li>
-                                    <a href="http://api.alquran.cloud/surah/114" target="_blank">http://api.alquran.cloud/surah/114</a> - Returns Arabic text of Surat An-Naas
+                                    <a href="http://api.alquran.cloud/v1/surah/114" target="_blank">http://api.alquran.cloud/v1/surah/114</a> - Returns Arabic text of Surat An-Naas
                                 </li>
                                 <li>
-                                    <a href="http://api.alquran.cloud/surah/1?offset=1&limit=3" target="_blank">http://api.alquran.cloud/surah/1?offset=1&limit=3</a> - Returns verses 2-4 of Surah Al-Fatiha
+                                    <a href="http://api.alquran.cloud/v1/surah/1?offset=1&limit=3" target="_blank">http://api.alquran.cloud/v1/surah/1?offset=1&limit=3</a> - Returns verses 2-4 of Surah Al-Fatiha
                                 </li>
                             </ol>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            3. http://api.alquran.cloud/surah/{{surah}}/editions/{{edition}},{{edition}}
+                            3. http://api.alquran.cloud/v1/surah/{{surah}}/editions/{{edition}},{{edition}}
                         </div>
                         <div class="col-md-4">
                             Returns the requested surah from multiple  editions<br />
@@ -307,7 +307,7 @@
                         <div class="col-md-4">
                             <ol>
                                 <li>
-                                    <a href="http://api.alquran.cloud/surah/114/editions/quran-uthmani,en.asad,en.pickthall" target="_blank">http://api.alquran.cloud/surah/114/editions/quran-uthmani,en.asad,en.pickthall</a> - Returns Surat An-Naas from 3 editions: Simple Quran, Muhammad Asad and Marmaduke Pickthall
+                                    <a href="http://api.alquran.cloud/v1/surah/114/editions/quran-uthmani,en.asad,en.pickthall" target="_blank">http://api.alquran.cloud/v1/surah/114/editions/quran-uthmani,en.asad,en.pickthall</a> - Returns Surat An-Naas from 3 editions: Simple Quran, Muhammad Asad and Marmaduke Pickthall
                                 </li>
                             </ol>
                         </div>
@@ -341,7 +341,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            1. http://api.alquran.cloud/ayah/{{reference}}/{{edition}}
+                            1. http://api.alquran.cloud/v1/ayah/{{reference}}/{{edition}}
                         </div>
                         <div class="col-md-4">
                             Returns an ayah for a given edition.<br />
@@ -350,16 +350,16 @@
                         </div>
                         <div class="col-md-4">
                             <ol>
-                                <li><a href="http://api.alquran.cloud/ayah/262/en.asad" target="_blank">http://api.alquran.cloud/ayah/262</a> - (Text) Returns Muhammad Asad's translation Ayat Al Kursi</li>
-                                <li><a href="http://api.alquran.cloud/ayah/2:255/en.asad" target="_blank">http://api.alquran.cloud/ayah/2:255</a> - (Text) Returns Muhammad Asad's translation Ayat Al Kursi</li>
-                                <li><a href="http://api.alquran.cloud/ayah/262/ar.alafasy" target="_blank">http://api.alquran.cloud/ayah/262/ar.alafasy</a> - (Audio) Returns Mishary Alafasy's recitation of the Ayat Al Kursi</li>
-                                <li><a href="http://api.alquran.cloud/ayah/262" target="_blank">http://api.alquran.cloud/ayah/262</a> - (Text) Returns the Arabic text of Ayat Al Kursi</li>
+                                <li><a href="http://api.alquran.cloud/v1/ayah/262/en.asad" target="_blank">http://api.alquran.cloud/v1/ayah/262</a> - (Text) Returns Muhammad Asad's translation Ayat Al Kursi</li>
+                                <li><a href="http://api.alquran.cloud/v1/ayah/2:255/en.asad" target="_blank">http://api.alquran.cloud/v1/ayah/2:255</a> - (Text) Returns Muhammad Asad's translation Ayat Al Kursi</li>
+                                <li><a href="http://api.alquran.cloud/v1/ayah/262/ar.alafasy" target="_blank">http://api.alquran.cloud/v1/ayah/262/ar.alafasy</a> - (Audio) Returns Mishary Alafasy's recitation of the Ayat Al Kursi</li>
+                                <li><a href="http://api.alquran.cloud/v1/ayah/262" target="_blank">http://api.alquran.cloud/v1/ayah/262</a> - (Text) Returns the Arabic text of Ayat Al Kursi</li>
                             </ol>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            2. http://api.alquran.cloud/ayah/{{reference}}/editions/{{edition}},{{edition}}
+                            2. http://api.alquran.cloud/v1/ayah/{{reference}}/editions/{{edition}},{{edition}}
                         </div>
                         <div class="col-md-4">
                             Returns an ayah for multiple edtitions.<br />
@@ -368,7 +368,7 @@
                         </div>
                         <div class="col-md-4">
                             <ol>
-                                <li><a href="http://api.alquran.cloud/ayah/262/editions/quran-uthmani,en.asad,en.pickthall" target="_blank">http://api.alquran.cloud/ayah/262/editions/quran-uthmani,en.asad,en.pickthall</a> - (Text) Returns Ayat Al Kursi from 3 editions: Simple Quran, Muhammad Asad and Maramduke Pickthall</li>
+                                <li><a href="http://api.alquran.cloud/v1/ayah/262/editions/quran-uthmani,en.asad,en.pickthall" target="_blank">http://api.alquran.cloud/v1/ayah/262/editions/quran-uthmani,en.asad,en.pickthall</a> - (Text) Returns Ayat Al Kursi from 3 editions: Simple Quran, Muhammad Asad and Maramduke Pickthall</li>
                             </ol>
                         </div>
                     </div>
@@ -401,7 +401,7 @@
                     </div>
                      <div class="row">
                         <div class="col-md-4">
-                            1. http://api.alquran.cloud/search/{{keyword}}/{{surah}}/{{edition or language}}
+                            1. http://api.alquran.cloud/v1/search/{{keyword}}/{{surah}}/{{edition or language}}
                         </div>
                         <div class="col-md-4">
                             Returns ayahs that match a keyword in a given edition or language. If you do not specify an edition or language, all english language texts are searched.<br />
@@ -411,9 +411,9 @@
                         </div>
                         <div class="col-md-4">
                             <ol>
-                                <li><a href="http://api.alquran.cloud/search/Abraham/all/en" target="_blank">http://api.alquran.cloud/search/Abraham/all/en</a> - (Text) Returns all ayahs that contain the word 'Abraham' in all the english  editions</li>
-                                <li><a href="http://api.alquran.cloud/search/Abraham/all/en.pickthall" target="_blank">http://api.alquran.cloud/search/Abraham/all/en.pickthall</a> - (Text) Returns all ayahs that contain the word 'Abraham' in Maramduke Pickthall's English translation</li>
-                                <li><a href="http://api.alquran.cloud/search/Abraham/37/en.pickthall" target="_blank">http://api.alquran.cloud/search/Abraham/37/en.pickthall</a> - (Text) Returns all ayahs that contain the word 'Abraham' Surat As-Saafaat in Maramduke Pickthall's English translation</li>
+                                <li><a href="http://api.alquran.cloud/v1/search/Abraham/all/en" target="_blank">http://api.alquran.cloud/v1/search/Abraham/all/en</a> - (Text) Returns all ayahs that contain the word 'Abraham' in all the english  editions</li>
+                                <li><a href="http://api.alquran.cloud/v1/search/Abraham/all/en.pickthall" target="_blank">http://api.alquran.cloud/v1/search/Abraham/all/en.pickthall</a> - (Text) Returns all ayahs that contain the word 'Abraham' in Maramduke Pickthall's English translation</li>
+                                <li><a href="http://api.alquran.cloud/v1/search/Abraham/37/en.pickthall" target="_blank">http://api.alquran.cloud/v1/search/Abraham/37/en.pickthall</a> - (Text) Returns all ayahs that contain the word 'Abraham' Surat As-Saafaat in Maramduke Pickthall's English translation</li>
                             </ol>
                         </div>
                     </div>
@@ -446,7 +446,7 @@
                     </div>
                      <div class="row">
                         <div class="col-md-4">
-                            1. http://api.alquran.cloud/manzil/{{manzil}}/{{edition}}
+                            1. http://api.alquran.cloud/v1/manzil/{{manzil}}/{{edition}}
                         </div>
                         <div class="col-md-4">
                             <p>
@@ -461,9 +461,9 @@
                         </div>
                         <div class="col-md-4">
                             <ol>
-                                <li><a href="http://api.alquran.cloud/manzil/7/en.asad" target="_blank">http://api.alquran.cloud/manzil/7/en.asad</a> - Returns manzil 7 from Muhammad Asad's translation of the Holy Quran</li>
-                                <li><a href="http://api.alquran.cloud/manzil/7/quran-uthmani" target="_blank">http://api.alquran.cloud/manzil/7/quran-uthmani</a> - Returns the text of Manzil 7 of the Holy Quran</li>
-                                <li><a href="http://api.alquran.cloud/manzil/7/quran-uthmani?offset=3&limit=10" target="_blank">http://api.alquran.cloud/manzil/7/quran-uthmani?offset=3&limit=10</a> - Returns the the ayahs 4-13 from Manzil 7</li>
+                                <li><a href="http://api.alquran.cloud/v1/manzil/7/en.asad" target="_blank">http://api.alquran.cloud/v1/manzil/7/en.asad</a> - Returns manzil 7 from Muhammad Asad's translation of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/v1/manzil/7/quran-uthmani" target="_blank">http://api.alquran.cloud/v1/manzil/7/quran-uthmani</a> - Returns the text of Manzil 7 of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/v1/manzil/7/quran-uthmani?offset=3&limit=10" target="_blank">http://api.alquran.cloud/v1/manzil/7/quran-uthmani?offset=3&limit=10</a> - Returns the the ayahs 4-13 from Manzil 7</li>
                             </ol>
                         </div>
                     </div>
@@ -496,7 +496,7 @@
                     </div>
                      <div class="row">
                         <div class="col-md-4">
-                            1. http://api.alquran.cloud/ruku/{{ruku}}/{{edition}}
+                            1. http://api.alquran.cloud/v1/ruku/{{ruku}}/{{edition}}
                         </div>
                         <div class="col-md-4">
                             <p>
@@ -511,9 +511,9 @@
                         </div>
                         <div class="col-md-4">
                             <ol>
-                                <li><a href="http://api.alquran.cloud/ruku/7/en.asad" target="_blank">http://api.alquran.cloud/ruku/7/en.asad</a> - Returns ruku 7 from Muhammad Asad's translation of the Holy Quran</li>
-                                <li><a href="http://api.alquran.cloud/ruku/7/quran-uthmani" target="_blank">http://api.alquran.cloud/ruku/7/quran-uthmani</a> - Returns the text of ruku 7 of the Holy Quran</li>
-                                <li><a href="http://api.alquran.cloud/ruku/7/quran-uthmani?offset=3&limit=3" target="_blank">http://api.alquran.cloud/ruku/7/quran-uthmani?offset=3&limit=3</a> - Returns the the ayahs 4-6 from ruku 7</li>
+                                <li><a href="http://api.alquran.cloud/v1/ruku/7/en.asad" target="_blank">http://api.alquran.cloud/v1/ruku/7/en.asad</a> - Returns ruku 7 from Muhammad Asad's translation of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/v1/ruku/7/quran-uthmani" target="_blank">http://api.alquran.cloud/v1/ruku/7/quran-uthmani</a> - Returns the text of ruku 7 of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/v1/ruku/7/quran-uthmani?offset=3&limit=3" target="_blank">http://api.alquran.cloud/v1/ruku/7/quran-uthmani?offset=3&limit=3</a> - Returns the the ayahs 4-6 from ruku 7</li>
                             </ol>
                         </div>
                     </div>
@@ -546,7 +546,7 @@
                     </div>
                      <div class="row">
                         <div class="col-md-4">
-                            1. http://api.alquran.cloud/page/{{page}}/{{edition}}
+                            1. http://api.alquran.cloud/v1/page/{{page}}/{{edition}}
                         </div>
                         <div class="col-md-4">
                             <p>
@@ -561,9 +561,9 @@
                         </div>
                         <div class="col-md-4">
                             <ol>
-                                <li><a href="http://api.alquran.cloud/page/1/en.asad" target="_blank">http://api.alquran.cloud/page/1/en.asad</a> - Returns page 1 from Muhammad Asad's translation of the Holy Quran</li>
-                                <li><a href="http://api.alquran.cloud/page/1/quran-uthmani" target="_blank">http://api.alquran.cloud/page/1/quran-uthmani</a> - Returns the text of page 1 of the Holy Quran</li>
-                                <li><a href="http://api.alquran.cloud/page/1/quran-uthmani?offset=2&limit=2" target="_blank">http://api.alquran.cloud/page/1/quran-uthmani?offset=2&limit=2</a> - Returns the the ayahs 3-4 from page 1</li>
+                                <li><a href="http://api.alquran.cloud/v1/page/1/en.asad" target="_blank">http://api.alquran.cloud/v1/page/1/en.asad</a> - Returns page 1 from Muhammad Asad's translation of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/v1/page/1/quran-uthmani" target="_blank">http://api.alquran.cloud/v1/page/1/quran-uthmani</a> - Returns the text of page 1 of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/v1/page/1/quran-uthmani?offset=2&limit=2" target="_blank">http://api.alquran.cloud/v1/page/1/quran-uthmani?offset=2&limit=2</a> - Returns the the ayahs 3-4 from page 1</li>
                             </ol>
                         </div>
                     </div>
@@ -597,7 +597,7 @@
                     </div>
                      <div class="row">
                         <div class="col-md-4">
-                            1. http://api.alquran.cloud/hizbQuarter/{{hizb}}/{{edition}}
+                            1. http://api.alquran.cloud/v1/hizbQuarter/{{hizb}}/{{edition}}
                         </div>
                         <div class="col-md-4">
                             <p>
@@ -612,9 +612,9 @@
                         </div>
                         <div class="col-md-4">
                             <ol>
-                                <li><a href="http://api.alquran.cloud/hizbQuarter/1/en.asad" target="_blank">http://api.alquran.cloud/hizbQuarter/1/en.asad</a> - Returns hizb quarter 1 from Muhammad Asad's translation of the Holy Quran</li>
-                                <li><a href="http://api.alquran.cloud/hizbQuarter/1/quran-uthmani" target="_blank">http://api.alquran.cloud/hizbQuarter/1/quran-uthmani</a> - Returns the text of hizb quarater 1 of the Holy Quran</li>
-                                <li><a href="http://api.alquran.cloud/hizbQuarter/1/quran-uthmani?offset=2&limit=2" target="_blank">http://api.alquran.cloud/hizbQuarter/1/quran-uthmani?offset=2&limit=2</a> - Returns the the ayahs 3-4 from hizb Quarter 1</li>
+                                <li><a href="http://api.alquran.cloud/v1/hizbQuarter/1/en.asad" target="_blank">http://api.alquran.cloud/v1/hizbQuarter/1/en.asad</a> - Returns hizb quarter 1 from Muhammad Asad's translation of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/v1/hizbQuarter/1/quran-uthmani" target="_blank">http://api.alquran.cloud/v1/hizbQuarter/1/quran-uthmani</a> - Returns the text of hizb quarater 1 of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/v1/hizbQuarter/1/quran-uthmani?offset=2&limit=2" target="_blank">http://api.alquran.cloud/v1/hizbQuarter/1/quran-uthmani?offset=2&limit=2</a> - Returns the the ayahs 3-4 from hizb Quarter 1</li>
                             </ol>
                         </div>
                     </div>
@@ -648,7 +648,7 @@
                     </div>
                      <div class="row">
                         <div class="col-md-4">
-                            1. http://api.alquran.cloud/sajda/{{edition}}
+                            1. http://api.alquran.cloud/v1/sajda/{{edition}}
                         </div>
                         <div class="col-md-4">
                             <p>
@@ -658,8 +658,8 @@
                         </div>
                         <div class="col-md-4">
                             <ol>
-                                <li><a href="http://api.alquran.cloud/sajda/en.asad" target="_blank">http://api.alquran.cloud/sajda/en.asad</a> - Returns sajda ayahs from Muhammad Asad's translation of the Holy Quran</li>
-                                <li><a href="http://api.alquran.cloud/sajda/quran-uthmani" target="_blank">http://api.alquran.cloud/sajda/quran-uthmani</a> - Returns the text of sajda ayahs of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/v1/sajda/en.asad" target="_blank">http://api.alquran.cloud/v1/sajda/en.asad</a> - Returns sajda ayahs from Muhammad Asad's translation of the Holy Quran</li>
+                                <li><a href="http://api.alquran.cloud/v1/sajda/quran-uthmani" target="_blank">http://api.alquran.cloud/v1/sajda/quran-uthmani</a> - Returns the text of sajda ayahs of the Holy Quran</li>
                             </ol>
                         </div>
                     </div>
