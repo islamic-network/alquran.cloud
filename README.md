@@ -1,3 +1,5 @@
+## بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+
 # Al Quran Cloud
 
 This is the code you see deployed on https://alquran.cloud. This documentation explains how you can get setup
