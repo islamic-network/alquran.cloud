@@ -1,0 +1,149 @@
+version: 2.1
+executors:
+  docker-publisher:
+    environment:
+      IMAGE_NAME: vesica/alquran.cloud
+    docker:
+      - image: circleci/buildpack-deps:stretch
+  php72:
+    docker:
+      - image: vesica/php72
+    working_directory: ~/repo
+
+jobs:
+  build-app:
+    executor: php72
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "composer.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      - run: composer install -n --prefer-dist
+      - save_cache:
+          paths:
+            - ./vendor
+          key: v1-dependencies-{{ checksum "composer.json" }}
+      - run: vendor/bin/phpunit tests/
+  push-git-tag:
+    docker:
+      - image: cibuilds/github
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run:
+          name: "Publish Release on GitHub"
+          command: |
+            VERSION="${CIRCLE_BUILD_NUM}"
+            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} ~/repo/
+  build-docker-image:
+    executor: docker-publisher
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Add Version information
+          command: |
+            echo "commit: ${CIRCLE_SHA1}" > html/VERSION
+            echo "tag: ${CIRCLE_TAG}" >> html/VERSION
+            echo "branch: ${CIRCLE_BRANCH}" >> html/VERSION
+            echo "ci_build: ${CIRCLE_BUILD_NUM}" >> html/VERSION
+            echo "ci_workflow: ${CIRCLE_WORKFLOW_ID}" >> html/VERSION
+      - run:
+          name: Build Production Docker image
+          command: docker build -t $IMAGE_NAME:latest .
+      - run:
+          name: Archive Production Docker image
+          command: docker save -o prod.tar $IMAGE_NAME
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./prod.tar
+  publish-docker-latest:
+    executor: docker-publisher
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
+      - setup_remote_docker
+      - run:
+          name: Load archived Docker image
+          command: docker load -i /tmp/workspace/prod.tar
+      - run:
+          name: Publish Docker Image to Docker Hub
+          command: |
+            echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            IMAGE_TAG="${CIRCLE_BUILD_NUM}"
+            docker tag $IMAGE_NAME:latest $IMAGE_NAME:$IMAGE_TAG
+            docker push $IMAGE_NAME:latest
+  publish-docker-tag:
+    executor: docker-publisher
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
+      - setup_remote_docker
+      - run:
+          name: Load archived Docker image
+          command: docker load -i /tmp/workspace/prod.tar
+      - run:
+          name: Publish Docker Image to Docker Hub
+          command: |
+            echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            IMAGE_TAG=${CIRCLE_TAG}
+            docker tag $IMAGE_NAME:latest $IMAGE_NAME:$IMAGE_TAG
+            docker push $IMAGE_NAME:latest
+            docker push $IMAGE_NAME:$IMAGE_TAG
+
+workflows:
+  version: 2
+  build-master:
+    jobs:
+      - build-app:
+          filters:
+            branches:
+              only: master
+      - push-git-tag:
+          context: org-global
+          requires:
+            - build-app
+          filters:
+            branches:
+              only: master
+      - build-docker-image:
+          requires:
+            - push-git-tag
+          filters:
+            branches:
+              only: master
+      - publish-docker-latest:
+          context: org-global
+          requires:
+            - build-docker-image
+          filters:
+            branches:
+              only: master
+  build-tags:
+    jobs:
+      - build-app:
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
+      - build-docker-image:
+          requires:
+            - build-app
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
+      - publish-docker-tag:
+          context: org-global
+          requires:
+            - build-docker-image
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
