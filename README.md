@@ -33,6 +33,8 @@ You can now visit http://localhost:8081/ and start using it.
 
 ### Build and Contribute
 
+**Please note that the Dockerfile included builds a production ready container which has opcache switched on and xdebug turned off, so you will only see your changes every 5 minutes if you are developing. To actively develop, change the ```FROM vesica/php72:latest``` line to ```vesica/php72:dev```.**
+
 1. Clone this repository
 2. Run ```docker build . -t vesica/alquran.cloud```. This will build an image with production dependencies only.
 3. Run ```docker run -it -p 8081:8080  -v ($pwd)/.:/var/www vesica/alquran.cloud``` to spin up the built image.
