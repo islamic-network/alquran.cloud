@@ -1,5 +1,10 @@
 ## بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
 
+[![CircleCI](https://circleci.com/gh/islamic-network/alquran.cloud.svg?style=shield)](https://circleci.com/gh/islamic-network/alquran.cloud)
+[![](https://img.shields.io/docker/pulls/vesica/alquran.cloud.svg)](https://cloud.docker.com/u/vesica/repository/docker/vesica/alquran.cloud)
+[![](https://img.shields.io/github/release/islamic-network/alquran.cloud.svg)](https://github.com/islamic-network/alquran.cloud/releases)
+[![](https://img.shields.io/github/license/islamic-network/alquran.cloud.svg)](https://github.com/islamic-network/alquran.cloud/blob/master/LICENSE)
+
 # Al Quran Cloud
 
 This is the code you see deployed on https://alquran.cloud. This documentation explains how you can get setup
