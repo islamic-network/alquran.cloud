@@ -7,7 +7,7 @@
 
 <div class="container">
 	<div class="lead font-uthmani align-center style-ayah" style="padding-top: 70px;">
-		بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+		بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
 	</div>
 	<hr />
 	<?php

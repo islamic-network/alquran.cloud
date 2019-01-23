@@ -3,7 +3,7 @@
 <?php // ================================================================ // ?>
 <div class="container">
     <div class="lead font-uthmani align-center">
-        بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+        بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
     </div>
 	<div class="page-header">
         <h4>About</h4>

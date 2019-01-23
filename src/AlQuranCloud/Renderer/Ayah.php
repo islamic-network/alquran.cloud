@@ -14,8 +14,9 @@ class Ayah
 		} else {
 			$ayahNumber = 'ayah-number';
 		}
-        return '<span class="ayah-ending">&#1757;
-			<span class="'. $ayahNumber . '">' .
+
+        return '<span class="ayah-ending">
+			<span class="'. $ayahNumber . ' label label-default">' .
 				Generic::latinToArabicNumerals($number)
            . '
 			</span>

@@ -14,7 +14,7 @@
 			<hr />
 			<?php if ($surah->number != 9) { ?>
 			<div class="lead font-uthmani align-center style-ayah">
-				بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+				بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
 			</div>
 			<?php } ?>
 			<?php $ayahs = (array) $surah->ayahs;

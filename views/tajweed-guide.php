@@ -10,7 +10,7 @@ $parser = new AlQuranCloud\Tools\Parser\Tajweed();
 
 <div class="container">
     <div class="lead font-uthmani align-center">
-        بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+        بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
     </div>
 	<div class="page-header">
         <h4>Tajweed Guide - <small> Parsing and Displaying Tajweed Data </small></h4>

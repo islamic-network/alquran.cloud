@@ -71,39 +71,31 @@ div.container {
 .ayah-number {
   width: 90%;
   height: 90%;
-  position: absolute;
   top: 0px;
   left: 0;
   z-index: 10;
   margin-top: 25%;
   margin-left: -20%;
-  font-size: 60%;
 }
 
 .ayah-number-2digit {
   width: 90%;
   height: 90%;
-  position: absolute;
   top: 0px;
   left: 0;
   right: 5px;
   z-index: 10;
   margin-top: 25%;
-  margin-right: 20%;
-  font-size: 60%;
 }
 
 .ayah-number-3digit {
   width: 90%;
   height: 90%;
-  position: absolute;
   top: 0px;
   right: 1px;
   left: 0;
   z-index: 10;
   margin-top: 25%;
-  margin-right: 20%;
-  font-size: 60%;
 }
 
 .ayahEditionName:first-letter {

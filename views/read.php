@@ -5,7 +5,7 @@
 
 <div class="container">
 	<div class="lead font-uthmani align-center style-ayah">
-		بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+		بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
 	</div>
 	<div class="page-header">
 		<h4>
