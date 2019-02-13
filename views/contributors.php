@@ -20,6 +20,7 @@
 		<ul>
 			<li>Khaled Hosny for the Amiri Font</li>
 			<li>The team @ GlobalQuran.com</li>
+			<li><a href="http://tanzil.net" target="_blank">Tanzil.net</a> - where all the text comes from</li>
 			<li>Yasser Atia</li>
 			<li>Slim Framework</li>
 			<li>JQuery / Apache / PHP / Twitter Bootstrap / Composer</li>
