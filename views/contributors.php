@@ -11,7 +11,7 @@
 	<div class="row">
 		<div class="col-md-12">
 		<p>
-		First and foremost, all thanks and praise is to Allah for providing us with the Blessed Quran. Then...	
+		First and foremost, all thanks and praise is to Allah for providing us with the Blessed Quran and giving us the ability to maintain this. Then...	
 		</p>
 		<p>
         The following organisations / people have contributed to AlQuran.cloud, directly or indirectly:
@@ -24,6 +24,8 @@
 			<li>Yasser Atia</li>
 			<li>Slim Framework</li>
 			<li>JQuery / Apache / PHP / Twitter Bootstrap / Composer</li>
+			<li>CircleCI, Docker and Portainer</li>
+			<li>Linux / Ubuntu / Debian<l/i>
 			<li>All Translators and Reciters</li>
 			<li>Vesica - for hosting</li>
 			<li>Bootswatch - for the Paper theme</li>
