@@ -3,6 +3,7 @@ use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use Slim\Http\Request;
 use Slim\Http\Response;
+use Vesica\Slim\Middleware\Headers\Validate as HeaderValidationMiddleware;
 
 $container = $app->getContainer();
 
@@ -53,22 +54,12 @@ $container['notFoundHandler'] = function ($c) {
 };
 
 /** Invoke Middleware for Load Balancer Checks */
-$app->add(function (Request $request, Response $response, $next) {
-    $lbMode = (bool) getenv('LOAD_BALANCER_MODE');
-    if ($lbMode) {
-        // Validate Key
-        if (isset($request->getHeader('X-LOAD-BALANCER')[0]) && $request->getHeader('X-LOAD-BALANCER')[0] === getenv('LOAD_BALANCER_KEY')) {
-            $response = $next($request, $response);
-
-            return $response;
-        }
-
-        throw new \Exception('Invalid Load Balancer Key.', 403);
-    }
-
-    $response = $next($request, $response);
-
-    return $response;
-});
+$app->add(new HeaderValidationMiddleware(
+        (bool) getenv('LOAD_BALANCER_MODE'),
+        'X-LOAD-BALANCER',
+        getenv('LOAD_BALANCER_KEY'),
+        'Invalid Load Balancer Key.'
+    )
+);
 
 

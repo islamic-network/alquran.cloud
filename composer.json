@@ -11,7 +11,8 @@
         "monolog/monolog": "~1.17",
         "slim/php-view": "^2.1",
         "alquran/api-client": "dev-master",
-        "alquran/tools": "dev-master"
+        "alquran/tools": "dev-master",
+        "vesica/slim-middlewares": "1.0"
     },
     "autoload": {
         "psr-0": {"": "src/"}
