@@ -8,9 +8,6 @@ $container = $app->getContainer();
 
 $container['helper'] = function($c) {
     $helper = new \stdClass();
-    $logId = uniqid();
-    $logStamp = time();
-    $logFile = date('Y-m-d', $logStamp);
     // Create the logger
     $helper->logger = new Logger('QuranApp');
     // Now add some handlers
@@ -39,7 +36,7 @@ $container['view'] = function ($container) {
 
 $container['errorHandler'] = function ($c) {
     return function (Request $request, Response $response, Exception $e) use ($c) {
-        $c->logger->error('Slim Error Handler Triggered', ['code' => $e->getCode(), 'message' => $e->getMessage(), 'trace' => $e->getTraceAsString()]);
+        $c->helper->logger->error('Slim Error Handler Triggered', ['code' => $e->getCode(), 'message' => $e->getMessage(), 'trace' => $e->getTraceAsString()]);
         return $c['response']->withStatus($e->getCode())
             ->withHeader('Content-Type', 'text/html')
             ->write($e->getMessage());
