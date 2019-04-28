@@ -7,7 +7,7 @@ executors:
       - image: circleci/buildpack-deps:stretch
   php72:
     docker:
-      - image: vesica/php72
+      - image: quay.io/vesica/php72
     working_directory: ~/repo
 
 jobs:
