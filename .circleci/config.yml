@@ -2,7 +2,7 @@ version: 2.1
 executors:
   docker-publisher:
     environment:
-      IMAGE_NAME: vesica/alquran.cloud
+      IMAGE_NAME: quay.io/islamic-network/alquran.cloud
     docker:
       - image: circleci/buildpack-deps:stretch
   php72:
@@ -70,9 +70,9 @@ jobs:
           name: Load archived Docker image
           command: docker load -i /tmp/workspace/prod.tar
       - run:
-          name: Publish Docker Image to Docker Hub
+          name: Publish Docker Image to Quay.io
           command: |
-            echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            echo "$QUAYIO_PASSWORD" | docker login -u "$QUAYIO_USERNAME" --password-stdin
             IMAGE_TAG="${CIRCLE_BUILD_NUM}"
             docker push $IMAGE_NAME:latest
   publish-docker-tag:
@@ -85,9 +85,9 @@ jobs:
           name: Load archived Docker image
           command: docker load -i /tmp/workspace/prod.tar
       - run:
-          name: Publish Docker Image to Docker Hub
+          name: Publish Docker Image to Quay.io
           command: |
-            echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            echo "$QUAYIO_PASSWORD" | docker login -u "$QUAYIO_USERNAME" --password-stdin
             IMAGE_TAG=${CIRCLE_TAG}
             docker tag $IMAGE_NAME:latest $IMAGE_NAME:$IMAGE_TAG
             docker push $IMAGE_NAME:$IMAGE_TAG
