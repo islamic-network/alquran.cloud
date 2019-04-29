@@ -26,7 +26,9 @@ to deploy your own instance and contribute code.
 
 The app is fully Dockerised. You **just need docker** to spin it up.
 
-A production ready Docker image of the app is published as vesica/alquran.cloud on Docker Hub (https://hub.docker.com/r/vesica/alquran.cloud/).
+A production ready Docker image of the app is published as:
+* quay.io/islamic-network/alquran.cloud on Quay
+* islamicnetwork/alquran.cloud on Docker Hub
 
 To get your own instance up, simply run:
 
