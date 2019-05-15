@@ -1,9 +1,12 @@
 AddType audio/mp3 .mp3
 
 RewriteEngine On
-#RewriteCond %{HTTP_HOST} ^alquran.cloud$ [OR]
+<If "%{ENV:LOAD_BALANCER_MODE} == '1' && %{HTTP:X-LOAD-BALANCER} != %{ENV:LOAD_BALANCER_KEY}">
+    RewriteRule .* - [F]
+</If>
+RewriteCond %{HTTP_HOST} ^alquran.cloud$ [OR]
 RewriteCond %{HTTP_HOST} ^www.alquran.cloud$
-#RewriteCond %{HTTPS} off
+RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://alquran.cloud/$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
