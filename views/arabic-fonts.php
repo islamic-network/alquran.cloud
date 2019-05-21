@@ -1,7 +1,11 @@
 <?php require_once('common/header.php'); ?>
 <?php require_once('common/navigation.php'); ?>
 <?php // ================================================================ // ?>
-
+<link href="/public/css/font-amiri.css?v=2" rel="stylesheet">
+<link href="/public/css/font-droid-kufi.css?v=2" rel="stylesheet">
+<link href="/public/css/font-droid-naskh.css?v=2" rel="stylesheet">
+<link href="/public/css/font-scheherazade.css?v=2" rel="stylesheet">
+<link href="/public/css/font-thabit.css?v=2" rel="stylesheet">
 <div class="container">
   <div class="row">
     <div class="col-md-3">
@@ -9,7 +13,7 @@
     </div>
     <div class="col-md-9">
     <h1 class="">
-    بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+    بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
     </h1>
     </div>
   </div>
@@ -20,7 +24,7 @@
     </div>
     <div class="col-md-9">
     <h1 class="font-droid-arabic-naskh">
-    بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+    بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
     </h1>
     </div>
   </div>
@@ -31,7 +35,7 @@
     </div>
     <div class="col-md-9">
     <h1 class="font-droid-arabic-kufi">
-    بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+    بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
     </h1>
     </div>
   </div>
@@ -41,8 +45,8 @@
     Amiri
     </div>
     <div class="col-md-9">
-    <h1 class="font-uthmani">
-    بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+    <h1 class="font-amiri">
+    بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
     </h1>
     </div>
   </div>
@@ -53,7 +57,7 @@
     </div>
     <div class="col-md-9">
     <h1 class="font-scheherazade">
-    بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+    بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
     </h1>
 
     </div>
@@ -65,7 +69,7 @@
     </div>
     <div class="col-md-9">
     <h1 class="font-thabit">
-    بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+    بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
     </h1>
 
     </div>
@@ -77,7 +81,7 @@
     </div>
     <div class="col-md-9">
     <h1 class="font-mequran">
-    بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+    بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
     </h1>
 
     </div>
@@ -89,7 +93,7 @@
     </div>
     <div class="col-md-9">
     <h1 class="font-nh">
-    بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+    بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
     </h1>
 
     </div>
@@ -101,19 +105,7 @@
     </div>
     <div class="col-md-9">
     <h1 class="font-quran">
-    بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
-    </h1>
-
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-3">
-    Othmani
-    </div>
-    <div class="col-md-9">
-    <h1 class="font-othmani">
-    بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+    بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
     </h1>
 
     </div>
@@ -125,7 +117,7 @@
     </div>
     <div class="col-md-9">
     <h1 class="font-uthmani">
-    بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+    بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
     </h1>
 
     </div>
