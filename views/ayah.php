@@ -5,7 +5,7 @@
 <?php use AlQuranCloud\Renderer\Generic; ?>
 
 <div class="container">
-	<div class="lead font-uthmani align-center">
+	<div class="lead font-mequran2 align-center">
 		بِسْمِ ٱللّٰهِِ الرَّحْمٰنِ الرَّحِيْمِ
 	</div>
 	<div class="page-header">
@@ -54,7 +54,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-12 font-uthmani rtl style-ayah">
+		<div class="col-md-12 font-mequran2 rtl style-ayah">
 			<?= $ayah->data->text; ?>
 				<?= Ayah::renderAyahEndingInArabic($ayah->data->numberInSurah); ?>
 		</div>

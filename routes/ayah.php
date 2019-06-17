@@ -3,13 +3,12 @@ use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
 $app->get('/ayah', function ($request, $response, $args) {
-
 	if ($request->getQueryParam('reference') !== null && $request->getQueryParam('reference') != '') {
 		$reference = urldecode($request->getQueryParam('reference'));
 	} else {
 		$reference = '24:35';
 	}
-	$ayah = $this->client->AlQuranCloudApi->ayah($reference, 'quran-simple');
+	$ayah = $this->client->AlQuranCloudApi->ayah($reference, 'quran-uthmani');
 
     return $this->view->render($response, 'ayah.php', [
         'pageTitle' => 'Quran - Surah ' . $ayah->data->surah->englishName . ' Ayah ' . $ayah->data->numberInSurah . ' (' . $ayah->data->surah->number . ':' . $ayah->data->numberInSurah . ')',
@@ -29,7 +28,7 @@ $app->get('/ayah/{reference}', function ($request, $response, $args) {
 	if ($request->getQueryParam('reference') !== null && $request->getQueryParam('reference') != '') {
 		$reference = $request->getQueryParam('reference');
 	}
-	$ayah = $this->client->AlQuranCloudApi->ayah($reference, 'quran-simple');
+	$ayah = $this->client->AlQuranCloudApi->ayah($reference, 'quran-uthmani');
     return $this->view->render($response, 'ayah.php', [
         'pageTitle' => 'Quran - Surah ' . $ayah->data->surah->englishName . ' Ayah ' . $ayah->data->numberInSurah . ' (' . $ayah->data->surah->number . ':' . $ayah->data->numberInSurah . ')',
 		'metaDescription' => 'AlQuran Cloud',
@@ -49,7 +48,7 @@ $app->get('/ayah/{reference}/{edition}', function ($request, $response, $args) {
 	if ($request->getQueryParam('reference') !== null && $request->getQueryParam('reference') != '') {
 		$reference = $request->getQueryParam('reference');
 	}
-	$ayah = $this->client->AlQuranCloudApi->ayah($reference, 'quran-simple');
+	$ayah = $this->client->AlQuranCloudApi->ayah($reference, 'quran-uthmani');
     return $this->view->render($response, 'ayah.php', [
         'pageTitle' => 'Quran - Surah ' . $ayah->data->surah->englishName . ' Ayah ' . $ayah->data->numberInSurah . ' (' . $ayah->data->surah->number . ':' . $ayah->data->numberInSurah . ')',
 		'metaDescription' => 'AlQuran Cloud',

@@ -140,7 +140,7 @@
     Uthmani
     </div>
     <div class="col-md-9">
-    <h1 class="font-uthmani">
+    <h1 class="font-mequran2">
     بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
     </h1>
 

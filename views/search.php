@@ -6,7 +6,7 @@
 <?php use AlQuranCloud\Renderer\Surah; ?>
 
 <div class="container">
-	<div class="lead font-uthmani align-center">
+	<div class="lead font-mequran2 align-center">
 		بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
 	</div>
 	 <div class="page-header">

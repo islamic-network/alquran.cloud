@@ -11,7 +11,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
-                  <a class="navbar-brand font-uthmani rtl" style="margin-right: 10px;" href="https://alquran.cloud">الْقُرْآن الْكَرِيْم</a>
+                  <a class="navbar-brand font-mequran2 rtl" style="margin-right: 10px;" href="https://alquran.cloud">الْقُرْآن الْكَرِيْم</a>
               </li>
           </ul>
           <ul class="nav navbar-nav">

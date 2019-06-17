@@ -9,7 +9,7 @@ $parser = new AlQuranCloud\Tools\Parser\Tajweed();
 ?>
 
 <div class="container">
-    <div class="lead font-uthmani align-center">
+    <div class="lead font-mequran2 align-center">
         بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
     </div>
 	<div class="page-header">
@@ -24,7 +24,7 @@ $parser = new AlQuranCloud\Tools\Parser\Tajweed();
             This page essentially lists the output of the library. Please see the complete documentation the GitHub URL above.
         </p>
         <h5>Rendered Example - Ayah Noor (24:35) with Tajweed Parsed</h5>
-            <div class="font-uthmani style-ayah" style="direction: rtl">
+            <div class="font-mequran2 style-ayah" style="direction: rtl">
             <?=$parser->parse($text);?>
             </div>
         <h5>What do the Colours mean?</h5>

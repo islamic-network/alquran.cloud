@@ -4,7 +4,7 @@
 <?php use AlQuranCloud\Renderer\Generic; ?>
 
 <div class="container">
-	<div class="lead font-uthmani align-center style-ayah">
+	<div class="lead font-mequran2 align-center style-ayah">
 		بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
 	</div>
 	<div class="page-header">
