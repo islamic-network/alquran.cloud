@@ -6,8 +6,6 @@ RewriteEngine On
 </If>
 
 RewriteCond %{HTTP_HOST} ^www.alquran.cloud$
-RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://alquran.cloud/$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ index.php [QSA,L]
