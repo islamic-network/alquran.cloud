@@ -6,6 +6,7 @@
 <link href="/public/css/font-droid-naskh.css?v=2" rel="stylesheet">
 <link href="/public/css/font-scheherazade.css?v=2" rel="stylesheet">
 <link href="/public/css/font-thabit.css?v=2" rel="stylesheet">
+<link href="/public/css/font-all.css?v=3" rel="stylesheet">
 <div class="container">
   <div class="row">
     <div class="col-md-3">
@@ -63,6 +64,29 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-md-3">
+    Thabit
+    </div>
+    <div class="col-md-9">
+    <h1 class="font-thabit">
+    بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+    </h1>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+    Me Quran
+    </div>
+    <div class="col-md-9">
+    <h1 class="font-mequran2">
+    بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+    </h1>
+
+    </div>
+  </div>
   <div class="row">
     <div class="col-md-3">
     Thabit
