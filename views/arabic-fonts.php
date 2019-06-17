@@ -78,7 +78,7 @@
 
   <div class="row">
     <div class="col-md-3">
-    Me Quran
+    Me Quran 2
     </div>
     <div class="col-md-9">
     <h1 class="font-mequran2">
