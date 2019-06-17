@@ -5,7 +5,7 @@ RewriteEngine On
     RewriteRule .* - [F]
 </If>
 
-RewriteCond %{HTTP_HOST} ^www.alquran.cloud$
+RewriteCond %{HTTP_HOST} ^www.alquran.cloud$ [OR]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://alquran.cloud/$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
