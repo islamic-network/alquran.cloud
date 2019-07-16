@@ -25,8 +25,12 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12">
+                            <h4>Primary CDN - Served by Cloudflare</h4>
                             <p>
-                                Audio files can be accessed via the CDN using the following URL:
+                                This CDN will be faster than the secondary CDN, but it may not be available in some countries, like Russia and China. If you do not have access to it, please use the secondary CDN.
+                            </p>
+                            <p>
+                                Audio files can be accessed via the Cloudflare CDN using the following URL:
                             </p>
                             <code>
                                 http://cdn.alquran.cloud/media/audio/ayah/{edition}/{number}/{quality}
@@ -49,6 +53,36 @@
                                 <li><a href="http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/262" target="_blank">http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/262</a></li>
                                 <li><a href="http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/262/low" target="_blank">http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/262/low</a></li>
                                 <li><a href="http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/262/high" target="_blank">http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/262/high</a></li>
+                            </ul>
+
+                            <h4>Secondary CDN - Served by Digital Ocean</h4>
+                            <p>
+                                This is the fallback CDN for those who cannot access Cloudflare.
+                            </p>
+                            <p>
+                                Audio files can be accessed via the Digital Ocean CDN using the following URL:
+                            </p>
+                            <code>
+                                http://islamic-network.fra1.cdn.digitaloceanspaces.com/quran/audio/{bitrate}/{edition}/{number}.mp3
+                            </code>
+                            <ul>
+                                <li>
+                                {edition} - An audio edition as returned by the API. (Example - ar.alafasy). A list of these editions is available here: <a href="http://api.alquran.cloud/edition/format/audio">http://api.alquran.cloud/edition/format/audio</a>
+                                </li>
+                                <li>
+                                {number} - An ayah number. the Quran contains 6236 ayahs, so this must be a number between 1 and 6236.
+                                </li>
+                                <li>
+                                {bitrate} - Quality of audio served. Acceptable values are 192, 128, 64, 48, 40 and 32. You can see which edition is available in what sizes at https://raw.githubusercontent.com/islamic-network/api.alquran.cloud/master/cdn.txt.
+                                </li>
+                            </ul>
+                             <p>
+                                Examples:
+                            </p>
+                            <ul>
+                                <li><a href="https://islamic-network.fra1.cdn.digitaloceanspaces.com/quran/audio/128/ar.alafasy/262.mp3" target="_blank">https://islamic-network.fra1.cdn.digitaloceanspaces.com/quran/audio/128/ar.alafasy/262.mp3</a></li>
+                                <li><a href="https://islamic-network.fra1.cdn.digitaloceanspaces.com/quran/audio/64/ar.alafasy/262.mp3" target="_blank">https://islamic-network.fra1.cdn.digitaloceanspaces.com/quran/audio/64/ar.alafasy/262.mp3</a></li>
+                                
                             </ul>
                         </div>
                     </div>

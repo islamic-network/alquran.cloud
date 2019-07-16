@@ -671,7 +671,7 @@
             Base URLs
         </h4>
         <p>
-            The API is available via 2 Base URLs - 1 in Europe and 1 in China.
+            The API is available via 1 Base URL  1 in Europe.
         </p>
         <div class="panel panel-primary">
             <div class="panel-heading" role="tab" id="headingEurope">
@@ -683,19 +683,6 @@
             <div id="collapseEurope" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEurope">
                 <div class="panel-body">
                    <b> http://api.alquran.cloud</b> - Available over http and https - based in Europe. Powered by multiple load balanced instances - please use this if you are outside China or expect heavy usage.
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-primary">
-            <div class="panel-heading" role="tab" id="headingChina">
-                <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseChina" aria-expanded="true" aria-controls="collapseSix">China
-                </a>
-      </h4>
-            </div>
-            <div id="collapseChina" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingChina">
-                <div class="panel-body">
-                    <b>http://api.quran.2muslim.org</b> - Available over http and https - licensed and based in China. This is a single instance endpoint - if you expect heavy usage, use the European endpoint or contact us, please. This instance has been kindly provided by ZhongMuWang（中穆网).
                 </div>
             </div>
         </div>
