@@ -73,7 +73,7 @@
                                 {number} - An ayah number. the Quran contains 6236 ayahs, so this must be a number between 1 and 6236.
                                 </li>
                                 <li>
-                                {bitrate} - Quality of audio served. Acceptable values are 192, 128, 64, 48, 40 and 32. You can see which edition is available in what sizes at https://raw.githubusercontent.com/islamic-network/api.alquran.cloud/master/cdn.txt.
+                                {bitrate} - Quality of audio served. Acceptable values are 192, 128, 64, 48, 40 and 32. You can see which edition is available in what sizes at <a href="https://raw.githubusercontent.com/islamic-network/api.alquran.cloud/master/cdn.txt" target="_blank">https://raw.githubusercontent.com/islamic-network/api.alquran.cloud/master/cdn.txt</a>.
                                 </li>
                             </ul>
                              <p>
