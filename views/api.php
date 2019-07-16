@@ -671,7 +671,7 @@
             Base URLs
         </h4>
         <p>
-            The API is available via 1 Base URL  1 in Europe.
+            The API is available via 1 Base URL in Europe.
         </p>
         <div class="panel panel-primary">
             <div class="panel-heading" role="tab" id="headingEurope">
