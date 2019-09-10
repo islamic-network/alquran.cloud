@@ -80,8 +80,8 @@
                                 Examples:
                             </p>
                             <ul>
-                                <li><a href="https://cdn.islamic.network/quran/audio/128/ar.alafasy/262.mp3" target="_blank">https://islamic-network.fra1.cdn.digitaloceanspaces.com/quran/audio/128/ar.alafasy/262.mp3</a></li>
-                                <li><a href="https://cdn.islamic.network/quran/audio/64/ar.alafasy/262.mp3" target="_blank">https://islamic-network.fra1.cdn.digitaloceanspaces.com/quran/audio/64/ar.alafasy/262.mp3</a></li>
+                                <li><a href="https://cdn.islamic.network/quran/audio/128/ar.alafasy/262.mp3" target="_blank">https://cdn.islamic.network/quran/audio/128/ar.alafasy/262.mp3</a></li>
+                                <li><a href="https://cdn.islamic.network/quran/audio/64/ar.alafasy/262.mp3" target="_blank">https://cdn.islamic.network/quran/audio/64/ar.alafasy/262.mp3</a></li>
                                 
                             </ul>
                         </div>
