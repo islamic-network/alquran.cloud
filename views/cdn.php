@@ -55,15 +55,15 @@
                                 <li><a href="http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/262/high" target="_blank">http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/262/high</a></li>
                             </ul>
 
-                            <h4>Secondary CDN - Served by Digital Ocean</h4>
+                            <h4>Secondary CDN</h4>
                             <p>
-                                This is the fallback CDN for those who cannot access Cloudflare.
+                                This is the fallback CDN in-case the primary one goes down.
                             </p>
                             <p>
-                                Audio files can be accessed via the Digital Ocean CDN using the following URL:
+                                Audio files can be accessed via the following URL:
                             </p>
                             <code>
-                                http://islamic-network.fra1.cdn.digitaloceanspaces.com/quran/audio/{bitrate}/{edition}/{number}.mp3
+                                https://cdn.islamic.network/quran/audio/{bitrate}/{edition}/{number}.mp3
                             </code>
                             <ul>
                                 <li>
@@ -80,8 +80,8 @@
                                 Examples:
                             </p>
                             <ul>
-                                <li><a href="https://islamic-network.fra1.cdn.digitaloceanspaces.com/quran/audio/128/ar.alafasy/262.mp3" target="_blank">https://islamic-network.fra1.cdn.digitaloceanspaces.com/quran/audio/128/ar.alafasy/262.mp3</a></li>
-                                <li><a href="https://islamic-network.fra1.cdn.digitaloceanspaces.com/quran/audio/64/ar.alafasy/262.mp3" target="_blank">https://islamic-network.fra1.cdn.digitaloceanspaces.com/quran/audio/64/ar.alafasy/262.mp3</a></li>
+                                <li><a href="https://cdn.islamic.network/quran/audio/128/ar.alafasy/262.mp3" target="_blank">https://islamic-network.fra1.cdn.digitaloceanspaces.com/quran/audio/128/ar.alafasy/262.mp3</a></li>
+                                <li><a href="https://cdn.islamic.network/quran/audio/64/ar.alafasy/262.mp3" target="_blank">https://islamic-network.fra1.cdn.digitaloceanspaces.com/quran/audio/64/ar.alafasy/262.mp3</a></li>
                                 
                             </ul>
                         </div>
