@@ -102,10 +102,12 @@
                     <div class="row">
                         <div class="col-md-12">
                             <p>
-                               Image files can be accessed via the CDN using the following URL:
+                               Image files can be accessed via the 2 CDNs using the following URLs:
                             </p>
                             <code>
-                                http://cdn.alquran.cloud/media/image/{surah}/{ayah}
+                                https://cdn.alquran.cloud/media/image/{surah}/{ayah}
+                                or
+                                https://cdn.islamic.network/quran/images/{surah}_{ayah}.png
                             </code>
                             <ul>
                                 <li>
@@ -121,6 +123,8 @@
                             <ul>
                                 <li><a href="http://cdn.alquran.cloud/media/image/2/255" target="_blank">http://cdn.alquran.cloud/media/image/2/255</a></li>
                                 <li><a href="http://cdn.alquran.cloud/media/image/24/35" target="_blank">http://cdn.alquran.cloud/media/image/24/35</a></li>
+                                <li><a href="http://cdn.islamic.network/images/2_255.png" target="_blank">http://cdn.islamic.network/images/2_255.png</a></li>
+                                <li><a href="http://cdn.islamic.network/images/24_35.png" target="_blank">http://cdn.islamic.network/images/24_35.png</a></li>
                             </ul>
                         </div>
                     </div>
