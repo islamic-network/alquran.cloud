@@ -123,8 +123,8 @@
                             <ul>
                                 <li><a href="http://cdn.alquran.cloud/media/image/2/255" target="_blank">http://cdn.alquran.cloud/media/image/2/255</a></li>
                                 <li><a href="http://cdn.alquran.cloud/media/image/24/35" target="_blank">http://cdn.alquran.cloud/media/image/24/35</a></li>
-                                <li><a href="http://cdn.islamic.network/images/2_255.png" target="_blank">http://cdn.islamic.network/images/2_255.png</a></li>
-                                <li><a href="http://cdn.islamic.network/images/24_35.png" target="_blank">http://cdn.islamic.network/images/24_35.png</a></li>
+                                <li><a href="http://cdn.islamic.network/quran/images/2_255.png" target="_blank">http://cdn.islamic.network/quran/images/2_255.png</a></li>
+                                <li><a href="http://cdn.islamic.network/quran/images/24_35.png" target="_blank">http://cdn.islamic.network/quran/images/24_35.png</a></li>
                             </ul>
                         </div>
                     </div>
