@@ -106,7 +106,9 @@
                             </p>
                             <code>
                                 https://cdn.alquran.cloud/media/image/{surah}/{ayah}
+                            </code>
                                 or
+                            <code>
                                 https://cdn.islamic.network/quran/images/{surah}_{ayah}.png
                             </code>
                             <ul>
