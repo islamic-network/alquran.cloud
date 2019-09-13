@@ -113,7 +113,7 @@
                             </code>
                             <ul>
                                 <li>
-                                {surah} - An audio edition as returned by the API. (Example - ar.alafasy). A list of these editions is available here: <a href="http://api.alquran.cloud/edition/format/audio">http://api.alquran.cloud/edition/format/audio</a>
+                                {surah} - A surah number (from 1 to 114) 
                                 </li>
                                 <li>
                                 {ayah} - An ayah number relative to the surah
