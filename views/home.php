@@ -76,7 +76,7 @@
             Quran audio, ayah images, the database - everything is available for use.
         </p>
         <p>
-            <a href="http://downloads.alquran.cloud" target="_blank" class="btn btn-primary">Get the Media</a>
+            <a href="/download-media" target="_blank" class="btn btn-primary">Get the Media</a>
 
         </p>
     </div>
