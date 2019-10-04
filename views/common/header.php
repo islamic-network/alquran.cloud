@@ -21,7 +21,7 @@
     <link href="/public/libraries/mep-feature-playlist/mep-feature-playlist.css?v=1" rel="stylesheet">
     <link href="/public/libraries/bootstrap-multiselect/dist/css/bootstrap-multiselect.css?v=1" rel="stylesheet">
     <link href="/public/css/stickyfooter.css?v=1" rel="stylesheet">
-    <link href="/public/css/alquran.cloud.css?v=1" rel="stylesheet">
+    <link href="/public/css/alquran.cloud.css?v=2" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
