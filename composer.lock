@@ -51,12 +51,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/islamic-network/alquran-tools.git",
-                "reference": "8ff87dd1ec33ad6671e976c4d71fed5a5a68d7da"
+                "reference": "b75676a607d22af3da30f20f588416b201dad012"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/islamic-network/alquran-tools/zipball/8ff87dd1ec33ad6671e976c4d71fed5a5a68d7da",
-                "reference": "8ff87dd1ec33ad6671e976c4d71fed5a5a68d7da",
+                "url": "https://api.github.com/repos/islamic-network/alquran-tools/zipball/b75676a607d22af3da30f20f588416b201dad012",
+                "reference": "b75676a607d22af3da30f20f588416b201dad012",
                 "shasum": ""
             },
             "type": "library",
@@ -73,7 +73,7 @@
                 }
             ],
             "description": "Various tools to parse and process Quran Text",
-            "time": "2019-10-19T18:32:44+00:00"
+            "time": "2019-11-21T08:39:19+00:00"
         },
         {
             "name": "container-interop/container-interop",
