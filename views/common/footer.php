@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
                 <p class="" style="margin-top: 20px; margin-left: 10px;">
-            &copy; <?php echo date('Y'); ?> Respective <a href="http://alquran.cloud/contributors">contributors</a>.
+            &copy; <?php echo date('Y'); ?> <a href="https://islamic.network" target="_blank">Islamic Network</a> and respective <a href="http://alquran.cloud/contributors">contributors</a>.
                 </p>
             </div>
             <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">
