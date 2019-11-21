@@ -17,7 +17,6 @@ $parser = new AlQuranCloud\Tools\Parser\Tajweed();
     </div>
 	<div class="row">
 		<div class="col-md-12">
-            <strong>NOTE: Webkit Browsers (Chrome, Safari etc.) are currently unable to properly parse arabic characters with inline HTML. Please use Firefox for displaying Tajweed. For more information, see the GitHub repo.</strong>
         <h5>Developer Tools and Documentation</h5>
         <p>
             The library and documentation on how to use it is available on <a href="https://github.com/islamic-network/alquran-tools">https://github.com/meezaan/alquran-tools</a>.
