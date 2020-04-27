@@ -668,13 +668,13 @@
         </div>
 
         <div class="panel panel-primary">
-            <div class="panel-heading" role="tab" id="headingEleven">
+            <div class="panel-heading" role="tab" id="headingTwelve">
                 <h4 class="panel-title">
-        <span class="label label-danger">GET</span> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">Meta - Get meta data about Surahs, Pages, Hizbs and Juzs
+        <span class="label label-danger">GET</span> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve" aria-expanded="true" aria-controls="collapseTwelve">Meta - Get meta data about Surahs, Pages, Hizbs and Juzs
         </a>
         </h4>
             </div>
-            <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+            <div id="collapseTwelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-4 bold">
