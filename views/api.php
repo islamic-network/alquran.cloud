@@ -667,6 +667,45 @@
             </div>
         </div>
 
+        <div class="panel panel-primary">
+            <div class="panel-heading" role="tab" id="headingEleven">
+                <h4 class="panel-title">
+        <span class="label label-danger">GET</span> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">Meta - Get meta data about Surahs, Pages, Hizbs and Juzs
+        </a>
+        </h4>
+            </div>
+            <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-4 bold">
+                            Endpoint
+                        </div>
+                        <div class="col-md-4 bold">
+                            Description
+                        </div>
+                        <div class="col-md-4 bold">
+                            Example
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-4">
+                            1. http://api.alquran.cloud/v1/meta
+                        </div>
+                        <div class="col-md-4">
+                            <p>
+                            Returns all the meta data about the Qur'an available in this API<br />
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <ol>
+                                <li><a href="http://api.alquran.cloud/v1/meta" target="_blank">http://api.alquran.cloud/v1/meta</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <h4>
             Base URLs
         </h4>
