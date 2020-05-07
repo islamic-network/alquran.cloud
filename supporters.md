@@ -15,3 +15,4 @@ AlQuran.cloud is an open source project and is powered by free APIs provided by 
 * Saiful Abdul Aziz
 * Walid Aredjal
 * Sarkar Anwar
+* Usman Razaq
