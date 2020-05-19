@@ -32,7 +32,7 @@
 			<li>David Stutz - for Bootstrap multiselect</li>
 			<li>Media Elements JS</li>
 			<li>Google Early Access Fonts</li>
-			<li>EB WSAD</li>
+			<li>Quranwbw.com</li>
 			<li>Mishary Alafasy - for the beautiful recitation used on this website</li>
 		</ul>
 
