@@ -1,0 +1,52 @@
+# Deployment
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alquran-cloud-app
+  namespace: alquran-cloud
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: alquran-cloud-app
+  template:
+    metadata:
+      labels:
+        app: alquran-cloud-app
+    spec:
+      containers:
+      - name: alquran-cloud-app
+        image: islamicnetwork/alquran.cloud:$COMMIT_TAG
+        livenessProbe:
+          httpGet:
+            path: /about
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          timeoutSeconds: 3
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /about
+            port: 8080
+          initialDelaySeconds: 7
+          periodSeconds: 15
+          timeoutSeconds: 3
+          failureThreshold: 3
+        resources:
+          requests:
+            cpu: "0.1"
+            memory: 18Mi
+          limits:
+            cpu: "0.1"
+            memory: 180Mi
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+

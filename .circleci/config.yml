@@ -2,18 +2,17 @@ version: 2.1
 executors:
   docker-publisher:
     environment:
-      IMAGE_NAME: quay.io/islamic-network/alquran.cloud
-      IMAGE_NAME_DH: islamicnetwork/alquran.cloud
+      IMAGE_NAME: islamicnetwork/alquran.cloud
     docker:
       - image: circleci/buildpack-deps:stretch
-  php72:
+  php74:
     docker:
-      - image: quay.io/vesica/php72
+      - image: quay.io/vesica/php74
     working_directory: ~/repo
 
 jobs:
   build-app:
-    executor: php72
+    executor: php74
     steps:
       - checkout
       - restore_cache:
@@ -71,18 +70,11 @@ jobs:
           name: Load archived Docker image
           command: docker load -i /tmp/workspace/prod.tar
       - run:
-          name: Publish Docker Image to Quay.io
-          command: |
-            echo "$QUAYIO_PASSWORD" | docker login quay.io -u "$QUAYIO_USERNAME" --password-stdin
-            IMAGE_TAG="${CIRCLE_BUILD_NUM}"
-            docker push $IMAGE_NAME:latest
-      - run:
           name: Publish Docker Image to Docker Hub
           command: |
             echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
             IMAGE_TAG="${CIRCLE_BUILD_NUM}"
-            docker tag $IMAGE_NAME:latest $IMAGE_NAME_DH:latest
-            docker push $IMAGE_NAME_DH:latest
+            docker push $IMAGE_NAME:latest
   publish-docker-tag:
     executor: docker-publisher
     steps:
@@ -93,19 +85,29 @@ jobs:
           name: Load archived Docker image
           command: docker load -i /tmp/workspace/prod.tar
       - run:
-          name: Publish Docker Image to Quay.io
-          command: |
-            echo "$QUAYIO_PASSWORD" | docker login quay.io -u "$QUAYIO_USERNAME" --password-stdin
-            IMAGE_TAG=${CIRCLE_TAG}
-            docker tag $IMAGE_NAME:latest $IMAGE_NAME:$IMAGE_TAG
-            docker push $IMAGE_NAME:$IMAGE_TAG
-      - run:
           name: Publish Docker Image to Docker Hub
           command: |
             echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
             IMAGE_TAG=${CIRCLE_TAG}
-            docker tag $IMAGE_NAME:latest $IMAGE_NAME_DH:$IMAGE_TAG
-            docker push $IMAGE_NAME_DH:$IMAGE_TAG
+            docker tag $IMAGE_NAME:latest $IMAGE_NAME:$IMAGE_TAG
+            docker push $IMAGE_NAME:$IMAGE_TAG
+  deploy-docker-tag:
+    executor: docker-publisher
+    steps:
+      - checkout
+      - run:
+          name: Install envsubst
+          command: |
+            sudo apt-get update && sudo apt-get -y install gettext-base
+      - run:
+          name: Install kubectl
+          command: |
+            curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+            chmod u+x ./kubectl
+      - run:
+          name: Deploy Code
+          command: |
+            chmod u+x ./.k8s/deploy.sh && sh ./.k8s/deploy.sh
 
 workflows:
   version: 2
@@ -155,6 +157,15 @@ workflows:
           context: org-global
           requires:
             - build-docker-image
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
+      - deploy-docker-tag:
+          context: org-global
+          requires:
+            - publish-docker-tag
           filters:
             tags:
               only: /.*/
