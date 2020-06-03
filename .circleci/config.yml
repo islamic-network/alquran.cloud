@@ -107,7 +107,7 @@ jobs:
       - run:
           name: Deploy Code
           command: |
-            chmod u+x ./.k8s/deploy.sh && sh ./.k8s/deploy.sh
+            curl -o ./.k8s/deploy.sh https://raw.githubusercontent.com/islamic-network/k8s-deployment/master/deploy.sh && chmod u+x ./.k8s/deploy.sh && sh ./.k8s/deploy.sh
 
 workflows:
   version: 2
