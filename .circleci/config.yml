@@ -7,7 +7,7 @@ executors:
       - image: circleci/buildpack-deps:stretch
   php74:
     docker:
-      - image: quay.io/vesica/php74
+      - image: islamicnetwork/php74
     working_directory: ~/repo
 
 jobs:
