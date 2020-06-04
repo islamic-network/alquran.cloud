@@ -10,9 +10,8 @@
         "slim/slim": "^3.0",
         "monolog/monolog": "~1.17",
         "slim/php-view": "^2.1",
-        "alquran/api-client": "dev-master",
-        "alquran/tools": "dev-master",
-        "vesica/slim-middlewares": "1.0"
+        "alquran/api-client": "1.1",
+        "alquran/tools": "dev-master"
     },
     "autoload": {
         "psr-0": {"": "src/"}
