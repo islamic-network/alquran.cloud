@@ -706,27 +706,6 @@
             </div>
         </div>
 
-        <h4>
-            Base URLs
-        </h4>
-        <p>
-            The API is available via 1 Base URL in Europe.
-        </p>
-        <div class="panel panel-primary">
-            <div class="panel-heading" role="tab" id="headingEurope">
-                <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEurope" aria-expanded="true" aria-controls="collapseEurope">Europe
-                </a>
-      </h4>
-            </div>
-            <div id="collapseEurope" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEurope">
-                <div class="panel-body">
-                   <b> http://api.alquran.cloud</b> - Available over http and https - based in Europe. Powered by multiple load balanced instances - please use this if you are outside China or expect heavy usage.
-                </div>
-            </div>
-        </div>
-    </div>
-
     <h4>Developer Resources</h4>
     For API clients and other tools, see our open source repositories on <a href="https://github.com/islamic-network" target="_blank">GitHub</a>.
 </div>
