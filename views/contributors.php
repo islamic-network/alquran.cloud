@@ -18,7 +18,8 @@
 		</p>
 			
 		<ul>
-			<li>Khaled Hosny for the Amiri Font</li>
+			<li>Khaled Hosny for the Amiri Font and the Qur'an Unicode Text</li>
+            <li>Quran Academy for the edited Uthmanic Quran Text and the Kitab font</li>
 			<li>The team @ GlobalQuran.com</li>
 			<li><a href="http://tanzil.net" target="_blank">Tanzil.net</a> - where all the text comes from</li>
 			<li>Yasser Atia</li>
