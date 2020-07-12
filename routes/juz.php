@@ -14,7 +14,7 @@ $app->get('/juz', function ($request, $response, $args) {
     return $this->view->render($response, 'juz.php', [
         'pageTitle' => 'Quran - Juz 1',
 		'metaDescription' => 'AlQuran Cloud',
-		'juz' => $this->client->AlQuranCloudApi->juz('1', 'quran-uthmani'),
+		'juz' => $this->client->AlQuranCloudApi->juz('1', 'quran-uthmani-quran-academy'),
 		'editions' => [
 			'editions' => $this->client->AlQuranCloudApi->editions(null, null, 'text'),
 		],
@@ -24,7 +24,7 @@ $app->get('/juz', function ($request, $response, $args) {
 
 $app->get('/juz/{reference}', function ($request, $response, $args) {
 	$reference = $request->getAttribute('reference');
-	$juz = $this->client->AlQuranCloudApi->juz($reference, 'quran-uthmani');
+	$juz = $this->client->AlQuranCloudApi->juz($reference, 'quran-uthmani-quran-academy');
     return $this->view->render($response, 'juz.php', [
         'pageTitle' => 'Quran - Juz ' . $juz->data->number,
 		'metaDescription' => 'AlQuran Cloud',
@@ -40,7 +40,7 @@ $app->get('/juz/{reference}/{edition}', function ($request, $response, $args) {
 
 	$reference = $request->getAttribute('reference');
 	$edition = $request->getAttribute('edition');
-	$juz = $this->client->AlQuranCloudApi->juz($reference, 'quran-uthmani');
+	$juz = $this->client->AlQuranCloudApi->juz($reference, 'quran-uthmani-quran-academy');
 	$juzEdition = $this->client->AlQuranCloudApi->juz($reference, $edition);
     return $this->view->render($response, 'juz.php', [
         'pageTitle' => 'Quran - Juz ' . $juz->data->number . ' - ' . $juzEdition->data->edition->name,

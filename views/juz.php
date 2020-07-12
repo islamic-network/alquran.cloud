@@ -6,7 +6,7 @@
 <?php use AlQuranCloud\Renderer\Juz; ?>
 
 <div class="container">
-	<div class="lead font-mequran2 align-center style-ayah" style="padding-top: 70px;">
+	<div class="lead font-kitab align-center style-ayah" style="padding-top: 70px;">
 		بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
 	</div>
 	<hr />

@@ -9,7 +9,7 @@ class Juz
 	{
 		$html = '';
 		foreach ($ayahs as $key => $ayah) {
-			$html .= '<p class="font-mequran2 rtl style-ayah ayah' . $juz->data->number . '_' . $ayah->number . '">';
+			$html .= '<p class="font-kitab rtl style-ayah ayah' . $juz->data->number . '_' . $ayah->number . '">';
 				if ($ayah->surah->number > 1 && $ayah->surah->number != 9 && $ayah->numberInSurah == 1) {
 					$html .= mb_substr($ayah->text, 39);
 				} else {

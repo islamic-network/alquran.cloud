@@ -60,7 +60,7 @@
 
   <?= Surah::renderSurahHeaderRow($surah); ?>
   <?php if ($surah->data->number != 9) { ?>
-  <div class="lead font-mequran2 align-center style-ayah">
+  <div class="lead font-kitab align-center style-ayah">
     بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
   </div>
   <?php } ?>

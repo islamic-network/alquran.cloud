@@ -17,7 +17,7 @@ class Quran
 			</h4>
 		</div>
 		<div class="col-md-4">
-			<h4 class="rtl align-right font-mequran2">
+			<h4 class="rtl align-right font-kitab">
 		' . Generic::latinToArabicNumerals($surah->number) . '
 		<span class="surah-bracket-sign">﴿</span> ' . $surah->name . ' <span class="surah-bracket-sign">﴾</span>
 			</h4>
@@ -31,7 +31,7 @@ class Quran
 
 		foreach ($ayahs as $key => $ayah) {
 
-			$html .= '<p class="font-mequran2 rtl style-ayah ayah' . $surah->number . '_' . $ayah->numberInSurah . '">';
+			$html .= '<p class="font-kitab rtl style-ayah ayah' . $surah->number . '_' . $ayah->numberInSurah . '">';
 				if ($surah->number > 1 && $surah->number != 9 && $ayah->numberInSurah == 1) {
 					$html .= mb_substr($ayah->text, 39);
 				} else {

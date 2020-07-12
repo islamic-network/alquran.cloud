@@ -2,7 +2,7 @@
 <?php require_once('common/navigation.php'); ?>
 <?php // ================================================================ // ?>
 <div class="container">
-    <div class="lead font-mequran2 align-center">
+    <div class="lead font-kitab align-center">
         بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
     </div>
     <h4>

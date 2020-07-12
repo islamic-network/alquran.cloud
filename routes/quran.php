@@ -15,7 +15,7 @@ $app->get('/quran', function ($request, $response, $args) {
     return $this->view->render($response, 'quran.php', [
         'pageTitle' => 'The Holy Quran',
 		'metaDescription' => 'A Complete Rendering and Recitation of the Quran',
-		'quran' => $this->client->AlQuranCloudApi->quran('quran-uthmani'),
+		'quran' => $this->client->AlQuranCloudApi->quran('quran-uthmani-quran-academy'),
 		'suwar' => $this->client->AlQuranCloudApi->surahs(),
 		'editions' => [
 			'editions' => $this->client->AlQuranCloudApi->editions(null, null, 'text'),
@@ -31,7 +31,7 @@ $app->get('/quran/{edition}', function ($request, $response, $args) {
     return $this->view->render($response, 'quran.php', [
         'pageTitle' => 'Al Quran Cloud',
 		'metaDescription' => 'AlQuran Cloud',
-		'quran' => $this->client->AlQuranCloudApi->quran('quran-uthmani'),
+		'quran' => $this->client->AlQuranCloudApi->quran('quran-uthmani-quran-academy'),
 		'suwar' => $this->client->AlQuranCloudApi->surahs(),
 		'quranEdition' => $this->client->AlQuranCloudApi->quran($edition),
 		'editions' => [

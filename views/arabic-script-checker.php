@@ -5,7 +5,7 @@
 <?php use AlQuranCloud\Renderer\Generic; ?>
 
 <div class="container">
-	<div class="lead font-mequran2 align-center">
+	<div class="lead font-kitab align-center">
 		بِسْمِ ٱللّٰهِِ الرَّحْمٰنِ الرَّحِيْمِ
 	</div>
 	<div class="page-header">
@@ -24,7 +24,7 @@
                         <select id="arabicEditionSelector" name="arabicEditionSelector" title="Select Edition" class="form-control" >
                             <?php foreach (Generic::getArabicQuranEditions($editions['editions']->data) as  $language => $edition) { ?>
                                 <?php foreach ($edition as $e) { ?>
-                                    <option value="<?= $e->identifier; ?>" <?= isset($ayahEdition) && $ayahEdition->data->edition->identifier == $e->identifier ? 'selected="selected"' : ''; ?>><?= $e->name; ?> (<?= $e->identifier; ?>)</option>
+                                    <option value="<?= $e->identifier; ?>" <?= 'quran-uthmani-quran-academy' == $e->identifier ? 'selected="selected"' : ''; ?>><?= $e->name; ?> (<?= $e->identifier; ?>)</option>
                                 <?php } ?>
                             <?php } ?>
                         </select>
@@ -37,14 +37,14 @@
                         <label for="fontSelector">Font </label>
                         <select id="fontSelector" name="fontSelector" title="Select Font" class="form-control" >
                             <option value="font-mequran">Quran ME</option>
-                            <option value="font-mequran2" selected>Quran ME 2</option>
+                            <option value="font-kitab" selected>Quran ME 2</option>
                             <option value="font-nh">Noor e Hidayah</option>
                             <option value="font-othmani">Othmani</option>
                             <option value="font-quran">Quran</option>
                             <option value="font-uthmani">Uthmani</option>
                             <option value="font-scheherazade">Scheherazade</option>
                             <option value="font-naskh">Naskh</option>
-                            <option value="font-kitab">Kitab</option>
+                            <option value="font-kitab" selected>Kitab</option>
                             <option value="font-kitab-bold">Kitab Bold</option>
                         </select>
                     </div>
@@ -68,7 +68,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12 rtl style-ayah">
-            <span id="ayahFont" class="font-mequran2">
+            <span id="ayahFont" class="font-kitab">
 			<?= $ayah->data->text; ?>
             </span>
             <?= Ayah::renderAyahEndingInArabic($ayah->data->numberInSurah); ?>

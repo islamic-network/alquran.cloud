@@ -81,7 +81,7 @@
     Me Quran 2
     </div>
     <div class="col-md-9">
-    <h1 class="font-mequran2">
+    <h1 class="font-kitab">
     بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
     </h1>
 
@@ -140,7 +140,7 @@
     Uthmani
     </div>
     <div class="col-md-9">
-    <h1 class="font-mequran2">
+    <h1 class="font-kitab">
     بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
     </h1>
 

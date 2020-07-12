@@ -2,10 +2,10 @@
 <?php require_once('common/navigation.php'); ?>
 <?php // ================================================================ // ?>
 <div class="container">
-    <div class="lead font-mequran2 align-center">
+    <div class="lead font-kitab align-center">
         بِسْمِ ٱللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
     </div>
-  <div class="lead font-mequran2 align-center">
+  <div class="lead font-kitab align-center">
 ٱلْحَمْدُ لِلّٰهِ ٱلَّذِي خَلَقَ ٱلْإِنْسَانَ وَٱلْجَانَ وَ ٱلسَّمٰوَاتِ وَ ٱلْأَرْضَ وَ مَا فِيهُمَا وَ مَا بَيْنَهُمَا وَ هُوَ ذُوْ ٱلْجَلَالِ وَ ٱلْإِكْرَامِ وَ هُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
 
   </div>
