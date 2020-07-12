@@ -78,6 +78,6 @@ $app->get('/arabic-font-edition-tester', function ($request, $response, $args) {
         'editions' => [
             'editions' => $this->client->AlQuranCloudApi->editions(null, null, 'text'),
         ],
-        'view' => 'ayah'
+        'view' => 'api'
     ]);
 });
