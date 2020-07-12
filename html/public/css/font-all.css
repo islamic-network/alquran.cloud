@@ -51,3 +51,39 @@
 .font-uthmani {
   font-family: 'Uthmani', serif;
 }
+
+@font-face {
+    font-family: 'Scheherazade';
+    src: url("//cdn.alquran.cloud/public/fonts/Scheherazade-webfont.ttf");
+}
+
+.font-scheherazade {
+    font-family: 'Scheherazade';
+}
+
+@font-face {
+    font-family: 'Naskh';
+    src: url("//cdn.alquran.cloud/public/fonts/kfc_naskh-webfont.ttf");
+}
+
+.font-naskh {
+    font-family: 'Naskh';
+}
+
+@font-face {
+    font-family: 'Kitab';
+    src: url("//cdn.alquran.cloud/public/fonts/Kitab-Regular.ttf");
+}
+
+.font-kitab {
+    font-family: 'Kitab';
+}
+
+@font-face {
+    font-family: 'Kitab Bold';
+    src: url("//cdn.alquran.cloud/public/fonts/Kitab-Bold.ttf");
+}
+
+.font-kitab-bold {
+    font-family: 'Kitab Bold';
+}
