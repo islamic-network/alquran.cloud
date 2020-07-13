@@ -1,4 +1,5 @@
 <?php require_once('common/header.php'); ?>
+<link href="/public/css/font-all.css?v=7" rel="stylesheet">
 <?php require_once('common/navigation.php'); ?>
 <?php // ================================================================ // ?>
 <?php use AlQuranCloud\Renderer\Ayah; ?>
@@ -46,6 +47,11 @@
                             <option value="font-naskh">Naskh</option>
                             <option value="font-kitab" selected>Kitab</option>
                             <option value="font-kitab-bold">Kitab Bold</option>
+                            <option value="font-amiri">Amiri</option>
+                            <option value="font-droid-arabic-kufi">Droid Kufi</option>
+                            <option value="font-droid-arabic-naskh">Droid Naskh</option>
+                            <option value="font-thabit">Thabit</option>
+
                         </select>
                     </div>
                 </form>

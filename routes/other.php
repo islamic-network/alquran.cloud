@@ -2,18 +2,12 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
+
+
 $app->get('/', function ($request, $response, $args) {
     return $this->view->render($response, 'home.php', [
         'pageTitle' => 'Al Quran Cloud',
 		'metaDescription' => 'AlQuran Cloud - A resource to read, hear and progamatically interact with the Quran',
-		'view' => 'home'
-    ]);
-});
-
-$app->get('/arabic-fonts', function ($request, $response, $args) {
-    return $this->view->render($response, 'arabic-fonts.php', [
-        'pageTitle' => 'Arabic Fonts',
-		'metaDescription' => 'Arabic Fonts',
 		'view' => 'home'
     ]);
 });
@@ -96,5 +90,25 @@ $app->get('/contributors', function ($request, $response, $args) {
         'pageTitle' => 'Al Quran Cloud Contributors',
 		'metaDescription' => 'Contributors to the Al Quran Cloud',
 		'view' => 'home'
+    ]);
+});
+
+$app->get('/arabic-font-edition-tester', function ($request, $response, $args) {
+    if ($request->getQueryParam('reference') !== null && $request->getQueryParam('reference') != '') {
+        $reference = urldecode($request->getQueryParam('reference'));
+    } else {
+        $reference = '24:35';
+    }
+    $ayah = $this->client->AlQuranCloudApi->ayah($reference, 'quran-uthmani-quran-academy');
+
+    return $this->view->render($response, 'arabic-script-checker.php', [
+        'pageTitle' => 'Arabic Font Edition Tester - ' . $ayah->data->surah->englishName . ' Ayah ' . $ayah->data->numberInSurah . ' (' . $ayah->data->surah->number . ':' . $ayah->data->numberInSurah . ')',
+        'metaDescription' => 'AlQuran Cloud',
+        'ayah' => $ayah,
+        'reference' => $reference,
+        'editions' => [
+            'editions' => $this->client->AlQuranCloudApi->editions(null, null, 'text'),
+        ],
+        'view' => 'api'
     ]);
 });

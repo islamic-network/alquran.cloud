@@ -1,3 +1,8 @@
+@import url(//fonts.googleapis.com/earlyaccess/amiri.css);
+@import url(//fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+@import url(//fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+@import url(//fonts.googleapis.com/earlyaccess/thabit.css);
+
 @font-face {
   font-family: 'MeQuran';
   src: url('//cdn.alquran.cloud/public/fonts/me_quran-webfont.otf');
@@ -87,3 +92,20 @@
 .font-kitab-bold {
     font-family: 'Kitab Bold';
 }
+
+.font-amiri {
+    font-family: 'Amiri', serif;
+}
+
+.font-droid-arabic-kufi {
+    font-family: 'Droid Arabic Kufi', serif;
+}
+
+.font-droid-arabic-naskh {
+    font-family: 'Droid Arabic Naskh', serif;
+}
+
+.font-thabit {
+    font-family: 'Thabit', serif;
+}
+
