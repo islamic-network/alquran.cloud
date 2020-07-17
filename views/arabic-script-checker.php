@@ -57,7 +57,7 @@
                 </form>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <form method="GET" action="/arabic-script-checker" style="width: 80%;">
+                <form method="GET" action="/arabic-font-edition-tester" style="width: 80%;">
                     <div class="input-group">
                         <label for="ayah-reference">Ayah Reference </label>
                         <input type="text" class="form-control" placeholder="Ayah Reference. E.g. 2:255" name="reference" id="ayah-reference" value="<?= isset($reference) ? $reference : ''; ?>">
