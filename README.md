@@ -4,6 +4,7 @@
 [![](https://img.shields.io/docker/pulls/islamicnetwork/alquran.cloud.svg)](https://cloud.docker.com/u/vesica/repository/docker/islamicnetwork/alquran.cloud)
 [![](https://img.shields.io/github/release/islamic-network/alquran.cloud.svg)](https://github.com/islamic-network/alquran.cloud/releases)
 [![](https://img.shields.io/github/license/islamic-network/alquran.cloud.svg)](https://github.com/islamic-network/alquran.cloud/blob/master/LICENSE)
+![GitHub All Releases](https://img.shields.io/github/downloads/islamic-network/alquran.cloud/total)
 
 # Al Quran Cloud
 
