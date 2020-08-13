@@ -1,7 +1,7 @@
 AddType audio/mp3 .mp3
 
-RewriteCond %{REQUEST_URI} !=/server-status
 RewriteCond %{HTTP_HOST} ^www.alquran.cloud$
 RewriteRule ^(.*)$ https://alquran.cloud/$1 [R=301,L]
+RewriteCond %{REQUEST_URI} !=/server-status
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
