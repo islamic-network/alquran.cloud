@@ -21,6 +21,13 @@ spec:
         app: alquran-cloud-app
     spec:
       containers:
+      - name: apache-exporter-sidecar
+        image: lusotycoon/apache-exporter
+        args:
+          - '--scrape_uri=http://localhost:8080/server-status?auto'
+        ports:
+          - containerPort: 9117
+            protocol: TCP
       - name: alquran-cloud-app
         image: islamicnetwork/alquran.cloud:$COMMIT_TAG
         env:
