@@ -62,15 +62,15 @@
 	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 	<audio id="juzPlayer" controls="controls" class="align-right rtl">
 		<?php if ($juz->data->number != 1) { ?>
-			<source src="//cdn.alquran.cloud/media/audio/ayah/ar.alafasy/1/high" title="Bismillah" type="audio/mp3"/>
+			<source src="//cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3" title="Bismillah" type="audio/mp3"/>
 		<?php }
 		$currentSurah = $juz->data->ayahs[0]->surah->number;
 		foreach ($juz->data->ayahs as $ayah) {
 			if ($ayah->surah->number > $currentSurah) {
 				$currentSurah = $ayah->surah->number; ?>
-				<source src="//cdn.alquran.cloud/media/audio/ayah/ar.alafasy/1/high" title="Bismillah" type="audio/mp3"/>
+				<source src="//cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3" title="Bismillah" type="audio/mp3"/>
 			<?php } ?>
-			<source src="//cdn.alquran.cloud/media/audio/ayah/ar.alafasy/<?= $ayah->number; ?>/high" title="<?= $juz->data->number; ?>_<?= $ayah->number; ?>" type="audio/mp3"/>
+			<source src="//cdn.islamic.network/quran/audio/128/ar.alafasy/<?= $ayah->number; ?>.mp3" title="<?= $juz->data->number; ?>_<?= $ayah->number; ?>" type="audio/mp3"/>
 		<?php } ?>
 	</audio>
 	</div>
