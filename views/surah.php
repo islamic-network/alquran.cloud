@@ -38,10 +38,10 @@
   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
   <audio id="surahPlayer" controls="controls" class="">
     <?php if ($surah->data->number > 1 && $surah->data->number != 9) { ?>
-    <source src="https://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/1/high" title="Bismillah" type="audio/mp3"/>
+    <source src="//cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3" title="Bismillah" type="audio/mp3"/>
     <?php } ?>
     <?php foreach ($surah->data->ayahs as $ayah) { ?>
-      <source src="https://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/<?= $ayah->number; ?>/high" title="<?= $surah->data->number; ?>_<?= $ayah->numberInSurah; ?>" type="audio/mp3"/>
+      <source src="//cdn.islamic.network/quran/audio/128/ar.alafasy/<?= $ayah->number; ?>.mp3" title="<?= $surah->data->number; ?>_<?= $ayah->numberInSurah; ?>" type="audio/mp3"/>
     <?php } ?>
   </audio>
   </div>
