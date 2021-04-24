@@ -93,6 +93,10 @@ $app->get('/contributors', function ($request, $response, $args) {
     ]);
 });
 
+$app->get('/liveness', function (Request $request, Response $response) {
+    return $response->withJson('OK', 200);
+});
+
 $app->get('/arabic-font-edition-tester', function ($request, $response, $args) {
     if ($request->getQueryParam('reference') !== null && $request->getQueryParam('reference') != '') {
         $reference = urldecode($request->getQueryParam('reference'));
@@ -111,4 +115,5 @@ $app->get('/arabic-font-edition-tester', function ($request, $response, $args) {
         ],
         'view' => 'api'
     ]);
+
 });
