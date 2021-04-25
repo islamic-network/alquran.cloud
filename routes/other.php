@@ -93,7 +93,7 @@ $app->get('/contributors', function ($request, $response, $args) {
     ]);
 });
 
-$app->get('/liveness', function (Request $request, Response $response) {
+$app->get('/liveness', function ($request, $response) {
     return $response->withJson('OK', 200);
 });
 
