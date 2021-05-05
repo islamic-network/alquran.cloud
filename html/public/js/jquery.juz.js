@@ -1,5 +1,4 @@
-jQuery( document ).ready( function( $ ) {
-    $.alQuranJuz = {
+d    $.alQuranJuz = {
         editions: function(element, reference) {
             this.monitorEditions(element, reference);
         },
@@ -13,7 +12,7 @@ jQuery( document ).ready( function( $ ) {
 			$('.playThisAyah').on('click', function() {
 				// reference = $(this).data('reference');
 				number = $(this).data('number');
-				player.playTrackURL('http://cdn.alquran.cloud/media/audio/ayah/ar.alafasy/' + number + '/high');
+				player.playTrackURL('https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + number + '.mp3');
 		  	});	
 		},
 		zoomIntoThisAyah: function() {
