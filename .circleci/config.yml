@@ -3,13 +3,14 @@ executors:
   docker-publisher:
     environment:
       IMAGE_NAME: islamicnetwork/alquran.cloud
+      QUAYIO_IMAGE_NAME: quay.io/islamic-network/alquran.cloud
     docker:
       - image: circleci/buildpack-deps:stretch
   php74:
     docker:
-      - image: islamicnetwork/php74
+      - image: islamicnetwork/php:7.4-cli
+      - image: memcached:1.5
     working_directory: ~/repo
-
 jobs:
   build-app:
     executor: php74
@@ -25,7 +26,6 @@ jobs:
           paths:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
-      #- run: vendor/bin/phpunit tests/
   push-git-tag:
     docker:
       - image: cibuilds/github
@@ -37,7 +37,7 @@ jobs:
           command: |
             VERSION="${CIRCLE_BUILD_NUM}"
             ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} ~/repo/
-  build-docker-image:
+  build-and-publish-docker-image:
     executor: docker-publisher
     steps:
       - checkout
@@ -52,46 +52,23 @@ jobs:
             echo "ci_workflow: ${CIRCLE_WORKFLOW_ID}" >> html/VERSION
       - run:
           name: Build Production Docker image
-          command: docker build -t $IMAGE_NAME:latest .
-      - run:
-          name: Archive Production Docker image
-          command: docker save -o prod.tar $IMAGE_NAME
-      - persist_to_workspace:
-          root: .
-          paths:
-            - ./prod.tar
-  publish-docker-latest:
-    executor: docker-publisher
-    steps:
-      - attach_workspace:
-          at: /tmp/workspace
-      - setup_remote_docker
-      - run:
-          name: Load archived Docker image
-          command: docker load -i /tmp/workspace/prod.tar
-      - run:
-          name: Publish Docker Image to Docker Hub
           command: |
-            echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
-            IMAGE_TAG="${CIRCLE_BUILD_NUM}"
+            echo "$DOCKERHUB_PASSWORD" | docker login --username "$DOCKERHUB_USERNAME" --password-stdin
+            docker build -t $IMAGE_NAME:latest .
+            echo "Pushing latest tag to Docker Hub..."
             docker push $IMAGE_NAME:latest
-  publish-docker-tag:
-    executor: docker-publisher
-    steps:
-      - attach_workspace:
-          at: /tmp/workspace
-      - setup_remote_docker
-      - run:
-          name: Load archived Docker image
-          command: docker load -i /tmp/workspace/prod.tar
-      - run:
-          name: Publish Docker Image to Docker Hub
-          command: |
-            echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
             IMAGE_TAG=${CIRCLE_TAG}
+            echo "Pushing tag $IMAGE_TAG to Docker Hub..."
             docker tag $IMAGE_NAME:latest $IMAGE_NAME:$IMAGE_TAG
             docker push $IMAGE_NAME:$IMAGE_TAG
-  deploy-docker-tag:
+            echo "$QUAYIO_PASSWORD" | docker login quay.io --username "$QUAYIO_USERNAME" --password-stdin
+            docker tag $IMAGE_NAME:latest $QUAYIO_IMAGE_NAME:latest
+            echo "Pushing latest tag to quay.io..."
+            docker push $QUAYIO_IMAGE_NAME:latest
+            docker tag $IMAGE_NAME:latest $QUAYIO_IMAGE_NAME:$IMAGE_TAG
+            echo "Pushing tag $IMAGE_TAG to quay.io..."
+            docker push $QUAYIO_IMAGE_NAME:$IMAGE_TAG
+  deploy-docker-tag-europe:
     executor: docker-publisher
     steps:
       - checkout
@@ -107,7 +84,28 @@ jobs:
       - run:
           name: Deploy Code
           command: |
-            curl -o ./.k8s/deploy.sh https://raw.githubusercontent.com/islamic-network/k8s-deployment/master/deploy.sh && chmod u+x ./.k8s/deploy.sh && sh ./.k8s/deploy.sh
+            curl -o ./.k8s/deploy.sh https://raw.githubusercontent.com/islamic-network/k8s-deployment/master/deploy-europe.sh
+            chmod u+x ./.k8s/deploy.sh
+            sh ./.k8s/deploy.sh
+  deploy-docker-tag-asia:
+    executor: docker-publisher
+    steps:
+      - checkout
+      - run:
+          name: Install envsubst
+          command: |
+            sudo apt-get update && sudo apt-get -y install gettext-base
+      - run:
+          name: Install kubectl
+          command: |
+            curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+            chmod u+x ./kubectl
+      - run:
+          name: Deploy Code
+          command: |
+            curl -o ./.k8s/deploy.sh https://raw.githubusercontent.com/islamic-network/k8s-deployment/master/deploy-asia.sh
+            chmod u+x ./.k8s/deploy.sh
+            sh ./.k8s/deploy.sh
 
 workflows:
   version: 2
@@ -124,19 +122,6 @@ workflows:
           filters:
             branches:
               only: master
-      - build-docker-image:
-          requires:
-            - push-git-tag
-          filters:
-            branches:
-              only: master
-      - publish-docker-latest:
-          context: org-global
-          requires:
-            - build-docker-image
-          filters:
-            branches:
-              only: master
   build-tags:
     jobs:
       - build-app:
@@ -145,7 +130,8 @@ workflows:
               only: /.*/
             branches:
               ignore: /.*/
-      - build-docker-image:
+      - build-and-publish-docker-image:
+          context: org-global
           requires:
             - build-app
           filters:
@@ -153,19 +139,19 @@ workflows:
               only: /.*/
             branches:
               ignore: /.*/
-      - publish-docker-tag:
+      - deploy-docker-tag-europe:
           context: org-global
           requires:
-            - build-docker-image
+            - build-and-publish-docker-image
           filters:
             tags:
               only: /.*/
             branches:
               ignore: /.*/
-      - deploy-docker-tag:
+      - deploy-docker-tag-asia:
           context: org-global
           requires:
-            - publish-docker-tag
+            - build-and-publish-docker-image
           filters:
             tags:
               only: /.*/
