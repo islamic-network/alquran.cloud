@@ -14,12 +14,13 @@ jQuery( document ).ready( function( $ ) {
 				// reference = $(this).data('reference');
 				number = $(this).data('number');
 				player.playTrackURL('https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + number + '.mp3');
+				player.play();
 		  	});	
 		},
 		zoomIntoThisAyah: function() {
 			$('.zoomIntoThisAyah').on('click', function() {
 				number = $(this).data('number');
-				window.location.href = '//alquran.cloud/ayah/' + number;
+				window.location.href = 'https://alquran.cloud/ayah/' + number;
 			});
 		},
         monitorEditions: function(element, reference) {
