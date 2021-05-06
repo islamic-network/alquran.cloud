@@ -14,7 +14,7 @@
 
     <!-- Bootstrap core CSS -->
     <!--<link href="/public/libraries/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">-->
-    <link href="/public/css/theme.css" rel="stylesheet">
+    <link href="https://bootswatch.com/3/paper/bootstrap.min.css" rel="stylesheet">
     <!-- AlQuran.Cloud CSS -->
     <link href="/public/css/font-kitab.css?v=1" rel="stylesheet">
     <link href="/public/libraries/mediaelementjs-2.21.2/build/mediaelementplayer.css" rel="stylesheet">
