@@ -83,7 +83,7 @@
 <script src="/public/libraries/mediaelementjs-2.21.2/build/mediaelement-and-player.js"></script>
 <script src="/public/libraries/mep-feature-playlist/mep-feature-playlist.js"></script>
 <script src="/public/js/jquery.mediaplayer.js"></script>
-<script src="/public/js/jquery.surah.js"></script>
+<script src="/public/js/jquery.surah.js?v=1"></script>
 
 <script>
 $(function() {

@@ -82,7 +82,7 @@
 <script src="//cdn.alquran.cloud/public/libraries/mediaelementjs-2.21.2/build/mediaelement-and-player.js"></script>
 <script src="//cdn.alquran.cloud/public/libraries/mep-feature-playlist/mep-feature-playlist.js"></script>
 <script src="//cdn.alquran.cloud/public/js/jquery.mediaplayer.js"></script>
-<script src="//cdn.alquran.cloud/public/js/jquery.juz.js"></script>
+<script src="//cdn.alquran.cloud/public/js/jquery.juz.js?v=1"></script>
 <script>
 $(function() {
 	var player = $.alQuranMediaPlayer.getJuzPlayer('#juzPlayer');
