@@ -31,7 +31,7 @@ class Quran
 
 		foreach ($ayahs as $key => $ayah) {
 
-			$html .= '<p class="font-kitab rtl style-ayah ayah' . $surah->number . '_' . $ayah->numberInSurah . '">';
+			$html .= '<p class="font-kitab rtl style-ayah ayahAudio' . $ayah->number . ' ayah' . $surah->number . '_' . $ayah->numberInSurah . '">';
 				if ($surah->number > 1 && $surah->number != 9 && $ayah->numberInSurah == 1) {
 					$html .= mb_substr($ayah->text, 39);
 				} else {
@@ -61,7 +61,7 @@ class Quran
 
 	public static function renderPlayIcon($ayah)
 	{
-		return '<span class="linkify pull-left playThisAyah" data-number="' . $ayah->number . '"><i class="glyphicon glyphicon-play-circle"></i></span>';
+		return '<span class="linkify pull-left playThisAyah" id ="playThisAyah' . $ayah->number . '" data-number="' . $ayah->number . '"><i class="glyphicon glyphicon-play-circle"></i></span>';
 	}
 
 }

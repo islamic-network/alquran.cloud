@@ -9,7 +9,7 @@ class Juz
 	{
 		$html = '';
 		foreach ($ayahs as $key => $ayah) {
-			$html .= '<p class="font-kitab rtl style-ayah ayah' . $juz->data->number . '_' . $ayah->number . '">';
+			$html .= '<p class="font-kitab rtl style-ayah ayahAudio' . $ayah->number . ' ayah' . $juz->data->number . '_' . $ayah->number . '">';
 				if ($ayah->surah->number > 1 && $ayah->surah->number != 9 && $ayah->numberInSurah == 1) {
 					$html .= mb_substr($ayah->text, 39);
 				} else {
@@ -18,7 +18,7 @@ class Juz
 				$html .= Ayah::renderAyahEndingInArabic($ayah->numberInSurah);
 				$html .= self::renderZoomIcon($ayah);
 				$html .= '<span style="padding: 0 3px 0 3px;" class="pull-left">&nbsp;</span>';
-				$html .= self::renderPlayIcon($ayah);
+				$html .= self::renderPlayIcon($ayah, $juz);
 				$html .= '<span style="padding: 0 3px 0 3px;" class="pull-left">&nbsp;</span>';
 			$html .= '</p>';
             $html .= '<span class="label label-primary pull-left translationText">' . $ayah->surah->name . '</span>';
@@ -40,9 +40,9 @@ class Juz
 		return '<span class="linkify pull-left zoomIntoThisAyah" title="See just this Ayah" data-number="' . $ayah->number . '"><i class="glyphicon glyphicon-zoom-in"></i></span>';
 	}
 
-	public static function renderPlayIcon($ayah)
+	public static function renderPlayIcon($ayah, $juz)
 	{
-		return '<span class="linkify pull-left playThisAyah" data-number="' . $ayah->number . '"><i class="glyphicon glyphicon-play-circle"></i></span>';
+		return '<span class="linkify pull-left playThisAyah" data-juz="' . $juz->data->number . '" data-number="' . $ayah->number . '"><i class="glyphicon glyphicon-play-circle"></i></span>';
 	}
 
 }

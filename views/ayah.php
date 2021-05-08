@@ -45,7 +45,7 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <audio id="ayahPlayer" controls="controls" class="align-right">
-                    <source src="//cdn.islamic.network/quran/audio/128/ar.alafasy/<?= $ayah->data->number; ?>.mp3" title="Ayah" type="audio/mp3" />
+                    <source src="https://cdn.islamic.network/quran/audio/128/ar.alafasy/<?= $ayah->data->number; ?>.mp3" title="Ayah" type="audio/mp3" />
                 </audio>
             </div>
         </div>
@@ -54,7 +54,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-12 font-kitab rtl style-ayah">
+		<div class="col-md-12 font-kitab rtl style-ayah ayah-playing">
 			<?= $ayah->data->text; ?>
 				<?= Ayah::renderAyahEndingInArabic($ayah->data->numberInSurah); ?>
 		</div>
@@ -97,13 +97,10 @@
 	</div>
 </div>
 
-<script src="//cdn.alquran.cloud/public/libraries/mediaelementjs-2.21.2/build/mediaelement-and-player.js"></script>
-<script src="//cdn.alquran.cloud/public/libraries/mep-feature-playlist/mep-feature-playlist.js"></script>
-<script src="//cdn.alquran.cloud/public/js/jquery.mediaplayer.js"></script>
-<script src="//cdn.alquran.cloud/public/js/jquery.ayah.js"></script>
+<script src="/public/js/jquery.ayah.js"></script>
 <script>
 $(function() {
-	var player = $.alQuranMediaPlayer.getAyahPlayer('#ayahPlayer');
+	// var player = $.alQuranMediaPlayer.getAyahPlayer('#ayahPlayer');
 	$('#editionSelector').multiselect({ enableFiltering: true, enableCaseInsensitiveFiltering: true, dropUp: true, maxHeight: 400  });
 	$.alQuranAyah.init('#editionSelector', '<?= $ayah->data->number; ?>');
 

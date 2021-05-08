@@ -9,7 +9,7 @@
 
 	<?php foreach ($quran->data->surahs as $key => $surah) {
 		$hideThisSurah = $surah->number != 1 ? 'hide' : ''; ?>
-		<div class="<?=$hideThisSurah; ?> displayedSurah<?= $surah->number; ?>">';
+		<div class="<?=$hideThisSurah; ?> displayedSurah<?= $surah->number; ?>">
 			<?= Quran::renderSurahHeaderRow($surah); ?>
 			<hr />
 			<?php if ($surah->number != 9) { ?>
@@ -45,7 +45,11 @@
 		<form>
 			<div class="form-group">
 				<select id="surahSelector" name="surahSelector" title="Select Surah" class="form-control" >
-					<?php foreach ($suwar->data as $ss) { ?>
+                    <?php $surahChangers = []; $count=0; ?>
+					<?php foreach ($suwar->data as $ss) {
+					    $count = $count + $ss->numberOfAyahs;
+                        $surahChangers[$ss->number] = $count;
+					    ?>
 					<option value="<?= $ss->number; ?>" <?= $ss->number == 1 ? 'selected="selected"' : ''; ?>><?= $ss->name; ?> (<?= $ss->englishName; ?>)</option>
 					<?php } ?>
 				</select>
@@ -70,32 +74,25 @@
 	</div>
 	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 	<audio id="quranPlayer" controls="controls" class="align-right rt">
-		<?php foreach ($quran->data->surahs as $surah) { ?>
-			<?php if ($surah->number > 1 && $surah->number != 9) { ?>
-			<source src="//cdn.islamic.network/quran/audio/128/ar.lafasy/1.mp3" title="Bismillah" type="audio/mp3"/>
-			<?php } ?>
-			<?php foreach ($surah->ayahs as $ayah) { ?>
-			<source src="//cdn.islamic.network/quran/audio/128/ar.alafasy/<?= $ayah->number; ?>.mp3" title="<?= $surah->number; ?>_<?= $ayah->numberInSurah; ?>" type="audio/mp3"/>
-			<?php } ?>
-		<?php } ?>
+        <source id="activeAyah" src="https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3" title="1" type="audio/mp3"/>
 	</audio>
 	</div>
 </div>
 </div>
 </div>
-
-<script src="//cdn.alquran.cloud/public/libraries/mediaelementjs-2.21.2/build/mediaelement-and-player.js"></script>
-<script src="//cdn.alquran.cloud/public/libraries/mep-feature-playlist/mep-feature-playlist.js"></script>
-<script src="//cdn.alquran.cloud/public/js/jquery.mediaplayer.js"></script>
-<script src="//cdn.alquran.cloud/public/js/jquery.quran.js"></script>
+<script src="/public/js/jquery.mediaplayer.js"></script>
+<script src="/public/js/jquery.quran.js"></script>
 <script>
+    var quran = <?php echo json_encode($quran->data); ?>;
+    var surahChangers = <?php echo json_encode($surahChangers); ?>;
 $(function() {
-	var player = $.alQuranMediaPlayer.getQuranPlayer('#quranPlayer');
+	var player = $('#quranPlayer')[0];
 	$('#editionSelector').multiselect({ enableFiltering: true, enableCaseInsensitiveFiltering: true, dropUp: true, maxHeight: 400 });
 	$.alQuranQuran.editions('#editionSelector');
-	$.alQuranQuran.surahs('#surahSelector', player);
-	$.alQuranQuran.playThisAyah(player);
-	$.alQuranQuran.zoomIntoThisAyah();
+	$.alQuranQuran.surahs('#surahSelector', player, quran);
+    $.alQuranMediaPlayer.init(player, 'quran', 1, 6236, 1, quran, surahChangers);
+    $.alQuranMediaPlayer.defaultPlayer();
+    $.alQuranMediaPlayer.zoomIntoThisAyah();
 
 });
 </script>

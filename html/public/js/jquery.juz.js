@@ -6,21 +6,7 @@ jQuery( document ).ready( function( $ ) {
         juzs: function (element) {
             $(element).on('change', function () {
                 var juz = ($(this).val());
-                window.location.href = 'https://alquran.cloud/juz/' + juz;
-            });
-        },
-        playThisAyah: function (player) {
-            $('.playThisAyah').on('click', function () {
-                // reference = $(this).data('reference');
-                number = $(this).data('number');
-                player.playTrackURL('https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + number + '.mp3');
-                player.play();
-            });
-        },
-        zoomIntoThisAyah: function () {
-            $('.zoomIntoThisAyah').on('click', function () {
-                number = $(this).data('number');
-                window.location.href = 'http://alquran.cloud/ayah/' + number;
+                window.location.href = '/juz/' + juz;
             });
         },
         monitorEditions: function (element, reference) {
@@ -40,7 +26,7 @@ jQuery( document ).ready( function( $ ) {
             var w = this;
             $.ajax({
                 type: "GET",
-                url: "http://api.alquran.cloud/juz/" + reference + '/' + edition,
+                url: "https://api.alquran.cloud/juz/" + reference + '/' + edition,
                 cache: false,
                 //dataType: 'jsonp',
                 success: function (data) {

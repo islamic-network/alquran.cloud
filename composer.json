@@ -10,7 +10,7 @@
         "slim/slim": "^3.0",
         "monolog/monolog": "~1.17",
         "slim/php-view": "^2.1",
-        "alquran/api-client": "1.1",
+        "alquran/api-client": "1.2",
         "alquran/tools": "dev-master"
     },
     "autoload": {

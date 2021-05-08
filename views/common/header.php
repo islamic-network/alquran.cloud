@@ -17,8 +17,6 @@
     <link href="https://bootswatch.com/3/paper/bootstrap.min.css" rel="stylesheet">
     <!-- AlQuran.Cloud CSS -->
     <link href="/public/css/font-kitab.css?v=1" rel="stylesheet">
-    <link href="/public/libraries/mediaelementjs-2.21.2/build/mediaelementplayer.css" rel="stylesheet">
-    <link href="/public/libraries/mep-feature-playlist/mep-feature-playlist.css?v=1" rel="stylesheet">
     <link href="/public/libraries/bootstrap-multiselect/dist/css/bootstrap-multiselect.css?v=1" rel="stylesheet">
     <link href="/public/css/stickyfooter.css?v=1" rel="stylesheet">
     <link href="/public/css/alquran.cloud.css?v=2" rel="stylesheet">

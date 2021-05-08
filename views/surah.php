@@ -38,10 +38,10 @@
   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
   <audio id="surahPlayer" controls="controls" class="">
     <?php if ($surah->data->number > 1 && $surah->data->number != 9) { ?>
-    <source src="https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3" title="Bismillah" type="audio/mp3"/>
-    <?php } ?>
-    <?php foreach ($surah->data->ayahs as $ayah) { ?>
-      <source src="https://cdn.islamic.network/quran/audio/128/ar.alafasy/<?= $ayah->number; ?>.mp3" title="<?= $surah->data->number; ?>_<?= $ayah->numberInSurah; ?>" type="audio/mp3"/>
+    <source id ="activeAyah" src="https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3" title="1" type="audio/mp3"/>
+    <?php } else { ?>
+    <?php $ayah = $surah->data->ayahs[0]; ?>
+      <source id="activeAyah" src="https://cdn.islamic.network/quran/audio/128/ar.alafasy/<?= $ayah->number; ?>.mp3" title="<?= $ayah->number; ?>" type="audio/mp3"/>
     <?php } ?>
   </audio>
   </div>
@@ -79,20 +79,17 @@
 	</div>
 	<hr />
 </div>
-
-<script src="/public/libraries/mediaelementjs-2.21.2/build/mediaelement-and-player.js"></script>
-<script src="/public/libraries/mep-feature-playlist/mep-feature-playlist.js"></script>
-<script src="/public/js/jquery.mediaplayer.js"></script>
-<script src="/public/js/jquery.surah.js?v=4"></script>
+<script src="/public/js/jquery.mediaplayer.js?v=3"></script>
+<script src="/public/js/jquery.surah.js?v=7"></script>
 
 <script>
 $(function() {
-	var player = $.alQuranMediaPlayer.getSurahPlayer('#surahPlayer');
 	$('#editionSelector').multiselect({ enableFiltering: true, enableCaseInsensitiveFiltering: true, maxHeight: 400, dropUp: true});
 	$.alQuranSurah.editions('#editionSelector', '<?= $surah->data->number; ?>');
 	$.alQuranSurah.surahs('#surahSelector');
-	$.alQuranSurah.playThisAyah(player);
-	$.alQuranSurah.zoomIntoThisAyah();
+	$.alQuranMediaPlayer.init($("#surahPlayer")[0], 'surah', <?=$ayahs[0]->number?>, <?=end($ayahs)->number?>, <?=$surah->data->number?>, 0, 0);
+    $.alQuranMediaPlayer.defaultPlayer();
+    $.alQuranMediaPlayer.zoomIntoThisAyah();
 });
 </script>
 

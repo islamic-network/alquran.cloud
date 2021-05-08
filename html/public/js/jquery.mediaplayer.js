@@ -1,50 +1,104 @@
 jQuery( document ).ready( function( $ ) {
     $.alQuranMediaPlayer = {
-        getAyahPlayer: function(identifier) {
-            return new MediaElementPlayer(identifier, {
-                loop: false,
-                playlist: false,
-                features: ['playlistfeature', 'playpause', 'loop', 'progress', 'duration', 'volume'],
-                keyActions: []
-                }
-            );
+        currentSurah: '',
+        mode: 'surah',
+        surahChangers: '',
+        quran: '',
+        firstAyah: '',
+        lastAyah: '',
+        player: '',
+        surahChanged: false,
+        realNumber: 1,
+        init: function(player, mode, firstAyah, lastAyah, surah, quran, surahChangers) {
+            this.mode = mode;
+            this.player = player;
+            this.firstAyah = Number(firstAyah);
+            this.lastAyah = Number(lastAyah);
+            this.surah = Number(surah);
+            this.quran = quran;
+            this.surahChangers = surahChangers;
         },
-        getSurahPlayer: function(identifier) {
-            return new MediaElementPlayer(identifier, {
-                loop: true,
-                shuffle: false,
-                playlist: false,
-                audioHeight: 30,
-                playlistposition: 'bottom',
-                features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'volume', 'duration', 'progress', 'current'],
-                keyActions: []
-                }
-            );
+        defaultPlayer: function () {
+            var w = this;
+            var number = $('#activeAyah').attr('title');
+            $('.ayahAudio' + number).addClass('ayah-playing');
+            w.monitorPlayer(number);
         },
-        getJuzPlayer: function(identifier) {
-            return new MediaElementPlayer(identifier, {
-                loop: true,
-                shuffle: false,
-                playlist: false,
-                audioHeight: 30,
-                playlistposition: 'bottom',
-                features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'current', 'progress', 'duration', 'volume'],
-                keyActions: []
+        monitorPlayer: function(number) {
+            var w = this;
+            number = Number(number);
+            w.player.addEventListener('ended', function audioListener() {
+                //console.log(number, w.realNumber);
+                $('.ayahAudio' + number).removeClass('ayah-playing');
+                if (w.mode == 'quran') {
+                    $.each(w.surahChangers, function(i, v) {
+                        var matcher = v;
+                        if (number === matcher) {
+                            w.realNumber = matcher;
+                            if (i < 114) {
+                                w.surah = Number(i) + 1;
+                            } else {
+                                w.surah = 1;
+                            }
+                            w.surahChanged = true;
+                        }
+                    });
+                    if (w.surahChanged === true) {
+                        number = 1;
+                        // Update UI
+                        console.log(w.surah);
+                        $('.displayedSurah' + w.surah).removeClass('hide').siblings().addClass('hide');
+                    } else {
+                        number = w.realNumber;
+                        if (number < w.lastAyah) {
+                            number = Number(number) + 1;
+                            w.realNumber = number;
+                        } else if (number == w.lastAyah) {
+                            number = 1;
+                            w.realNumber = number;
+                        }
+                    }
+                } else {
+                    if (number == 1 && w.surah > 1) {
+                        number = w.firstAyah;
+                    } else if (number < w.lastAyah) {
+                        number = number+1;
+                    } else if (number == w.lastAyah) {
+                        number = 1;
+                    }
                 }
-            );
-        },
-        getQuranPlayer: function(identifier) {
-            return new MediaElementPlayer(identifier, {
-                loop: true,
-                shuffle: false,
-                playlist: false,
-                audioHeight: 30,
-                playlistposition: 'bottom',
-                features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'current', 'progress', 'duration', 'volume'],
-                keyActions: []
-                }
-            );
+                //console.log(number);
 
+                $('.ayahAudio' + number).addClass('ayah-playing');
+                $('#activeAyah').attr('src', 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + number + '.mp3');
+                if (w.player.paused) {
+                    w.player.load();
+                    w.player.oncanplaythrough = w.player.play();
+                }
+                $('.playThisAyah').on('click', function() {
+                    $('.ayahAudio' + number).removeClass('ayah-playing');
+                    number = Number($(this).data('number'));
+                    w.realNumber = number;
+                    $('.ayahAudio' + number).addClass('ayah-playing');
+                    $('#activeAyah').attr('src', 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + number + '.mp3');
+                    w.player.pause();
+                    if (w.player.paused) {
+                        w.player.load();
+                        w.player.oncanplaythrough = w.player.play();
+                    }
+                    w.player.removeEventListener('ended', audioListener, true);
+                });
+
+                if (w.surahChanged === true) {
+                    w.surahChanged = false;
+                }
+            });
+        },
+        zoomIntoThisAyah: function() {
+            $('.zoomIntoThisAyah').on('click', function() {
+                number = $(this).data('number');
+                window.location.href = '/ayah/' + number;
+            });
         }
 
     };

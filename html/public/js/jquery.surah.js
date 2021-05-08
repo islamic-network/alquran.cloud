@@ -1,28 +1,14 @@
 jQuery( document ).ready( function( $ ) {
     $.alQuranSurah = {
-        editions: function(element, reference) {
+        editions: function (element, reference) {
             this.monitorEditions(element, reference);
         },
-		surahs: function(element) {
-			$(element).on('change', function() {
-				var surah = ($(this).val());
-				window.location.href = 'https://alquran.cloud/surah/' + surah;
-			});
-		},
-		playThisAyah: function(player) {
-			$('.playThisAyah').on('click', function() {
-				// reference = $(this).data('reference');
-				number = $(this).data('number');
-				player.playTrackURL('https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + number + '.mp3');
-				player.play();
-		  	});	
-		},
-		zoomIntoThisAyah: function() {
-			$('.zoomIntoThisAyah').on('click', function() {
-				number = $(this).data('number');
-				window.location.href = 'https://alquran.cloud/ayah/' + number;
-			});
-		},
+        surahs: function (element) {
+            $(element).on('change', function () {
+                var surah = ($(this).val());
+                window.location.href = '/surah/' + surah;
+            });
+        },
         monitorEditions: function(element, reference) {
             var w = this;
             $(element).on('change', function() {
