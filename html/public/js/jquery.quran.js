@@ -24,22 +24,30 @@ jQuery( document ).ready( function( $ ) {
 			const sleep = (milliseconds) => {
 				return new Promise(resolve => setTimeout(resolve, milliseconds))
 			}
-			// First play bismillah
-			var bUrl = 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3';
-			$('#activeAyah').attr('src', bUrl)
-			player.pause();
-			if (player.paused) {
-				player.load();
-				player.oncanplaythrough = player.play();
-				// Sleep because the bismillah is 6 seconds
-				sleep(6000).then(() => {
-					// Now set surah to play normally
-					player.pause();
-					if (player.paused) {
-						//var url = 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + ayah + '.mp3';
-						$("#playThisAyah" + ayah).trigger('click');
-					}
-				});
+			if (surah !=1 && surah !=9) {
+				// First play bismillah
+				var bUrl = 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3';
+				$('#activeAyah').attr('src', bUrl)
+				player.pause();
+				if (player.paused) {
+					player.load();
+					player.oncanplaythrough = player.play();
+					// Sleep because the bismillah is 6 seconds
+					sleep(6000).then(() => {
+						// Now set surah to play normally
+						player.pause();
+						if (player.paused) {
+							//var url = 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + ayah + '.mp3';
+							$("#playThisAyah" + ayah).trigger('click');
+						}
+					});
+				}
+			} else {
+				player.pause();
+				if (player.paused) {
+					//var url = 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + ayah + '.mp3';
+					$("#playThisAyah" + ayah).trigger('click');
+				}
 			}
 		},
         monitorEditions: function(element, reference) {

@@ -43,7 +43,7 @@ jQuery( document ).ready( function( $ ) {
                             w.surahChanged = true;
                         }
                     });
-                    if (w.surahChanged === true) {
+                    if (w.surahChanged === true && w.surah !=9 && w.surah != 1) {
                         number = 1;
                         // Update UI
                         console.log(w.surah);
