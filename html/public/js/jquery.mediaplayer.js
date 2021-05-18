@@ -9,6 +9,7 @@ jQuery( document ).ready( function( $ ) {
         player: '',
         surahChanged: false,
         realNumber: 1,
+        container: '',
         init: function(player, mode, firstAyah, lastAyah, surah, quran, surahChangers) {
             this.mode = mode;
             this.player = player;
@@ -17,6 +18,7 @@ jQuery( document ).ready( function( $ ) {
             this.surah = Number(surah);
             this.quran = quran;
             this.surahChangers = surahChangers;
+            this.container = $("html,body");
         },
         defaultPlayer: function () {
             var w = this;
@@ -29,7 +31,8 @@ jQuery( document ).ready( function( $ ) {
             number = Number(number);
             w.player.addEventListener('ended', function audioListener() {
                 //console.log(number, w.realNumber);
-                $('.ayahAudio' + number).removeClass('ayah-playing');
+                var ayah = $('.ayahAudio' + number);
+                ayah.removeClass('ayah-playing');
                 if (w.mode == 'quran') {
                     $.each(w.surahChangers, function(i, v) {
                         var matcher = v;
@@ -46,7 +49,6 @@ jQuery( document ).ready( function( $ ) {
                     if (w.surahChanged === true && w.surah !=9 && w.surah != 1) {
                         number = 1;
                         // Update UI
-                        console.log(w.surah);
                         $('.displayedSurah' + w.surah).removeClass('hide').siblings().addClass('hide');
                     } else {
                         number = w.realNumber;
@@ -68,8 +70,12 @@ jQuery( document ).ready( function( $ ) {
                     }
                 }
                 //console.log(number);
-
-                $('.ayahAudio' + number).addClass('ayah-playing');
+                var ayah = $('.ayahAudio' + number);
+                ayah.addClass('ayah-playing');
+                w.container.animate({
+                    scrollTop: (ayah.offset().top - 100), scrollLeft: 0
+                },
+                    777);
                 $('#activeAyah').attr('src', 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + number + '.mp3');
                 if (w.player.paused) {
                     w.player.load();
