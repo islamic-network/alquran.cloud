@@ -60,7 +60,9 @@ jQuery( document ).ready( function( $ ) {
                             w.realNumber = number;
                         }
                     }
-                } else {
+                } else if (w.mode == 'ayah') {
+                    // Don't change the number.
+                } else { // w.mode == 'surah'
                     if (number == 1 && w.surah > 1) {
                         number = w.firstAyah;
                     } else if (number < w.lastAyah) {
@@ -69,7 +71,7 @@ jQuery( document ).ready( function( $ ) {
                         number = 1;
                     }
                 }
-                //console.log(number);
+                // console.log(number);
                 var ayah = $('.ayahAudio' + number);
                 ayah.addClass('ayah-playing');
                 w.container.animate({
