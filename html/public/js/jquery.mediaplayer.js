@@ -46,10 +46,14 @@ jQuery( document ).ready( function( $ ) {
                             w.surahChanged = true;
                         }
                     });
-                    if (w.surahChanged === true && w.surah !=9 && w.surah != 1) {
-                        number = 1;
+                    if (w.surahChanged === true) {
+                        if (w.surah !=9 && w.surah != 1) {
+                          number = 1;
+                        }
+                        console.log('hello');
                         // Update UI
-                        $('.displayedSurah' + w.surah).removeClass('hide').siblings().addClass('hide');
+                        //$('.displayedSurah' + w.surah).removeClass('hide').siblings().addClass('hide');
+                        $('#surahSelector').val(w.surah).trigger('change');
                     } else {
                         number = w.realNumber;
                         if (number < w.lastAyah) {
