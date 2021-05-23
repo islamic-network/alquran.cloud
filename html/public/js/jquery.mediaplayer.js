@@ -83,6 +83,9 @@ jQuery( document ).ready( function( $ ) {
                     w.player.load();
                     w.player.oncanplaythrough = w.player.play();
                 }
+                if ($('.playThisAyah').hasClass('hide')) {
+                    $('.playThisAyah').removeClass('hide');    
+                }
                 $('.playThisAyah').on('click', function() {
                     $('.ayahAudio' + number).removeClass('ayah-playing');
                     number = Number($(this).data('number'));

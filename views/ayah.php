@@ -100,7 +100,7 @@
 </div>
 
 <script src="/public/js/jquery.ayah.js?v=1"></script>
-<script src="/public/js/jquery.mediaplayer.js?v=7"></script>
+<script src="/public/js/jquery.mediaplayer.js?v=8"></script>
 <script>
 $(function() {
 	$('#editionSelector').multiselect({ enableFiltering: true, enableCaseInsensitiveFiltering: true, dropUp: true, maxHeight: 400  });

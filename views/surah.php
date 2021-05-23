@@ -79,7 +79,7 @@
 	</div>
 	<hr />
 </div>
-<script src="/public/js/jquery.mediaplayer.js?v=7"></script>
+<script src="/public/js/jquery.mediaplayer.js?v=8"></script>
 <script src="/public/js/jquery.surah.js?v=7"></script>
 
 <script>

@@ -59,7 +59,7 @@ class Surah
 
 	public static function renderPlayIcon($ayah, $surah)
 	{
-		return '<span class="linkify pull-left playThisAyah" data-numberInSurah="' . $ayah->numberInSurah . '" data-surah="' . $surah->data->number . '" data-number="' . $ayah->number . '"><i class="glyphicon glyphicon-play-circle"></i></span>';
+		return '<span class="linkify pull-left playThisAyah hide" data-numberInSurah="' . $ayah->numberInSurah . '" data-surah="' . $surah->data->number . '" data-number="' . $ayah->number . '"><i class="glyphicon glyphicon-play-circle"></i></span>';
 	}
 
 }
