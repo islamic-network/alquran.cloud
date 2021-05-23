@@ -50,7 +50,6 @@ jQuery( document ).ready( function( $ ) {
                         if (w.surah !=9 && w.surah != 1) {
                           number = 1;
                         }
-                        console.log('hello');
                         // Update UI
                         //$('.displayedSurah' + w.surah).removeClass('hide').siblings().addClass('hide');
                         $('#surahSelector').val(w.surah).trigger('change');
@@ -64,6 +63,7 @@ jQuery( document ).ready( function( $ ) {
                             w.realNumber = number;
                         }
                     }
+                    w.highlightActive(number);
                 } else if (w.mode == 'ayah') {
                     // Don't change the number.
                 } else { // w.mode == 'surah'
@@ -74,14 +74,11 @@ jQuery( document ).ready( function( $ ) {
                     } else if (number == w.lastAyah) {
                         number = 1;
                     }
+                    if (w.surah > 1 && number > 1) {
+                        w.highlightActive(number);
+                    }
                 }
-                // console.log(number);
-                var ayah = $('.ayahAudio' + number);
-                ayah.addClass('ayah-playing');
-                w.container.animate({
-                    scrollTop: (ayah.offset().top - 100), scrollLeft: 0
-                },
-                    777);
+                // console.log(number, w.surah);
                 $('#activeAyah').attr('src', 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + number + '.mp3');
                 if (w.player.paused) {
                     w.player.load();
@@ -108,6 +105,15 @@ jQuery( document ).ready( function( $ ) {
                     w.surahChanged = false;
                 }
             });
+        },
+        highlightActive: function(number) {
+            var w = this;
+            var ayah = $('.ayahAudio' + number);
+            ayah.addClass('ayah-playing');
+            w.container.animate({
+                scrollTop: (ayah.offset().top - 100), scrollLeft: 0
+            },
+                777);
         },
         zoomIntoThisAyah: function() {
             $('.zoomIntoThisAyah').on('click', function() {
