@@ -10,6 +10,7 @@ jQuery( document ).ready( function( $ ) {
         surahChanged: false,
         realNumber: 1,
         container: '',
+        firstPlayCompleted: false,
         init: function(player, mode, firstAyah, lastAyah, surah, quran, surahChangers) {
             this.mode = mode;
             this.player = player;
@@ -30,7 +31,6 @@ jQuery( document ).ready( function( $ ) {
             var w = this;
             number = Number(number);
             w.player.addEventListener('ended', function audioListener() {
-                //console.log(number, w.realNumber);
                 var ayah = $('.ayahAudio' + number);
                 ayah.removeClass('ayah-playing');
                 if (w.mode == 'quran') {
@@ -71,6 +71,7 @@ jQuery( document ).ready( function( $ ) {
                         number = w.firstAyah;
                     } else if (number < w.lastAyah) {
                         number = number+1;
+                        w.highlightActive(number);
                     } else if (number == w.lastAyah) {
                         number = 1;
                     }
@@ -78,14 +79,17 @@ jQuery( document ).ready( function( $ ) {
                         w.highlightActive(number);
                     }
                 }
-                // console.log(number, w.surah);
+                //console.log(number, w.surah);
                 $('#activeAyah').attr('src', 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + number + '.mp3');
                 if (w.player.paused) {
                     w.player.load();
                     w.player.oncanplaythrough = w.player.play();
                 }
-                if ($('.playThisAyah').hasClass('hide')) {
-                    $('.playThisAyah').removeClass('hide');    
+
+                if (w.firstPlayCompleted == false) {
+                    if ($('.playThisAyah').hasClass('hide')) {
+                        $('.playThisAyah').removeClass('hide');    
+                    }
                 }
                 $('.playThisAyah').on('click', function() {
                     $('.ayahAudio' + number).removeClass('ayah-playing');
@@ -104,6 +108,7 @@ jQuery( document ).ready( function( $ ) {
                 if (w.surahChanged === true) {
                     w.surahChanged = false;
                 }
+                w.firstPlayCompleted = true;
             });
         },
         highlightActive: function(number) {
