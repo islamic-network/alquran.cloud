@@ -91,10 +91,10 @@ class Generic
         $languages = self::getLanguages();
         $result = [];
         foreach ($editions as $edition) {
-            if ($edition->type != 'quran') {
+            //if ($edition->type != 'quran') {
                 $edition->languageName = $languages[$edition->language];
                 $result[$edition->languageName][] = $edition;
-            }
+            //}
         }
         ksort($result);
         return $result;
