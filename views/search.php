@@ -81,7 +81,7 @@
 	
 	<?php $i =0; foreach($results->data->matches as $ayah) { $i++; ?>
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-12 <?= $ayah->edition->type == 'quran' ? 'font-kitab rtl style-ayah' : '' ;?>">
 			<?= $i . '. ' . str_replace([$keyword, strtolower($keyword), ucwords($keyword)], ['<span class="bg-warning">' . $keyword . '</span>', '<span class="bg-warning">' . strtolower($keyword) .'</span>', '<span class="bg-warning">' . ucwords($keyword) . '</span>'], $ayah->text); ?>
 		</div>
 	</div>
