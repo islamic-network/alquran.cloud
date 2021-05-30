@@ -37,7 +37,6 @@ jQuery( document ).ready( function( $ ) {
 						// Now set surah to play normally
 						player.pause();
 						if (player.paused) {
-							//var url = 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + ayah + '.mp3';
 							$("#playThisAyah" + ayah).trigger('click');
 						}
 					});

@@ -44,7 +44,7 @@
 	<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 		<form>
 			<div class="form-group">
-				<select id="surahSelector" name="surahSelector" title="Select Surah" class="form-control" >
+				<select id="surahSelector" name="surahSelector" title="Select Surah" class="form-control" disabled="disabled" >
                     <?php $surahChangers = []; $count=0; ?>
 					<?php foreach ($suwar->data as $ss) {
 					    $count = $count + $ss->numberOfAyahs;
@@ -60,7 +60,7 @@
 		<form class="align-center">
 			<div class="form-group">
 				<label for="editionSelector">Show translation </label>
-				<select id="editionSelector" name="editionSelector" multiple="multiple" title="Select Language" class="form-control" >
+				<select id="editionSelector" name="editionSelector" multiple="multiple" title="Select Language" class="form-control">
 					<?php foreach (Generic::getEditionsByLanguage($editions['editions']->data) as  $language => $edition) { ?>
 					<optgroup label="<?= $language; ?>">
 						<?php foreach ($edition as $e) { ?>
@@ -80,8 +80,8 @@
 </div>
 </div>
 </div>
-<script src="/public/js/jquery.mediaplayer.js?v=11"></script>
-<script src="/public/js/jquery.quran.js?v=1"></script>
+<script src="/public/js/jquery.mediaplayer.js?v=13"></script>
+<script src="/public/js/jquery.quran.js?v=2"></script>
 <script>
     var quran = <?php echo json_encode($quran->data); ?>;
     var surahChangers = <?php echo json_encode($surahChangers); ?>;

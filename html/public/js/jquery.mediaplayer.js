@@ -85,10 +85,13 @@ jQuery( document ).ready( function( $ ) {
                     w.player.load();
                     w.player.oncanplaythrough = w.player.play();
                 }
-
                 if (w.firstPlayCompleted == false) {
+                    console.log('yes');
                     if ($('.playThisAyah').hasClass('hide')) {
-                        $('.playThisAyah').removeClass('hide');    
+                        $('.playThisAyah').removeClass('hide');
+                    }
+                    if ($('#surahSelector').attr('disabled') == 'disabled') {
+                        $('#surahSelector').attr('disabled', false);
                     }
                 }
                 $('.playThisAyah').on('click', function() {
