@@ -3,7 +3,6 @@ jQuery( document ).ready( function( $ ) {
         currentSurah: '',
         mode: 'surah',
         surahChangers: '',
-        quran: '',
         firstAyah: '',
         lastAyah: '',
         player: '',
@@ -11,13 +10,12 @@ jQuery( document ).ready( function( $ ) {
         realNumber: 1,
         container: '',
         firstPlayCompleted: false,
-        init: function(player, mode, firstAyah, lastAyah, surah, quran, surahChangers) {
+        init: function(player, mode, firstAyah, lastAyah, surah, surahChangers) {
             this.mode = mode;
             this.player = player;
             this.firstAyah = Number(firstAyah);
             this.lastAyah = Number(lastAyah);
             this.surah = Number(surah);
-            this.quran = quran;
             this.surahChangers = surahChangers;
             this.container = $("html,body");
         },
@@ -86,7 +84,6 @@ jQuery( document ).ready( function( $ ) {
                     w.player.oncanplaythrough = w.player.play();
                 }
                 if (w.firstPlayCompleted == false) {
-                    console.log('yes');
                     if ($('.playThisAyah').hasClass('hide')) {
                         $('.playThisAyah').removeClass('hide');
                     }

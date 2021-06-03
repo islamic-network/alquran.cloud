@@ -42,7 +42,7 @@ class Juz
 
 	public static function renderPlayIcon($ayah, $juz)
 	{
-		return '<span class="linkify pull-left playThisAyah" data-juz="' . $juz->data->number . '" data-number="' . $ayah->number . '"><i class="glyphicon glyphicon-play-circle"></i></span>';
+		return '<span class="linkify pull-left playThisAyah hide" data-juz="' . $juz->data->number . '" data-number="' . $ayah->number . '"><i class="glyphicon glyphicon-play-circle"></i></span>';
 	}
 
 }

@@ -90,7 +90,7 @@ $(function() {
 	$('#editionSelector').multiselect({ enableFiltering: true, enableCaseInsensitiveFiltering: true, dropUp: true, maxHeight: 400 });
 	$.alQuranQuran.editions('#editionSelector');
 	$.alQuranQuran.surahs('#surahSelector', player, quran);
-    $.alQuranMediaPlayer.init(player, 'quran', 1, 6236, 1, quran, surahChangers);
+    $.alQuranMediaPlayer.init(player, 'quran', 1, 6236, 1, surahChangers);
     $.alQuranMediaPlayer.defaultPlayer();
     $.alQuranMediaPlayer.zoomIntoThisAyah();
 

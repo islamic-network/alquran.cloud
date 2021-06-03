@@ -105,7 +105,7 @@
 $(function() {
 	$('#editionSelector').multiselect({ enableFiltering: true, enableCaseInsensitiveFiltering: true, dropUp: true, maxHeight: 400  });
 	$.alQuranAyah.init('#editionSelector', '<?= $ayah->data->number; ?>');
-	$.alQuranMediaPlayer.init($("#ayahPlayer")[0], 'ayah', <?= $ayah->data->number; ?>, <?= $ayah->data->number; ?>, <?= $ayah->data->surah->number; ?>, 0, 0);
+	$.alQuranMediaPlayer.init($("#ayahPlayer")[0], 'ayah', <?= $ayah->data->number; ?>, <?= $ayah->data->number; ?>, <?= $ayah->data->surah->number; ?>, 0);
         $.alQuranMediaPlayer.defaultPlayer();
 
 });

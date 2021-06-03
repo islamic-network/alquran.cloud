@@ -87,7 +87,7 @@ $(function() {
 	$('#editionSelector').multiselect({ enableFiltering: true, enableCaseInsensitiveFiltering: true, maxHeight: 400, dropUp: true});
 	$.alQuranSurah.editions('#editionSelector', '<?= $surah->data->number; ?>');
 	$.alQuranSurah.surahs('#surahSelector');
-	$.alQuranMediaPlayer.init($("#surahPlayer")[0], 'surah', <?=$ayahs[0]->number?>, <?=end($ayahs)->number?>, <?=$surah->data->number?>, 0, 0);
+	$.alQuranMediaPlayer.init($("#surahPlayer")[0], 'surah', <?=$ayahs[0]->number?>, <?=end($ayahs)->number?>, <?=$surah->data->number?>, 0);
     $.alQuranMediaPlayer.defaultPlayer();
     $.alQuranMediaPlayer.zoomIntoThisAyah();
 });
