@@ -83,7 +83,6 @@
 <script src="/public/js/jquery.mediaplayer.js?v=13"></script>
 <script src="/public/js/jquery.quran.js?v=4"></script>
 <script>
-    //var quran = <?php echo json_encode($quran->data); ?>;
     var surahChangers = <?php echo json_encode($surahChangers); ?>;
 $(function() {
 	var player = $('#quranPlayer')[0];
