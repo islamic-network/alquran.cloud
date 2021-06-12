@@ -5,30 +5,43 @@ jQuery( document ).ready( function( $ ) {
         editions: function(element, reference) {
             this.monitorEditions(element, reference);
         },
-		surahs: function(element, player, quran) {
+		surahs: function(element, player) {
 			var w = this;
 			$(element).on('change', function() {
 				w._surah = ($(this).val());
 				$('.displayedSurah' + w._surah).removeClass('hide').siblings().addClass('hide');
 				// Set audio player to play the first file in this surah.
-				w.getFirstAyahOfSurah(w._surah, player, quran);
+				w.getFirstAyahOfSurah(w._surah, player);
 				
 			});
 		},
-		getFirstAyahOfSurah: function(surahid, player, quran) {
+		getFirstAyahOfSurah: function(surahid, player) {
 		   var w = this;
-		   var ayahNumber = quran.surahs[Number(surahid - 1)].ayahs[0].number;
-		   w.setPlayerToAyah(surahid, ayahNumber, player);
+			var ayahNumber;
+			$.ajax({
+				type: "GET",
+				url: "https://api.alquran.cloud/ayah/" + (surahid) + ':' + 1,
+				cache: false,
+				success: function(data) {
+					// Update timings
+					if (data.code == 200) {
+						ayahNumber = data.data.number;
+						w.setPlayerToAyah(surahid, ayahNumber, player);
+					}
+				}
+			});
+		   //var ayahNumber = quran.surahs[Number(surahid - 1)].ayahs[0].number;
+		   //w.setPlayerToAyah(surahid, ayahNumber, player);
 		},
 		setPlayerToAyah: function(surah, ayah, player) {
 			const sleep = (milliseconds) => {
 				return new Promise(resolve => setTimeout(resolve, milliseconds))
 			}
 			if (surah !=1 && surah !=9) {
+				player.pause();
 				// First play bismillah
 				var bUrl = 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3';
 				$('#activeAyah').attr('src', bUrl)
-				player.pause();
 				if (player.paused) {
 					player.load();
 					player.oncanplaythrough = player.play();

@@ -81,15 +81,15 @@
 </div>
 </div>
 <script src="/public/js/jquery.mediaplayer.js?v=13"></script>
-<script src="/public/js/jquery.quran.js?v=2"></script>
+<script src="/public/js/jquery.quran.js?v=4"></script>
 <script>
-    var quran = <?php echo json_encode($quran->data); ?>;
+    //var quran = <?php echo json_encode($quran->data); ?>;
     var surahChangers = <?php echo json_encode($surahChangers); ?>;
 $(function() {
 	var player = $('#quranPlayer')[0];
 	$('#editionSelector').multiselect({ enableFiltering: true, enableCaseInsensitiveFiltering: true, dropUp: true, maxHeight: 400 });
 	$.alQuranQuran.editions('#editionSelector');
-	$.alQuranQuran.surahs('#surahSelector', player, quran);
+	$.alQuranQuran.surahs('#surahSelector', player);
     $.alQuranMediaPlayer.init(player, 'quran', 1, 6236, 1, surahChangers);
     $.alQuranMediaPlayer.defaultPlayer();
     $.alQuranMediaPlayer.zoomIntoThisAyah();
