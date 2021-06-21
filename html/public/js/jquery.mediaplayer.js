@@ -91,19 +91,21 @@ jQuery( document ).ready( function( $ ) {
                         $('#surahSelector').attr('disabled', false);
                     }
                 }
-                $('.playThisAyah').on('click', function() {
-                    $('.ayahAudio' + number).removeClass('ayah-playing');
-                    number = Number($(this).data('number'));
-                    w.realNumber = number;
-                    $('.ayahAudio' + number).addClass('ayah-playing');
-                    $('#activeAyah').attr('src', 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + number + '.mp3');
-                    w.player.pause();
-                    if (w.player.paused) {
-                        w.player.load();
-                        w.player.oncanplaythrough = w.player.play();
-                    }
-                    w.player.removeEventListener('ended', audioListener, true);
-                });
+                if (w.firstPlayCompleted == false) {
+                    $('.playThisAyah').on('click', function () {
+                        $('.ayahAudio' + number).removeClass('ayah-playing');
+                        number = Number($(this).data('number'));
+                        w.realNumber = number;
+                        $('.ayahAudio' + number).addClass('ayah-playing');
+                        $('#activeAyah').attr('src', 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + number + '.mp3');
+                        w.player.pause();
+                        if (w.player.paused) {
+                            w.player.load();
+                            w.player.oncanplaythrough = w.player.play();
+                        }
+                        w.player.removeEventListener('ended', audioListener, true);
+                    });
+                }
 
                 if (w.surahChanged === true) {
                     w.surahChanged = false;
