@@ -80,7 +80,7 @@
 </div>
 </div>
 </div>
-<script src="/public/js/jquery.mediaplayer.js?v=13"></script>
+<script src="/public/js/jquery.mediaplayer.js?v=14"></script>
 <script src="/public/js/jquery.quran.js?v=4"></script>
 <script>
     var surahChangers = <?php echo json_encode($surahChangers); ?>;

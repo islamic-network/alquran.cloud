@@ -74,7 +74,7 @@
 </div>
 </div>
 
-<script src="/public/js/jquery.mediaplayer.js?v=3"></script>
+<script src="/public/js/jquery.mediaplayer.js?v=14"></script>
 <script src="/public/js/jquery.juz.js?v=3"></script>
 <script>
 $(function() {
