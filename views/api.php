@@ -350,8 +350,9 @@
                         </div>
                         <div class="col-md-4">
                             <ol>
-                                <li><a href="http://api.alquran.cloud/v1/ayah/262/en.asad" target="_blank">http://api.alquran.cloud/v1/ayah/262</a> - (Text) Returns Muhammad Asad's translation Ayat Al Kursi</li>
-                                <li><a href="http://api.alquran.cloud/v1/ayah/2:255/en.asad" target="_blank">http://api.alquran.cloud/v1/ayah/2:255</a> - (Text) Returns Muhammad Asad's translation Ayat Al Kursi</li>
+                                <li><a href="http://api.alquran.cloud/v1/ayah/262" target="_blank">http://api.alquran.cloud/v1/ayah/262</a> - (Text) Returns Default Edition of the Ayat Al Kursi</li>
+                                <li><a href="http://api.alquran.cloud/v1/ayah/262/en.asad" target="_blank">http://api.alquran.cloud/v1/ayah/262/en.asad</a> - (Text) Returns Muhammad Asad's translation Ayat Al Kursi</li>
+                                <li><a href="http://api.alquran.cloud/v1/ayah/2:255/en.asad" target="_blank">http://api.alquran.cloud/v1/ayah/2:255/en.asad</a> - (Text) Returns Muhammad Asad's translation Ayat Al Kursi</li>
                                 <li><a href="http://api.alquran.cloud/v1/ayah/262/ar.alafasy" target="_blank">http://api.alquran.cloud/v1/ayah/262/ar.alafasy</a> - (Audio) Returns Mishary Alafasy's recitation of the Ayat Al Kursi</li>
                                 <li><a href="http://api.alquran.cloud/v1/ayah/262" target="_blank">http://api.alquran.cloud/v1/ayah/262</a> - (Text) Returns the Arabic text of Ayat Al Kursi</li>
                             </ol>
