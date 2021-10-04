@@ -10,7 +10,7 @@ spec:
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxSurge: 2
+      maxSurge: 1
       maxUnavailable: 0
   selector:
     matchLabels:
@@ -78,7 +78,7 @@ spec:
     name: alquran-cloud-app
   minReplicas: 2
   maxReplicas: 5
-  targetCPUUtilizationPercentage: 80
+  targetCPUUtilizationPercentage: 60
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress

@@ -6,11 +6,11 @@ metadata:
   name: alquran-cloud-app
   namespace: alquran-cloud
 spec:
-  replicas: 3
+  replicas: 2
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxSurge: 2
+      maxSurge: 1
       maxUnavailable: 0
   selector:
     matchLabels:
@@ -76,9 +76,9 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: alquran-cloud-app
-  minReplicas: 3
+  minReplicas: 2
   maxReplicas: 5
-  targetCPUUtilizationPercentage: 80
+  targetCPUUtilizationPercentage: 60
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
