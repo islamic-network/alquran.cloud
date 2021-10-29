@@ -39,7 +39,7 @@ class Generic
         $a = [
             "ar" => "Arabic",
             "az" => "Azerbaijani",
-            "ba" => "Bashkir"
+            "ba" => "Bashkir",
             "bn" => "Bengali",
             "cs" => "Czech",
             "de" => "German",
