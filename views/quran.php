@@ -1,7 +1,6 @@
 <?php require_once('common/header.php'); ?>
 <?php require_once('common/navigation.php'); ?>
 <?php // ================================================================ // ?>
-<?php use AlQuranCloud\Renderer\Ayah; ?>
 <?php use AlQuranCloud\Renderer\Generic; ?>
 <?php use AlQuranCloud\Renderer\Quran; ?>
 
@@ -80,7 +79,11 @@
 </div>
 </div>
 </div>
-<script src="/public/js/jquery.mediaplayer.js?v=14"></script>
+<?php if ($dualAudio == 'true') { ?>
+<script src="/public/js/jquery.mediaplayer-ar-en.js?v=<?=rand();?>"></script>
+<?php } else { ?>
+<script src="/public/js/jquery.mediaplayer.js?v=<?=rand();?>"></script>
+<?php } ?>
 <script src="/public/js/jquery.quran.js?v=4"></script>
 <script>
     var surahChangers = <?php echo json_encode($surahChangers); ?>;

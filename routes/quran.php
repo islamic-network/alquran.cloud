@@ -17,6 +17,7 @@ $app->get('/quran', function ($request, $response, $args) {
 		'metaDescription' => 'A Complete Rendering and Recitation of the Quran',
 		'quran' => $this->client->AlQuranCloudApi->quran('quran-uthmani-quran-academy'),
 		'suwar' => $this->client->AlQuranCloudApi->surahs(),
+		'dualAudio' => $request->getQueryParam('dualAudio', 'false'),
 		'editions' => [
 			'editions' => $this->client->AlQuranCloudApi->editions(null, null, 'text'),
 		],

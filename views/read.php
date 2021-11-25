@@ -9,7 +9,7 @@
 	</div>
 	<div class="page-header">
 		<h4>
-			Read the Quran
+			Read the Quran in Arabic
 		</h4>		
 	</div>
 	<div class="row surahRow">
@@ -19,11 +19,23 @@
 					The whole Quran
 				</p>
 				<p>
-					Read and Stream the entire Quran
+					Read and Stream the entire Quran in Arabic
 				</p>
 			</a>
 		</div>
 	</div>
+    <div class="row surahRow">
+        <div class="col-md-12">
+            <a href="/quran?dualAudio=true">
+                <p class="lead">
+                    The whole Quran in Arabic and English
+                </p>
+                <p>
+                    Read and Stream the entire Quran in Arabic and English
+                </p>
+            </a>
+        </div>
+    </div>
 	<div class="row">
 		<div class="col-md-6 surahRow">
 			<a href="/surahs">
