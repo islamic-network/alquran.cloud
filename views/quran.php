@@ -80,9 +80,9 @@
 </div>
 </div>
 <?php if ($dualAudio == 'true') { ?>
-<script src="/public/js/jquery.mediaplayer-ar-en.js?v=<?=rand();?>"></script>
+<script src="/public/js/jquery.mediaplayer-ar-en.js?v=27"></script>
 <?php } else { ?>
-<script src="/public/js/jquery.mediaplayer.js?v=<?=rand();?>"></script>
+<script src="/public/js/jquery.mediaplayer.js?v=27"></script>
 <?php } ?>
 <script src="/public/js/jquery.quran.js?v=4"></script>
 <script>

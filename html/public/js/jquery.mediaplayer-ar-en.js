@@ -38,7 +38,7 @@ jQuery( document ).ready( function( $ ) {
                     $.each(w.surahChangers, function(i, v) {
                         var matcher = v;
                         if (number === matcher && edition == 'en.walk') {
-                            console.log(edition, matcher);
+                            // console.log(edition, matcher);
                             w.realNumber = matcher;
                             if (i < 114) {
                                 w.surah = Number(i) + 1;
