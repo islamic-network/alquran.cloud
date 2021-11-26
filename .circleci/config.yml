@@ -126,25 +126,6 @@ jobs:
             curl -o ./.k8s/deploy.sh https://raw.githubusercontent.com/islamic-network/k8s-deployment/master/deploy-london.sh
             chmod u+x ./.k8s/deploy.sh
             sh ./.k8s/deploy.sh
-  deploy-docker-tag-frankfurt:
-    executor: docker-publisher
-    steps:
-      - checkout
-      - run:
-          name: Install envsubst
-          command: |
-            sudo apt-get update && sudo apt-get -y install gettext-base
-      - run:
-          name: Install kubectl
-          command: |
-            curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-            chmod u+x ./kubectl
-      - run:
-          name: Deploy Code
-          command: |
-            curl -o ./.k8s/deploy.sh https://raw.githubusercontent.com/islamic-network/k8s-deployment/master/deploy-frankfurt.sh
-            chmod u+x ./.k8s/deploy.sh
-            sh ./.k8s/deploy.sh
   deploy-docker-tag-mumbai:
     executor: docker-publisher
     steps:
@@ -235,15 +216,6 @@ workflows:
             branches:
               ignore: /.*/
       - deploy-docker-tag-london:
-          context: org-global
-          requires:
-            - build-and-publish-docker-image
-          filters:
-            tags:
-              only: /.*/
-            branches:
-              ignore: /.*/
-      - deploy-docker-tag-frankfurt:
           context: org-global
           requires:
             - build-and-publish-docker-image
