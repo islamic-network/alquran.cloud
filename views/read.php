@@ -31,7 +31,7 @@
                     The whole Quran in Arabic and English
                 </p>
                 <p>
-                    Read and Stream the entire Quran in Arabic and English
+                    Read and Stream the entire Quran in Arabic and English with the Sahih International Translation
                 </p>
             </a>
         </div>
