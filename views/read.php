@@ -26,7 +26,7 @@
 	</div>
     <div class="row surahRow">
         <div class="col-md-12">
-            <a href="/quran?dualAudio=true">
+            <a href="/quran/en.sahih?dualAudio=true">
                 <p class="lead">
                     The whole Quran in Arabic and English
                 </p>
