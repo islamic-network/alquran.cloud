@@ -84,7 +84,7 @@
 <?php } else { ?>
 <script src="/public/js/jquery.mediaplayer.js?v=27"></script>
 <?php } ?>
-<script src="/public/js/jquery.quran.js?v=4"></script>
+<script src="/public/js/jquery.quran.js?v=5"></script>
 <script>
     var surahChangers = <?php echo json_encode($surahChangers); ?>;
 $(function() {
