@@ -46,13 +46,13 @@ jQuery( document ).ready( function( $ ) {
 					player.load();
 					player.oncanplaythrough = player.play();
 					// Sleep because the bismillah is 6 seconds
-					/*sleep(6000).then(() => {
+					sleep(6000).then(() => {
 						// Now set surah to play normally
 						player.pause();
 						if (player.paused) {
 							$("#playThisAyah" + ayah).trigger('click');
 						}
-					});*/
+					});
 				}
 			} else {
 				player.pause();
