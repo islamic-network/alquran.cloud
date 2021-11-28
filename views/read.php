@@ -19,19 +19,19 @@
 					The whole Quran
 				</p>
 				<p>
-					Read and Stream the entire Quran in Arabic
+					Read and Stream the entire Quran in Arabic (Mishary al Afasy)
 				</p>
 			</a>
 		</div>
 	</div>
     <div class="row surahRow">
         <div class="col-md-12">
-            <a href="/quran/en.sahih?dualAudio=true">
+            <a href="/quran?dualAudio=true">
                 <p class="lead">
                     The whole Quran in Arabic and English
                 </p>
                 <p>
-                    Read and Stream the entire Quran in Arabic and English with the Sahih International Translation
+                    Read and Stream the entire Quran in Arabic (Mishary al Afasy) and English (Ibrahim Walk - Sahih International Translation)
                 </p>
             </a>
         </div>
