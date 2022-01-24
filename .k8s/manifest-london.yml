@@ -89,7 +89,7 @@ metadata:
     konghq.com/protocols: "https"
     konghq.com/https-redirect-status-code: "301"
     kubernetes.io/tls-acme: "true"
-    cert-manager.io/cluster-issuer: letsencrypt-prod
+    cert-manager.io/cluster-issuer: zerossl-prod
     kubernetes.io/ingress.class: kong
 spec:
   tls:
