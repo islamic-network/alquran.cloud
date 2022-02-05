@@ -8,7 +8,6 @@
             </div>
             <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">
                 <ul class="nav navbar-nav pull-right">
-                    <li><a href="http://masjidproject.org" target="_blank">The Masjid Project</a></li>
                     <li><a href="http://aladhan.com" target="_blank">Prayer Times</a></li>
                     <li><a href="http://aladhan.com/gregorian-hijri-calendar" target="_blank">Hijri Calendar</a></li>
                     <li><a href="http://alquran.cloud/contact">Contact</a></li>
