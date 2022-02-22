@@ -4,10 +4,10 @@ use \Psr\Http\Message\ResponseInterface as Response;
 
 $app->get('/search', function ($request, $response, $args) {
 
-    $keyword = $request->getQueryParam('keyword');
-    $language = $request->getQueryParam('language');
-    $edition = $request->getQueryParam('edition');
-    $surah = $request->getQueryParam('surah');
+    $keyword = isset($request->getQueryParams()['keyword']) ? $request->getQueryParams()['keyword'] : null;
+    $language = isset($request->getQueryParams()['language']) ? $request->getQueryParams()['language'] : null;
+    $edition = isset($request->getQueryParams()['edition']) ? $request->getQueryParams()['language'] : null;
+    $surah = isset($request->getQueryParams()['surah']) ? $request->getQueryParams()['language'] : null;
     $res = [];
     if ($keyword !== null && $keyword != '') {
         if ($surah !== null) {
@@ -16,16 +16,16 @@ $app->get('/search', function ($request, $response, $args) {
                     if ($language !== null || $edition !== null) {
                         if (is_array($language)) {
                             foreach ($language as $lang) {
-                                $results[] = $this->client->AlQuranCloudApi->searchSurah($keyword, $s, $lang);
+                                $results[] = $this->get('client')->AlQuranCloudApi->searchSurah($keyword, $s, $lang);
                             }
                         }
                         if (is_array($edition)) {
                             foreach ($edition as $ed) {
-                                $results[] = $this->client->AlQuranCloudApi->searchSurah($keyword, $s, $ed);
+                                $results[] = $this->get('client')->AlQuranCloudApi->searchSurah($keyword, $s, $ed);
                             }
                         }
                     } else {
-                        $results[] = $this->client->AlQuranCloudApi->searchSurah($keyword, $s, null);
+                        $results[] = $this->get('client')->AlQuranCloudApi->searchSurah($keyword, $s, null);
                     }
                 }
             }
@@ -33,16 +33,16 @@ $app->get('/search', function ($request, $response, $args) {
             if ($language !== null || $edition !== null) {
                 if (is_array($language)) {
                     foreach ($language as $lang) {
-                        $results[] = $this->client->AlQuranCloudApi->searchSurah($keyword, null, $lang);
+                        $results[] = $this->get('client')->AlQuranCloudApi->searchSurah($keyword, null, $lang);
                     }
                 }
                 if (is_array($edition)) {
                     foreach ($edition as $ed) {
-                        $results[] = $this->client->AlQuranCloudApi->searchSurah($keyword, null, $ed);
+                        $results[] = $this->get('client')->AlQuranCloudApi->searchSurah($keyword, null, $ed);
                     }
                 }
             } else {
-                $results[] = $this->client->AlQuranCloudApi->search($keyword, $surah, null);
+                $results[] = $this->get('client')->AlQuranCloudApi->search($keyword, $surah, null);
             }
         }
         foreach ($results as $result) {
@@ -61,7 +61,7 @@ $app->get('/search', function ($request, $response, $args) {
     $formatted->data->matches = $res;
     $formatted->data->count = count($res);
 
-    return $this->view->render($response, 'search.php', [
+    return $this->get('renderer')->render($response, 'search.php', [
         'pageTitle' => 'Al Quran Cloud',
         'metaDescription' => 'AlQuran Cloud',
         'results' => $formatted,
@@ -69,9 +69,9 @@ $app->get('/search', function ($request, $response, $args) {
         'language' => $language,
         'surah' => $surah,
         'edition' => $edition,
-        'suwar' => $this->client->AlQuranCloudApi->surahs(),
+        'suwar' => $this->get('client')->AlQuranCloudApi->surahs(),
         'editions' => [
-            'editions' => $this->client->AlQuranCloudApi->editions(null, null, 'text')
+            'editions' => $this->get('client')->AlQuranCloudApi->editions(null, null, 'text')
         ],
         'view' => 'search'
     ]);
