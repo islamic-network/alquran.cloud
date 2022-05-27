@@ -73,14 +73,14 @@
                     <div class="row">
                         <div class="col-md-12">
                             <p>
-                               Image files can be accessed via the 2 CDNs using the following URLs:
+                               Image files can be accessed via the CDN in normal and high resolution using the following URLs:
                             </p>
                             <code>
-                                https://cdn.alquran.cloud/media/image/{surah}/{ayah}
+                                https://cdn.islamic.network/quran/images/{surah}_{ayah}.png
                             </code>
                                 or
                             <code>
-                                https://cdn.islamic.network/quran/images/{surah}_{ayah}.png
+                                https://cdn.alquran.cloud/media/image/high-resolution/{surah}/{ayah}
                             </code>
                             <ul>
                                 <li>
@@ -94,10 +94,10 @@
                                 Examples:
                             </p>
                             <ul>
-                                <li><a href="http://cdn.alquran.cloud/media/image/2/255" target="_blank">http://cdn.alquran.cloud/media/image/2/255</a></li>
-                                <li><a href="http://cdn.alquran.cloud/media/image/24/35" target="_blank">http://cdn.alquran.cloud/media/image/24/35</a></li>
                                 <li><a href="http://cdn.islamic.network/quran/images/2_255.png" target="_blank">http://cdn.islamic.network/quran/images/2_255.png</a></li>
                                 <li><a href="http://cdn.islamic.network/quran/images/24_35.png" target="_blank">http://cdn.islamic.network/quran/images/24_35.png</a></li>
+                                <li><a href="http://cdn.islamic.network/quran/images/high-resolution/24_35.png"
+                                target="_blank">http://cdn.islamic.network/quran/images/high-resolution/24_35.png</a></li>
                             </ul>
                         </div>
                     </div>
