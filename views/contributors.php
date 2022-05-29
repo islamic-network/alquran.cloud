@@ -35,6 +35,8 @@
 			<li>Google Early Access Fonts</li>
 			<li>Quranwbw.com</li>
 			<li>Mishary Alafasy - for the beautiful recitation used on this website</li>
+            <li>Quran Central for the surah audio files on the CDN</li>
+            <li>Every Ayah for the ayah audio files on the CDN</li>
 		</ul>
 
 		</div>
