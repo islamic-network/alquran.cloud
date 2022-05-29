@@ -31,6 +31,7 @@
                     <li><a href="/arabic-font-edition-tester">Font Edition Tester</a></li>
                 </ul>
             </li>
+            <li class="<?= $view == 'cdn' ? 'active' : ''; ?>"><a href="/cdn">CDN</a></li>
 
           </ul>
             <form class="navbar-form pull-right" style="margin-right: 20px;" role="search" method="GET" action="/search">
