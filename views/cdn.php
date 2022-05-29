@@ -81,16 +81,16 @@
 
         <!-- AUDIO BY SURAH -->
         <div class="panel panel-primary">
-            <div class="panel-heading" role="tab" id="headingOne">
+            <div class="panel-heading" role="tab" id="headingThree">
                 <h4 class="panel-title">
                     <span class="label label-danger">GET</span>
                     <a role="button" data-toggle="collapse" data-parent="#accordion"
-                       href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                       href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                         Audio by Surah
                     </a>
                 </h4>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headinThree">
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12">
