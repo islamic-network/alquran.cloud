@@ -12,13 +12,12 @@ This is the code you see deployed on https://alquran.cloud. This documentation e
 to deploy your own instance and contribute code.
 
 ## Technology Stack and Requirements
-* PHP 7.2
+* PHP 8.1
 * Composer - See composer.json for other dependencies
-* Slim Framework
+* Slim Framework 4
 * Bootstrap 3
 * JQuery
 * Bootstrap Multiselect
-* Media Elements JS
 * Docker
 
 ## Getting Started
