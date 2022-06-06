@@ -7,13 +7,9 @@
 /** Autoloader **/
 require_once realpath(__DIR__) . '/../vendor/autoload.php';
 
-/** Settings **/
-$settings = [
-    'settings' => [
-        'displayErrorDetails' => false, // set to false in production
-        'addContentLengthHeader' => false, // Allow the web server to send the content-length header
-    ],
-];
-
-// Initiate Slim App
-$app = new \Slim\App($settings);
+// Instantiate the app
+$container = new \DI\Container();
+\Slim\Factory\AppFactory::setContainer($container);
+$app = \Slim\Factory\AppFactory::create();
+$app->addRoutingMiddleware();
+$container = $app->getContainer();
