@@ -41,7 +41,7 @@ $app->get('/cdn', function ($request, $response, $args) {
     return $this->get('renderer')->render($response, 'cdn.php', [
         'pageTitle' => 'Al Quran Cloud Content Delivery Network',
 		'metaDescription' => 'The Al Quran Cloud Content Delivery Network for Quran Recitation Audio Files and Quran Ayah Images',
-		'view' => 'api'
+		'view' => 'cdn'
     ]);
 });
 
