@@ -94,7 +94,10 @@ $app->get('/contributors', function ($request, $response, $args) {
 });
 
 $app->get('/liveness', function ($request, $response) {
-    return $response->withJson('OK', 200);
+    $response->getBody()->write(json_encode('OK'));
+    $response->withStatus(200);
+
+    return $response;
 });
 
 $app->get('/arabic-font-edition-tester', function ($request, $response, $args) {
