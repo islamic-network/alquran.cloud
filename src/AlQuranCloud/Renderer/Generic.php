@@ -75,7 +75,7 @@ class Generic
             "ug" => "Uyghur",
             "ur" => "Urdu",
             "uz" => "Uzbek",
-            "bg" => "Burmese",
+            "bg" => "Bulgarian",
             "bs" => "Bosnian",
             "ms" => "Malay",
             "zh" => "Chinese",
