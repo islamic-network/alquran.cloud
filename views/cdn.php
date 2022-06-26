@@ -159,7 +159,7 @@
                             </code>
                             or
                             <code>
-                                https://cdn.alquran.cloud/media/image/high-resolution/{surah}/{ayah}
+                                https://cdn.islamic.network/quran/images/high-resolution/{surah}_{ayah}.png
                             </code>
                             <ul>
                                 <li>
@@ -177,8 +177,8 @@
                                 </li>
                                 <li><a href="http://cdn.islamic.network/quran/images/24_35.png" target="_blank">http://cdn.islamic.network/quran/images/24_35.png</a>
                                 </li>
-                                <li><a href="http://cdn.islamic.network/quran/images/high-resolution/24_35.png"
-                                       target="_blank">http://cdn.islamic.network/quran/images/high-resolution/24_35.png</a>
+                                <li><a href="http://cdn.islamic.network/quran/images/high-resolution/100_1.png"
+                                       target="_blank">http://cdn.islamic.network/quran/images/high-resolution/100_1.png</a>
                                 </li>
                             </ul>
                         </div>
