@@ -51,7 +51,7 @@ $errorMiddleware->setErrorHandler(
 $errorMiddleware->setErrorHandler(
     HttpMethodNotAllowedException::class,
     function (ServerRequestInterface $request, Throwable $exception, bool $displayErrorDetails) use ($container) {
-        $logger = $containter->get('logger)');
+        $logger = $containter->get('logger');
         $logger->error('Slim Error Handler Triggered', ['code' => $exception->getCode(), 'message' => $exception->getMessage(), 'trace' => $exception->getTraceAsString()]);
         $response = new Response();
         $response->getBody()->write($exception->getMessage());
