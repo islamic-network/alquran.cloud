@@ -56,6 +56,7 @@ class Generic
             "ko" => "Korean",
             "ku" => "Kurdish",
             "ml" => "Malayalam",
+            "my" => "Myanmar",
             "nl" => "Dutch",
             "no" => "Norwegiwn",
             "pl" => "Polish",
