@@ -61,8 +61,6 @@
                                 </li>
                             </ol>
 
-
-
                         </div>
                     </div>
                      <div class="row">
@@ -571,7 +569,6 @@
             </div>
         </div>
 
-
         <div class="panel panel-primary">
             <div class="panel-heading" role="tab" id="headingTen">
                 <h4 class="panel-title">
@@ -621,7 +618,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="panel panel-primary">
             <div class="panel-heading" role="tab" id="headingEleven">
@@ -708,7 +704,9 @@
 
     <h4>Developer Resources</h4>
     For API clients and other tools, see our open source repositories on <a href="https://github.com/islamic-network" target="_blank">GitHub</a>.
+    </div>
 </div>
+
 
 <?php // ================================================================ // ?>
 <?php require_once('common/footer.php'); ?>
