@@ -39,7 +39,7 @@ spec:
         image: islamicnetwork/alquran.cloud:$COMMIT_TAG
         env:
           - name:  API_BASE_URI
-            value: http://alquran-cloud-api/
+            value: http://alquran-cloud-api/v1/
         livenessProbe:
           httpGet:
             path: /liveness
