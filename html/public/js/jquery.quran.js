@@ -20,7 +20,7 @@ jQuery( document ).ready( function( $ ) {
 			var ayahNumber;
 			$.ajax({
 				type: "GET",
-				url: "https://api.alquran.cloud/ayah/" + (surahid) + ':' + 1,
+				url: "https://api.alquran.cloud/v1/ayah/" + (surahid) + ':' + 1,
 				cache: false,
 				success: function(data) {
 					// Update timings
@@ -94,7 +94,7 @@ jQuery( document ).ready( function( $ ) {
            var w = this;
            $.ajax({
                     type: "GET",
-                    url: "https://api.alquran.cloud/quran/" + edition,
+                    url: "https://api.alquran.cloud/v1/quran/" + edition,
                     cache: false,
                     //dataType: 'jsonp',
                     success: function(data) {

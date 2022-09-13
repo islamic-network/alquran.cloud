@@ -20,7 +20,7 @@ jQuery( document ).ready( function( $ ) {
             var w = this;
            $.ajax({
                     type: "GET",
-                    url: "https://api.alquran.cloud/ayah/" + reference + '/' + edition,
+                    url: "https://api.alquran.cloud/v1/ayah/" + reference + '/' + edition,
                     cache: false,
                     //dataType: 'jsonp',
                     success: function(data) {

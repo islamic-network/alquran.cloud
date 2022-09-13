@@ -26,7 +26,7 @@ jQuery( document ).ready( function( $ ) {
             var w = this;
            $.ajax({
                     type: "GET",
-                    url: "https://api.alquran.cloud/surah/" + reference + '/' + edition,
+                    url: "https://api.alquran.cloud/v1/surah/" + reference + '/' + edition,
                     cache: false,
                     //dataType: 'jsonp',
                     success: function(data) {
