@@ -1,4 +1,4 @@
-FROM islamicnetwork/php:8.1-apache
+FROM ghcr.io/islamic-network/php:8.1-apache
 
 # Copy files
 RUN cd ../ && rm -rf /var/www/html

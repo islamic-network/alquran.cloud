@@ -2,14 +2,14 @@ version: 2.1
 executors:
   docker-publisher:
     environment:
-      IMAGE_NAME: islamicnetwork/alquran.cloud
+      IMAGE_NAME: ghcr.io/islamic-network/alquran.cloud
       QUAYIO_IMAGE_NAME: quay.io/islamic-network/alquran.cloud
     docker:
       - image: circleci/buildpack-deps:stretch
   php74:
     docker:
-      - image: islamicnetwork/php:8.1-cli
-      - image: memcached:1.5
+      - image: ghcr.io/islamic-network/php:8.1-cli
+      - image: memcached:1.6
     working_directory: ~/repo
 jobs:
   build-app:
@@ -53,7 +53,7 @@ jobs:
       - run:
           name: Build Production Docker image
           command: |
-            echo "$DOCKERHUB_PASSWORD" | docker login --username "$DOCKERHUB_USERNAME" --password-stdin
+            echo "$GITHUB_TOKEN" | docker login ghcr.io --username "$DOCKERHUB_USERNAME" --password-stdin
             docker build -t $IMAGE_NAME:latest .
             echo "Pushing latest tag to Docker Hub..."
             docker push $IMAGE_NAME:latest
