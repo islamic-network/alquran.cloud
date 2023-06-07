@@ -1,0 +1,17 @@
+{
+  "listeners": {
+    "*:8080": {
+      "application": "alquran.cloud"
+    }
+  },
+  "applications": {
+    "alquran.cloud": {
+      "type": "php",
+      "user": "nobody",
+      "processes": 2,
+      "root": "/var/www/html",
+      "index": "index.php",
+      "script": "index.php"
+    }
+  }
+}

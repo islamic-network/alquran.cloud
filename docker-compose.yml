@@ -1,0 +1,22 @@
+version: '3'
+services:
+  alquran_cloud:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/var/www
+    privileged: true
+    container_name: alquran_cloud
+  static_files:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/var/www
+    privileged: true
+    container_name: static_files
