@@ -32,6 +32,27 @@ jobs:
             ghcr.io/islamic-network/alquran.cloud:latest
             ghcr.io/islamic-network/alquran.cloud:${{ github.ref_name }}
             
+  deploy-london:
+    needs: docker-build-and-push
+    runs-on: ubuntu-latest
+    container:
+      image: meezaan/kubectl:latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Update Consumer and Keys
+        run: |
+          export K8S_URL=${{ secrets.K8S_LONDON_URL }}
+          export K8S_TOKEN=${{ secrets.K8S_LONDON_TOKEN }}
+          export K8S_CA=${{ secrets.K8S_LONDON_CA }}
+          echo "$K8S_CA" | base64 --decode > cert.crt
+          export REF_NAME=${{ github.ref_name }}
+          COMMIT_TAG=$REF_NAME
+          export COMMIT_TAG=$REF_NAME
+          envsubst <./.k8s/manifest-london.yml >./.k8s/manifest-london.yml.out
+          mv ./.k8s/manifest-london.yml.out ./.k8s/manifest-london.yml
+          kubectl apply -f .k8s/manifest-london.yml --kubeconfig=/dev/null --server=$K8S_URL --certificate-authority=cert.crt --token=$K8S_TOKEN
+
 
   deploy-dubai:
     needs: docker-build-and-push

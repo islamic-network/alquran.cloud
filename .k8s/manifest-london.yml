@@ -1,0 +1,171 @@
+# Deployment
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alquran-cloud-app
+  namespace: alquran-cloud
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: alquran-cloud-app
+  template:
+    metadata:
+      labels:
+        app: alquran-cloud-app
+    spec:
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: ScheduleAnyway
+      containers:
+      - name: apache-exporter-sidecar
+        image: lusotycoon/apache-exporter
+        resources:
+          requests:
+            cpu: "20m"
+            memory: 16Mi
+          limits:
+            cpu: "100"
+            memory: 128Mi
+        args:
+          - '--scrape_uri=http://localhost:8080/server-status?auto'
+        ports:
+          - containerPort: 9117
+            protocol: TCP
+      - name: alquran-cloud-app
+        image: ghcr.io/islamic-network/alquran.cloud:$COMMIT_TAG
+        env:
+          - name:  API_BASE_URI
+            value: http://alquran-cloud-api/v1/
+        livenessProbe:
+          httpGet:
+            path: /liveness
+            port: 8080
+          initialDelaySeconds: 7
+          periodSeconds: 30
+          timeoutSeconds: 5
+          failureThreshold: 3
+        startupProbe:
+          httpGet:
+            path: /liveness
+            port: 8080
+          periodSeconds: 7
+          failureThreshold: 3
+        resources:
+          requests:
+            cpu: "100m"
+            memory: 180Mi
+          limits:
+            cpu: "200m"
+            memory: 380Mi
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+---
+# HPA
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: alquran-cloud-app
+  namespace: alquran-cloud
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: alquran-cloud-app
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 60
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: alquran-cloud-ingress
+  namespace: alquran-cloud
+  annotations:
+    konghq.com/protocols: "https"
+    konghq.com/https-redirect-status-code: "301"
+    kubernetes.io/tls-acme: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: kong
+spec:
+  tls:
+  - hosts:
+    - alquran.cloud
+    - "www.alquran.cloud"
+    secretName: "alquran-cloud-app-tls"
+  rules:
+  - host: alquran.cloud
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: alquran-cloud-app
+            port: 
+              number: 80
+  - host: www.alquran.cloud
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: alquran-cloud-app
+            port: 
+              number: 80
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: alquran-cloud-app-metrics
+  namespace: monitoring
+  labels:
+    release: lke-monitor
+spec:
+  selector:
+    matchLabels:
+      name: alquran-cloud-app-metrics
+  namespaceSelector:
+    any: true
+  endpoints:
+    - port: "metrics"
+      interval: 30s
+---
+#  Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: alquran-cloud-app
+  namespace: alquran-cloud
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: alquran-cloud-app
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: alquran-cloud-app-metrics
+  namespace: alquran-cloud
+  labels:
+    name: alquran-cloud-app-metrics
+spec:
+  type: ClusterIP
+  selector:
+    app: alquran-cloud-app
+  ports:
+    - name: metrics
+      port: 9117
+      targetPort: 9117
+
