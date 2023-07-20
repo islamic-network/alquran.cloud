@@ -30,5 +30,14 @@
     <script src="/public/libraries/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script src="/public/libraries/bootstrap-multiselect/dist/js/bootstrap-multiselect.js"></script>
   </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKKYMLDGXQ"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VKKYMLDGXQ');
+  </script>
 
   <body style="margin-top: 70px;background:url(/public/images/bg4.png); background-attachment: fixed; background-size: 100%; background position: center center;" >
