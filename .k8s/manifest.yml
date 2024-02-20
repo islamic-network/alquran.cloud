@@ -122,23 +122,23 @@ spec:
             name: alquran-cloud-app
             port: 
               number: 80
----
-apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-  name: alquran-cloud-app-metrics
-  namespace: monitoring
-  labels:
-    release: lke-monitor
-spec:
-  selector:
-    matchLabels:
-      name: alquran-cloud-app-metrics
-  namespaceSelector:
-    any: true
-  endpoints:
-    - port: "metrics"
-      interval: 30s
+#---
+#apiVersion: monitoring.coreos.com/v1
+#kind: ServiceMonitor
+#metadata:
+#  name: alquran-cloud-app-metrics
+#  namespace: monitoring
+#  labels:
+#    release: lke-monitor
+#spec:
+#  selector:
+#    matchLabels:
+#      name: alquran-cloud-app-metrics
+#  namespaceSelector:
+#    any: true
+#  endpoints:
+#    - port: "metrics"
+#      interval: 30s
 ---
 #  Service
 apiVersion: v1
