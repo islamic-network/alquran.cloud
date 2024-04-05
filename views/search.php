@@ -27,7 +27,7 @@
 			</div>
 			<div class="col-md-4 languageSelectorDiv">
 				<div class="form-group">
-					<label for="languageSelector">Lanuages</label>
+					<label for="languageSelector">Languages</label>
 					<select id="languageSelector" name="language[]" multiple="multiple" title="Select Language" class="form-control" >
 						<?php foreach (Generic::getLanguages() as  $l => $lang) { ?>
 						<option value="<?= $l; ?>" <?= in_array($l, (array) $language) ? 'selected="selected"' : ''; ?> ><?= $lang ?></option>
