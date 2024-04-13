@@ -10,54 +10,66 @@ $app->get('/search', function ($request, $response, $args) {
     $surah = isset($request->getQueryParams()['surah']) ? $request->getQueryParams()['surah'] : null;
     $res = [];
     $results = [];
-    try {
-        if ($keyword !== null && $keyword != '') {
-            if ($surah !== null) {
-                foreach ((array)$surah as $s) {
-                    if ((int)$s > 0 && (int)$s < 115) {
-                        if ($language !== null || $edition !== null) {
-                            // Get Language only if edition === null
-                            if ($edition === null) {
-                                if (is_array($language)) {
-                                    foreach ($language as $lang) {
-                                        $results[] = $this->get('client')->AlQuranCloudApi->searchSurah($keyword, $s, $lang);
-                                    }
-                                }
-                            } else {
-                                if (is_array($edition)) {
-                                    foreach ($edition as $ed) {
-                                        $results[] = $this->get('client')->AlQuranCloudApi->searchSurah($keyword, $s, $ed);
-                                    }
+    if ($keyword !== null && $keyword != '') {
+        if ($surah !== null) {
+            foreach ((array) $surah as $s) {
+                if ((int)$s > 0 && (int)$s < 115) {
+                    if ($language !== null || $edition !== null) {
+                        // Get Language only if edition === null
+                        if ($edition === null) {
+                            foreach ((array) $language as $lang) {
+                                try {
+                                $results[] = $this->get('client')->AlQuranCloudApi->searchSurah($keyword, $s, $lang);
+                                } catch (\Exception $e) {
+                                    $this->get('helper')->logger->info($e->getMessage(), [$keyword, $surah, $edition, $language]);
                                 }
                             }
                         } else {
+                            foreach ((array) $edition as $ed) {
+                                try {
+                                $results[] = $this->get('client')->AlQuranCloudApi->searchSurah($keyword, $s, $ed);
+                                } catch (\Exception $e) {
+                                    $this->get('helper')->logger->info($e->getMessage(), [$keyword, $surah, $edition, $language]);
+                                }
+                            }
+                        }
+                    } else {
+                        try {
                             $results[] = $this->get('client')->AlQuranCloudApi->searchSurah($keyword, $s, null);
+                        } catch (\Exception $e) {
+                            $this->get('helper')->logger->info($e->getMessage(), [$keyword, $surah, $edition, $language]);
+                        }
+                    }
+                }
+            }
+        } else {
+            if ($language !== null || $edition !== null) {
+                // Get Language only if edition === null
+                if ($edition === null) {
+                    foreach ((array) $language as $lang) {
+                        try {
+                            $results[] = $this->get('client')->AlQuranCloudApi->searchSurah($keyword, null, $lang);
+                        } catch (\Exception $e) {
+                            $this->get('helper')->logger->info($e->getMessage(), [$keyword, $surah, $edition, $language]);
+                        }
+                    }
+                } else {
+                    foreach ((array) $edition as $ed) {
+                        try {
+                            $results[] = $this->get('client')->AlQuranCloudApi->searchSurah($keyword, null, $ed);
+                        } catch (\Exception $e) {
+                            $this->get('helper')->logger->info($e->getMessage(), [$keyword, $surah, $edition, $language]);
                         }
                     }
                 }
             } else {
-                if ($language !== null || $edition !== null) {
-                    // Get Language only if edition === null
-                    if ($edition === null) {
-                        if (is_array($language)) {
-                            foreach ($language as $lang) {
-                                $results[] = $this->get('client')->AlQuranCloudApi->searchSurah($keyword, null, $lang);
-                            }
-                        }
-                    } else {
-                        if (is_array($edition)) {
-                            foreach ($edition as $ed) {
-                                $results[] = $this->get('client')->AlQuranCloudApi->searchSurah($keyword, null, $ed);
-                            }
-                        }
-                    }
-                } else {
+                try {
                     $results[] = $this->get('client')->AlQuranCloudApi->search($keyword, $surah, null);
+                } catch (\Exception $e) {
+                    $this->get('helper')->logger->info($e->getMessage(), [$keyword, $surah, $edition, $language]);
                 }
             }
         }
-    } catch (\Exception $e) {
-
     }
 
     foreach ($results as $result) {
