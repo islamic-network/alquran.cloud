@@ -98,10 +98,13 @@
                             <p>
                                 Surah audio files are available to stream via the CDN.
                                 Please note that surah audio files are not integrated with the API as the API deals with with ayah level detail.
+                                For programmatic integration, you can use the JSON list of audio editions by surah at <a href="https://raw.githubusercontent.com/islamic-network/cdn/master/info/cdn_surah_audio.json">
+                                        https://raw.githubusercontent.com/islamic-network/cdn/master/info/cdn_surah_audio.json
+                                    </a>
                                 Surah audio files can be accessed on the CDN directly via the following URL:
                             </p>
                             <code>
-                                https://cdn.islamic.network/quran/audio-surah/128/{edition}/{number}.mp3
+                                https://cdn.islamic.network/quran/audio-surah/{bitrate}/{edition}/{number}.mp3
                             </code>
 
                             <ul>
