@@ -118,6 +118,12 @@
                                     {number} - A surah number. The Quran contains 114 ayahs, so this must be a number
                                     between 1 and 114.
                                 </li>
+                                <li>
+                                    {bitrate} - Quality of audio served. Different editions are available at different bitrates. 
+                                    You can see which edition is available at what bitrate on <a href="https://raw.githubusercontent.com/islamic-network/cdn/master/info/cdn_surah_audio.json">
+                                        https://raw.githubusercontent.com/islamic-network/cdn/master/info/cdn_surah_audio.json
+                                    </a>
+                                </li>
 
                             </ul>
                             <p>
