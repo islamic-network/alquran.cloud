@@ -115,7 +115,7 @@
                                     </a>. (Example - ar.alafasy).
                                 </li>
                                 <li>
-                                    {number} - A surah number. The Quran contains 114 ayahs, so this must be a number
+                                    {number} - A surah number. The Quran contains 114 surahs, so this must be a number
                                     between 1 and 114.
                                 </li>
                                 <li>
