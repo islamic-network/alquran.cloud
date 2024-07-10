@@ -49,9 +49,10 @@ jQuery( document ).ready( function( $ ) {
                         }
                     });
                     if (w.surahChanged === true) {
-                        if (w.surah !=9 && w.surah != 1) {
+
+/*                        if (w.surah !=9 && w.surah != 1) {
                           number = 1;
-                        }
+                        }*/
                         // Update UI
                         //$('.displayedSurah' + w.surah).removeClass('hide').siblings().addClass('hide');
                         $('#surahSelector').val(w.surah).trigger('change');
@@ -86,10 +87,10 @@ jQuery( document ).ready( function( $ ) {
                     }
                 }
                 // console.log(number, w.surah, w.lastAyah);
-                if (edition == 'ar.alafasy' && w.mode == 'quran') {
+                if (edition == 'ar.alafasy-2' && w.mode == 'quran') {
                     $('#activeAyah').attr('src', 'https://cdn.islamic.network/quran/audio/192/en.walk/' + number + '.mp3');
                 } else {
-                    $('#activeAyah').attr('src', 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + number + '.mp3');
+                    $('#activeAyah').attr('src', 'https://cdn.islamic.network/quran/audio/128/ar.alafasy-2/' + number + '.mp3');
                 }
                 if (w.player.paused) {
                     w.player.load();
@@ -109,7 +110,7 @@ jQuery( document ).ready( function( $ ) {
                         number = Number($(this).data('number'));
                         w.realNumber = number;
                         $('.ayahAudio' + number).addClass('ayah-playing');
-                        $('#activeAyah').attr('src', 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + number + '.mp3');
+                        $('#activeAyah').attr('src', 'https://cdn.islamic.network/quran/audio/128/ar.alafasy-2/' + number + '.mp3');
                         w.player.pause();
                         if (w.player.paused) {
                             w.player.load();

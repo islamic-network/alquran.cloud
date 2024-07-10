@@ -46,7 +46,7 @@
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <audio id="ayahPlayer" controls="controls" class="align-right">
                     <source
-                    id="activeAyah"src="https://cdn.islamic.network/quran/audio/128/ar.alafasy/<?=
+                    id="activeAyah"src="https://cdn.islamic.network/quran/audio/128/ar.alafasy-2/<?=
                     $ayah->data->number; ?>.mp3" title="<?= $ayah->data->number; ?>" type="audio/mp3" />
                 </audio>
             </div>

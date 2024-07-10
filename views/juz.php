@@ -67,7 +67,7 @@
         if ($ayah->surah->number > $currentSurah) {
             $currentSurah = $ayah->surah->number; ?>
         <?php } ?>
-			<source id="activeAyah" src="https://cdn.islamic.network/quran/audio/128/ar.alafasy/<?= $ayah->number; ?>.mp3" title="<?= $ayah->number; ?>" type="audio/mp3"/>
+			<source id="activeAyah" src="https://cdn.islamic.network/quran/audio/128/ar.alafasy-2/<?= $ayah->number; ?>.mp3" title="<?= $ayah->number; ?>" type="audio/mp3"/>
 	</audio>
 	</div>
 </div>

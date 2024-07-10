@@ -73,7 +73,7 @@
 	</div>
 	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 	<audio id="quranPlayer" controls="controls" class="align-right rt">
-        <source id="activeAyah" src="https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3" title="1" type="audio/mp3"/>
+        <source id="activeAyah" src="https://cdn.islamic.network/quran/audio/128/ar.alafasy-2/1.mp3" title="1" type="audio/mp3"/>
 	</audio>
 	</div>
 </div>

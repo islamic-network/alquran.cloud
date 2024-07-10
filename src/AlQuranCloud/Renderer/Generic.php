@@ -81,6 +81,9 @@ class Generic
             "ms" => "Malay",
             "zh" => "Chinese",
             "si" => "Sinhalese",
+            "am" => "Amharic",
+            "ber" => "Berber",
+            "ps" => "Pashto",
         ];
         
         asort($a);

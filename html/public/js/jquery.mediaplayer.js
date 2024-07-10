@@ -78,7 +78,7 @@ jQuery( document ).ready( function( $ ) {
                     }
                 }
                 //console.log(number, w.surah);
-                $('#activeAyah').attr('src', 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + number + '.mp3');
+                $('#activeAyah').attr('src', 'https://cdn.islamic.network/quran/audio/128/ar.alafasy-2/' + number + '.mp3');
                 if (w.player.paused) {
                     w.player.load();
                     w.player.oncanplaythrough = w.player.play();
@@ -97,7 +97,7 @@ jQuery( document ).ready( function( $ ) {
                         number = Number($(this).data('number'));
                         w.realNumber = number;
                         $('.ayahAudio' + number).addClass('ayah-playing');
-                        $('#activeAyah').attr('src', 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/' + number + '.mp3');
+                        $('#activeAyah').attr('src', 'https://cdn.islamic.network/quran/audio/128/ar.alafasy-2/' + number + '.mp3');
                         w.player.pause();
                         if (w.player.paused) {
                             w.player.load();
