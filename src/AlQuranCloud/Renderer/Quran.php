@@ -61,7 +61,7 @@ class Quran
 
 	public static function renderPlayIcon($ayah)
 	{
-		return '<span class="linkify pull-left playThisAyah hide" id ="playThisAyah' . $ayah->number . '" data-number="' . $ayah->number . '"><i class="glyphicon glyphicon-play-circle"></i></span>';
+		return '<span class="linkify pull-left playThisAyah" id ="playThisAyah' . $ayah->number . '" data-number="' . $ayah->number . '"><i class="glyphicon glyphicon-play-circle"></i></span>';
 	}
 
 }

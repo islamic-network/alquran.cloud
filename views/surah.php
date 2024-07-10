@@ -37,12 +37,8 @@
   </div>
   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
   <audio id="surahPlayer" controls="controls" class="">
-    <?php if ($surah->data->number > 1 && $surah->data->number != 9) { ?>
-    <source id ="activeAyah" src="https://cdn.islamic.network/quran/audio/128/ar.alafasy-2/1.mp3" title="1" type="audio/mp3"/>
-    <?php } else { ?>
     <?php $ayah = $surah->data->ayahs[0]; ?>
       <source id="activeAyah" src="https://cdn.islamic.network/quran/audio/128/ar.alafasy-2/<?= $ayah->number; ?>.mp3" title="<?= $ayah->number; ?>" type="audio/mp3"/>
-    <?php } ?>
   </audio>
   </div>
 </div>
@@ -79,8 +75,8 @@
 	</div>
 	<hr />
 </div>
-<script src="/public/js/jquery.mediaplayer.js?v=14"></script>
-<script src="/public/js/jquery.surah.js?v=7"></script>
+<script src="/public/js/jquery.mediaplayer.js?v=15"></script>
+<script src="/public/js/jquery.surah.js?v=8"></script>
 
 <script>
 $(function() {

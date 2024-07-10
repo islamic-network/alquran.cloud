@@ -80,11 +80,11 @@
 </div>
 </div>
 <?php if ($dualAudio == 'true') { ?>
-<script src="/public/js/jquery.mediaplayer-ar-en.js?v=27"></script>
+<script src="/public/js/jquery.mediaplayer-ar-en.js?v=28"></script>
 <?php } else { ?>
-<script src="/public/js/jquery.mediaplayer.js?v=27"></script>
+<script src="/public/js/jquery.mediaplayer.js?v=28"></script>
 <?php } ?>
-<script src="/public/js/jquery.quran.js?v=6"></script>
+<script src="/public/js/jquery.quran.js?v=7"></script>
 <script>
     var surahChangers = <?php echo json_encode($surahChangers); ?>;
 $(function() {
