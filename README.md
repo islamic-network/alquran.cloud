@@ -62,5 +62,5 @@ You can contribute code by raising a pull request.
 
 There's a backlog of stuff under issues for things that potentially need to be worked on, so please feel free to pick something up from there or contribute your own improvements.
 
-You can also join the community at https://community.islamic.network/ or the Islamic Network Discord Server to discuss any of the apps or APIs @ https://discord.gg/FwUy69M.
+You can also join the community at https://community.islamic.network/.
 
