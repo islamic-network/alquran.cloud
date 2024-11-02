@@ -22,10 +22,6 @@
           Join and post your query on the Islamic Network Community @ <a href="https://community.islamic.network"
           target="_blank">https://community.islamic.network</a>. This is the official supported channel for support.
           </li>
-          <li>
-          Join the Discord server if you'd just like to chat about something related @ <a href="https://discord.gg/FwUy69M"
-          target="_blank">https://discord.gg/FwUy69M</a>.
-          </li>
         </ul> 
       </div>
     </div>
