@@ -17,9 +17,9 @@ spec:
       app: alquran-cloud-app
   template:
     metadata:
-      annotations:
-        prometheus.io/scrape: "true"
-        prometheus.io/port: "9117"
+#      annotations:
+#        prometheus.io/scrape: "true"
+#        prometheus.io/port: "9117"
       labels:
         app: alquran-cloud-app
     spec:
