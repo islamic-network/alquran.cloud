@@ -72,8 +72,15 @@ spec:
             cpu: "200m"
             memory: 380Mi
         ports:
-        - containerPort: 8080
-          protocol: TCP
+          - containerPort: 8080
+            name: api
+            protocol: TCP
+          - containerPort: 9090
+            name: metrics
+            protocol: TCP
+          - containerPort: 9091
+            name: status
+            protocol: TCP
 ---
 # HPA
 apiVersion: autoscaling/v1

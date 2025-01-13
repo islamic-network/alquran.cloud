@@ -1,17 +1,98 @@
 {
   "listeners": {
     "*:8080": {
-      "application": "alquran.cloud"
+      "pass": "routes/main"
+    },
+    "*:9090": {
+      "pass": "routes/metrics"
+    },
+    "*:9091": {
+      "pass": "routes/status"
     }
   },
   "applications": {
-    "alquran.cloud": {
+    "alquran_cloud": {
       "type": "php",
       "user": "nobody",
-      "processes": 2,
+      "limits": {
+        "timeout": 10,
+        "requests": 100000
+      },
+      "processes": {
+        "max": 7,
+        "spare": 3,
+        "idle_timeout": 5
+      },
       "root": "/var/www/html",
       "index": "index.php",
       "script": "index.php"
+    },
+    "metrics": {
+      "type": "php",
+      "root": "/var/www/metrics",
+      "index": "metrics.php",
+      "script": "metrics.php",
+      "user": "root",
+      "environment": {
+        "control_socket": "/var/run/control.unit.sock"
+      }
+    },
+    "status": {
+      "type": "php",
+      "root": "/var/www/metrics",
+      "index": "status.php",
+      "script": "status.php",
+      "user": "root",
+      "environment": {
+        "control_socket": "/var/run/control.unit.sock"
+      }
     }
+  },
+  "routes": {
+    "metrics": [
+      {
+        "match": {
+          "uri": [
+            "/metrics"
+          ]
+        },
+        "action": {
+          "pass": "applications/metrics"
+        }
+      }
+    ],
+    "status": [
+      {
+        "match": {
+          "uri": [
+            "/status"
+          ]
+        },
+        "action": {
+          "pass": "applications/status"
+        }
+      }
+    ],
+    "main": [
+      {
+        "match": {
+          "uri": [
+            "/libraries*",
+            "/public*"
+          ]
+        },
+        "action": {
+          "share": "/var/www/html/$uri"
+        }
+      },
+      {
+        "match": {
+          "uri": "*"
+        },
+        "action": {
+          "pass": "applications/alquran_cloud"
+        }
+      }
+    ]
   }
 }
