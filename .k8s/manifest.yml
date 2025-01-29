@@ -31,20 +31,6 @@ spec:
             matchLabels:
               app: alquran-cloud-app
       containers:
-      - name: apache-exporter-sidecar
-        image: lusotycoon/apache-exporter
-        resources:
-          requests:
-            cpu: "20m"
-            memory: 16Mi
-          limits:
-            cpu: "100"
-            memory: 128Mi
-        args:
-          - '--scrape_uri=http://localhost:8080/server-status?auto'
-        ports:
-          - containerPort: 9117
-            protocol: TCP
       - name: alquran-cloud-app
         image: ghcr.io/islamic-network/alquran.cloud:$COMMIT_TAG
         env:
